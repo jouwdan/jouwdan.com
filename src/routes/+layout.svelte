@@ -25,7 +25,79 @@
 </svelte:head>
 
 <Drawer>
-
+	{#if $drawerStore.id === 'menu'}
+<nav class="list-nav py-6 px-4">
+	<!-- (optionally you can provde a label here) -->
+	<ul>
+		<li>
+		<a
+						class="btn hover:variant-ghost-primary transition-all duration-200"
+						href="/"
+						class:variant-ghost-surface={currentRoute !== '/'}
+						class:variant-ghost-primary={currentRoute === '/'}
+					>
+						Home
+					</a></li>
+					<li>
+					<a
+						class="btn hover:variant-ghost-primary transition-all duration-200"
+						href="/about"
+						class:variant-ghost-surface={!currentRoute.includes('/about')}
+						class:variant-ghost-primary={currentRoute.includes('/about')}
+					>
+						About
+					</a></li>
+					<li>
+					<a
+						class="btn hover:variant-ghost-primary transition-all duration-200"
+						href="/portfolio"
+						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
+						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
+					>
+						Portfolio
+					</a></li>
+					<li>
+					<a
+						class="btn hover:variant-ghost-primary transition-all duration-200"
+						href="/blog"
+						class:variant-ghost-surface={!currentRoute.includes('/blog')}
+						class:variant-ghost-primary={currentRoute.includes('/blog')}
+					>
+						Blog
+					</a></li>
+					<li>
+					<hr class="divider my-4 w-24 mx-auto" /></li>
+					<li>
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://twitter.com/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:twitter" class="text-xl" />
+					</a></li>
+					<li>
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://linkedin.com/in/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:linkedin" class="text-xl" />
+					</a></li>
+					<li>
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://github.com/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:github" class="text-xl" />
+					</a></li>
+		<!-- ... -->
+	</ul>
+</nav>
+{/if}
 </Drawer>
 
 <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
