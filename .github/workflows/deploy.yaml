@@ -24,7 +24,7 @@ jobs:
             
             - name: Build site
               run: |
-                  git config user.name "Deploy from CI"
+                  git config user.name "jouwdan"
                   git config user.email "contact@jordanharrison.ie"
                   npm run gh-pages
             
