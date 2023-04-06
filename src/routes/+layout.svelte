@@ -28,6 +28,22 @@
 				</a>
 				<a
 					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+					href="/about"
+					class:variant-ghost-surface={!currentRoute.includes('/about')}
+					class:variant-ghost-primary={currentRoute.includes('/about')}
+				>
+					About
+				</a>
+				<a
+					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+					href="/portfolio"
+					class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
+					class:variant-ghost-primary={currentRoute.includes('/portfolio')}
+				>
+					Portfolio
+				</a>
+				<a
+					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 					href="/blog"
 					class:variant-ghost-surface={!currentRoute.includes('/blog')}
 					class:variant-ghost-primary={currentRoute.includes('/blog')}
