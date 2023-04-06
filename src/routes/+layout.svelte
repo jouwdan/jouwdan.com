@@ -126,13 +126,14 @@
 
 <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
 	<svelte:fragment slot="pageHeader">
+		<div class="bg-surface-900 backdrop-blur-xl bg-opacity-80">
 		<AppBar
-			background="bg-surface-900 backdrop-blur-xl bg-opacity-80"
-			class="container mx-auto py-4"
+			background="none"
+			class="py-4 container mx-auto"
 		>
 			<svelte:fragment slot="lead">
 				<a href="/">
-					<Avatar src="images/logo.png" rounded="rounded-xl" />
+					<Avatar src="/images/logo.png" rounded="rounded-xl" />
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
@@ -210,8 +211,11 @@
 				</div>
 			</svelte:fragment>
 		</AppBar>
+	</div>
 	</svelte:fragment>
-	<slot />
+	<div class="container mx-auto">
+		<slot />
+	</div>
 	<svelte:fragment slot="pageFooter">
 		<div
 			class="container mx-auto py-4 px-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center"
