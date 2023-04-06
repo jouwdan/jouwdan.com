@@ -6,8 +6,6 @@
 	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
 	import Icon from '@iconify/svelte';
 
-	export const prerender = true;
-
 	$: currentRoute = $page.url.pathname;
 </script>
 
