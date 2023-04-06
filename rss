@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Jordan Harrison</title>
+<description>Full Stack Developer</description>
+<link>https://jouwdan.com</link>
+<atom:link href="https://jouwdan.com/rss.xml" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">https://jouwdan.com/blog/blog/how-to-create-and-host-a-html-website-for-free-using-github-pages</guid>
+<title>How to create and host a HTML website for free using GitHub Pages</title>
+<link>https://jouwdan.com/blog/blog/how-to-create-and-host-a-html-website-for-free-using-github-pages</link>
+<description>How to create and host a HTML website for free using GitHub Pages</description>
+<pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
