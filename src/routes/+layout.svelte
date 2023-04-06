@@ -12,7 +12,7 @@
 	position: 'right',
 	bgDrawer: 'bg-surface-800 text-white',
 	bgBackdrop: 'backdrop-blur',
-	width: 'w-2/3',
+	width: 'w-full',
 	padding: 'p-4',
 	rounded: 'rounded-xl',
 };
@@ -27,50 +27,62 @@
 <Drawer>
 	{#if $drawerStore.id === 'menu'}
 <nav class="list-nav py-6 px-4">
-	<!-- (optionally you can provde a label here) -->
+	<div class="flex pb-6 items-center">
+	<h2 class="font-bold pl-4 flex-1">
+		Menu
+	</h2>
+	<button class="btn btn-icon-lg variant-ghost-surface" on:click={() => drawerStore.close()}>
+		x
+	</button>
+	</div>
 	<ul>
 		<li>
 		<a
-						class="btn hover:variant-ghost-primary transition-all duration-200"
+						class="btn transition-all duration-200"
 						href="/"
 						class:variant-ghost-surface={currentRoute !== '/'}
 						class:variant-ghost-primary={currentRoute === '/'}
+						on:click={() => drawerStore.close()}
 					>
 						Home
 					</a></li>
 					<li>
 					<a
-						class="btn hover:variant-ghost-primary transition-all duration-200"
+						class="btn transition-all duration-200"
 						href="/about"
 						class:variant-ghost-surface={!currentRoute.includes('/about')}
 						class:variant-ghost-primary={currentRoute.includes('/about')}
+						on:click={() => drawerStore.close()}
 					>
 						About
 					</a></li>
 					<li>
 					<a
-						class="btn hover:variant-ghost-primary transition-all duration-200"
+						class="btn transition-all duration-200"
 						href="/portfolio"
 						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
 						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
+						on:click={() => drawerStore.close()}
 					>
 						Portfolio
 					</a></li>
 					<li>
 					<a
-						class="btn hover:variant-ghost-primary transition-all duration-200"
+						class="btn transition-all duration-200"
 						href="/blog"
 						class:variant-ghost-surface={!currentRoute.includes('/blog')}
 						class:variant-ghost-primary={currentRoute.includes('/blog')}
+						on:click={() => drawerStore.close()}
 					>
 						Blog
 					</a></li>
 					<li>
 					<a
-						class="btn hover:variant-ghost-primary transition-all duration-200"
+						class="btn transition-all duration-200"
 						href="/contact"
 						class:variant-ghost-surface={!currentRoute.includes('/contact')}
 						class:variant-ghost-primary={currentRoute.includes('/contact')}
+						on:click={() => drawerStore.close()}
 					>
 						Contact
 					</a></li>
@@ -82,6 +94,7 @@
 						href="https://twitter.com/jouwdan"
 						target="_blank"
 						rel="noreferrer"
+						on:click={() => drawerStore.close()}
 					>
 						<Icon icon="mdi:twitter" class="text-xl" />
 					</a></li>
@@ -91,6 +104,7 @@
 						href="https://linkedin.com/in/jouwdan"
 						target="_blank"
 						rel="noreferrer"
+						on:click={() => drawerStore.close()}
 					>
 						<Icon icon="mdi:linkedin" class="text-xl" />
 					</a></li>
@@ -100,6 +114,7 @@
 						href="https://github.com/jouwdan"
 						target="_blank"
 						rel="noreferrer"
+						on:click={() => drawerStore.close()}
 					>
 						<Icon icon="mdi:github" class="text-xl" />
 					</a></li>
