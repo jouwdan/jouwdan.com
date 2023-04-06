@@ -24,12 +24,12 @@ jobs:
             
             - name: Build site
               run: |
+                  git config user.name "Deploy from CI"
+                  git config user.email "contact@jordanharrison.ie"
                   npm run gh-pages
             
             - name: Deploy GitHub Pages
               run: |
-                  git config --global user.name "Deploy from CI"
-                  git config --global user.email "contact@jordanharrison.ie"
                   git worktree add gh-pages
                   cd gh-pages
                   # Delete the ref to avoid keeping history.
