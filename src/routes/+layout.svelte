@@ -55,8 +55,8 @@
 		</AppBar>
 	</svelte:fragment>
 	<slot />
-	<svelte:fragment slot="footer">
-			<div class="container mx-auto h-16 bg-surface-800 rounded-xl mb-4 flex justify-center items-center">
+	<svelte:fragment slot="pageFooter">
+			<div class="container mx-auto h-16 bg-surface-800 rounded-xl my-4 flex justify-center items-center">
 				<p>Built with ♥ and SvelteKit, Deployed to GitHub Pages</p>
 			</div>
 	</svelte:fragment>
