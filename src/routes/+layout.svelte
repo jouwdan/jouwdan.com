@@ -9,9 +9,9 @@
 	$: currentRoute = $page.url.pathname;
 </script>
 
-<AppShell>
-	<svelte:fragment slot="header">
-		<AppBar background="bg-surface-900" class="container mx-auto my-4">
+<AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
+	<svelte:fragment slot="pageHeader">
+		<AppBar background="bg-surface-900 backdrop-blur-xl bg-opacity-80" class="container mx-auto py-4">
 			<svelte:fragment slot="lead">
 				<a href="/">
 					<Avatar src="images/logo.png" rounded="rounded-xl" />
