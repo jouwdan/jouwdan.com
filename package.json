@@ -11,13 +11,15 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"gh-pages": "touch build/.nojekyll && npm run build && npx gh-pages -d build"
 	},
 	"devDependencies": {
 		"@iconify/svelte": "3.1.0",
 		"@playwright/test": "^1.28.1",
 		"@skeletonlabs/skeleton": "1.1.0",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "2.0.1",
 		"@sveltejs/kit": "^1.5.0",
 		"@tailwindcss/forms": "0.5.3",
 		"@tailwindcss/typography": "0.5.9",
@@ -27,6 +29,7 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"gh-pages": "5.0.0",
 		"postcss": "8.4.21",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
