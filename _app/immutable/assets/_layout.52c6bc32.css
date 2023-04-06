@@ -2223,6 +2223,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .h-10 {
   height: 2.5rem;
 }
+.h-16 {
+  height: 4rem;
+}
 .h-2 {
   height: 0.5rem;
 }
@@ -2502,6 +2505,10 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .bg-surface-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(var(--color-surface-50) / var(--tw-bg-opacity));
+}
+.bg-surface-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(var(--color-surface-800) / var(--tw-bg-opacity));
 }
 .bg-surface-900 {
   --tw-bg-opacity: 1;
