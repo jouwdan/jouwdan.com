@@ -1662,6 +1662,12 @@ button:disabled:active {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.btn-icon-lg {
+  aspect-ratio: 1 / 1;
+  width: 53px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
 /* File Input Button */
 input[type='file']:not(.file-dropzone-input)::file-selector-button {
 		/* Size (match base)  */
@@ -2256,9 +2262,6 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .w-16 {
   width: 4rem;
 }
-.w-2\/3 {
-  width: 66.666667%;
-}
 .w-20 {
   width: 5rem;
 }
@@ -2496,6 +2499,10 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .border-dashed {
   border-style: dashed;
 }
+.border-surface-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(var(--color-surface-700) / var(--tw-border-opacity));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -2574,6 +2581,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .p-1 {
   padding: 0.25rem;
 }
+.p-16 {
+  padding: 4rem;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -2618,6 +2628,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 }
 .pb-12 {
   padding-bottom: 3rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 .pl-4 {
   padding-left: 1rem;
