@@ -3,8 +3,19 @@
 	import '$lib/theme.css';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
-	import { AppShell, AppBar, Avatar } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, Avatar, Drawer, drawerStore } from '@skeletonlabs/skeleton';
+	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	import Icon from '@iconify/svelte';
+
+	const menu: DrawerSettings = {
+	id: 'menu',
+	position: 'right',
+	bgDrawer: 'bg-surface-800 text-white',
+	bgBackdrop: 'backdrop-blur',
+	width: 'w-[280px] md:w-[480px]',
+	padding: 'p-4',
+	rounded: 'rounded-xl',
+};
 
 	$: currentRoute = $page.url.pathname;
 </script>
@@ -13,79 +24,95 @@
 	<title>Jordan Harrison | Full Stack Developer</title>
 </svelte:head>
 
+<Drawer>
+
+</Drawer>
+
 <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
 	<svelte:fragment slot="pageHeader">
-		<AppBar background="bg-surface-900 backdrop-blur-xl bg-opacity-80" class="container mx-auto py-4">
+		<AppBar
+			background="bg-surface-900 backdrop-blur-xl bg-opacity-80"
+			class="container mx-auto py-4"
+		>
 			<svelte:fragment slot="lead">
 				<a href="/">
 					<Avatar src="images/logo.png" rounded="rounded-xl" />
 				</a>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
-				<a
-					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-					href="/"
-					class:variant-ghost-surface={currentRoute !== '/'}
-					class:variant-ghost-primary={currentRoute === '/'}
-				>
-					Home
-				</a>
-				<a
-					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-					href="/about"
-					class:variant-ghost-surface={!currentRoute.includes('/about')}
-					class:variant-ghost-primary={currentRoute.includes('/about')}
-				>
-					About
-				</a>
-				<a
-					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-					href="/portfolio"
-					class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
-					class:variant-ghost-primary={currentRoute.includes('/portfolio')}
-				>
-					Portfolio
-				</a>
-				<a
-					class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-					href="/blog"
-					class:variant-ghost-surface={!currentRoute.includes('/blog')}
-					class:variant-ghost-primary={currentRoute.includes('/blog')}
-				>
-					Blog
-				</a>
-				<hr class="divider-vertical h-6" />
-				<a
-					class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-					href="https://twitter.com/jouwdan"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<Icon icon="mdi:twitter" class="text-xl" />
-				</a>
-				<a
-					class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-					href="https://linkedin.com/in/jouwdan"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<Icon icon="mdi:linkedin" class="text-xl" />
-				</a>
-				<a
-					class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-					href="https://github.com/jouwdan"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<Icon icon="mdi:github" class="text-xl" />
-				</a>
+				<div class="hidden lg:flex space-x-3 items-center">
+					<a
+						class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+						href="/"
+						class:variant-ghost-surface={currentRoute !== '/'}
+						class:variant-ghost-primary={currentRoute === '/'}
+					>
+						Home
+					</a>
+					<a
+						class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+						href="/about"
+						class:variant-ghost-surface={!currentRoute.includes('/about')}
+						class:variant-ghost-primary={currentRoute.includes('/about')}
+					>
+						About
+					</a>
+					<a
+						class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+						href="/portfolio"
+						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
+						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
+					>
+						Portfolio
+					</a>
+					<a
+						class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+						href="/blog"
+						class:variant-ghost-surface={!currentRoute.includes('/blog')}
+						class:variant-ghost-primary={currentRoute.includes('/blog')}
+					>
+						Blog
+					</a>
+					<hr class="divider-vertical h-6" />
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://twitter.com/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:twitter" class="text-xl" />
+					</a>
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://linkedin.com/in/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:linkedin" class="text-xl" />
+					</a>
+					<a
+						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						href="https://github.com/jouwdan"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<Icon icon="mdi:github" class="text-xl" />
+					</a>
+				</div>
+				<div class="flex lg:hidden">
+					<button class="btn px-0" on:click={() => drawerStore.open(menu)}>
+						<Icon icon="mdi:menu" class="text-2xl" />
+					</button>
+				</div>
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<slot />
 	<svelte:fragment slot="pageFooter">
-			<div class="container mx-auto h-16 bg-surface-800 rounded-xl my-4 flex justify-center items-center">
-				<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
-			</div>
+		<div
+			class="container mx-auto h-16 bg-surface-800 rounded-xl my-4 flex justify-center items-center"
+		>
+			<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
+		</div>
 	</svelte:fragment>
 </AppShell>
