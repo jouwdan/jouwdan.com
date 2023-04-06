@@ -2259,6 +2259,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .w-16 {
   width: 4rem;
 }
+.w-2\/3 {
+  width: 66.666667%;
+}
 .w-20 {
   width: 5rem;
 }
@@ -2276,9 +2279,6 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 }
 .w-\[240px\] {
   width: 240px;
-}
-.w-\[280px\] {
-  width: 280px;
 }
 .w-\[50\%\] {
   width: 50%;
@@ -3800,9 +3800,6 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
   }
 }
 @media (min-width: 768px) {
-  .md\:w-\[480px\] {
-    width: 480px;
-  }
   .md\:w-auto {
     width: auto;
   }
