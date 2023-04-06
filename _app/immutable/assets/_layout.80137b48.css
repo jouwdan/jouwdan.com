@@ -2283,6 +2283,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .w-\[240px\] {
   width: 240px;
 }
+.w-\[280px\] {
+  width: 280px;
+}
 .w-\[50\%\] {
   width: 50%;
 }
@@ -2417,6 +2420,11 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -2578,6 +2586,10 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 .p-4 {
   padding: 1rem;
 }
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
@@ -2729,6 +2741,11 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
 }
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur {
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .backdrop-blur-xl {
   --tw-backdrop-blur: blur(24px);
@@ -3785,6 +3802,9 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
   }
 }
 @media (min-width: 768px) {
+  .md\:w-\[480px\] {
+    width: 480px;
+  }
   .md\:w-auto {
     width: auto;
   }
@@ -3800,6 +3820,14 @@ input[type='file']:not(.file-dropzone-input)::file-selector-button {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:flex {
+    display: flex;
+  }
+  .lg\:hidden {
+    display: none;
   }
 }
 /* Global Styles */
