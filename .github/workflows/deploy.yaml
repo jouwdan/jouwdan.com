@@ -1,0 +1,41 @@
+name: Deploy Site
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3.6.0
+              with:
+                node-version: '19.6.1'
+
+            - name: Install Dependancies
+              run: |
+                  npm install
+            
+            - name: Build site
+              run: |
+                  npm run gh-pages
+            
+            - name: Deploy GitHub Pages
+              run: |
+                  git worktree add gh-pages
+                  git config user.name "Deploy from CI"
+                  git config user.email ""
+                  cd gh-pages
+                  # Delete the ref to avoid keeping history.
+                  git update-ref -d refs/heads/gh-pages
+                  rm -rf *
+                  mv ../build/* .
+                  git add .
+                  git commit -m "Deploy $GITHUB_SHA to gh-pages"
+                  git push --force --set-upstream origin gh-pages
