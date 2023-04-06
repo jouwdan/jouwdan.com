@@ -12,7 +12,7 @@
 	position: 'right',
 	bgDrawer: 'bg-surface-800 text-white',
 	bgBackdrop: 'backdrop-blur',
-	width: 'w-[280px] md:w-[480px]',
+	width: 'w-2/3',
 	padding: 'p-4',
 	rounded: 'rounded-xl',
 };
