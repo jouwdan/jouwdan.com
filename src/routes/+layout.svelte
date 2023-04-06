@@ -66,6 +66,15 @@
 						Blog
 					</a></li>
 					<li>
+					<a
+						class="btn hover:variant-ghost-primary transition-all duration-200"
+						href="/contact"
+						class:variant-ghost-surface={!currentRoute.includes('/contact')}
+						class:variant-ghost-primary={currentRoute.includes('/contact')}
+					>
+						Contact
+					</a></li>
+					<li>
 					<hr class="divider my-4 w-24 mx-auto" /></li>
 					<li>
 					<a
@@ -144,6 +153,14 @@
 						class:variant-ghost-primary={currentRoute.includes('/blog')}
 					>
 						Blog
+					</a>
+					<a
+						class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
+						href="/contact"
+						class:variant-ghost-surface={!currentRoute.includes('/contact')}
+						class:variant-ghost-primary={currentRoute.includes('/contact')}
+					>
+						Contact
 					</a>
 					<hr class="divider-vertical h-6" />
 					<a
