@@ -12,7 +12,7 @@
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
-		"gh-pages": "npm run build && npx gh-pages -d build -t true"
+		"gh-pages": "npm run build && echo jouwdan.com > ./build/CNAME && touch ./build/.nojekyll && npx gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@iconify/svelte": "3.1.0",
