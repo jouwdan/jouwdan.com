@@ -1,5 +1,5 @@
 <div
-	class="container px-12 rounded-xl py-12 mx-auto justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 text-surface-900"
+	class="container px-12 rounded-xl py-6 lg:py-12 mx-auto justify-center items-center bg-gradient-to-br from-primary-500 to-secondary-500 text-surface-900"
 >
 		<div class="flex flex-col-reverse lg:flex-row">
 			<div class="my-auto lg:w-1/2 lg:pl-24">
