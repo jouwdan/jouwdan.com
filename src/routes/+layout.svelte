@@ -9,6 +9,10 @@
 	$: currentRoute = $page.url.pathname;
 </script>
 
+<svelte:head>
+	<title>Jordan Harrison | Full Stack Developer</title>
+</svelte:head>
+
 <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
 	<svelte:fragment slot="pageHeader">
 		<AppBar background="bg-surface-900 backdrop-blur-xl bg-opacity-80" class="container mx-auto py-4">
