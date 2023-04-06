@@ -45,7 +45,15 @@
 				</a>
 				<a
 					class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-					href="https://github.com/skeletonlabs/skeleton"
+					href="https://linkedin.com/in/jouwdan"
+					target="_blank"
+					rel="noreferrer"
+				>
+					<Icon icon="mdi:linkedin" class="text-xl" />
+				</a>
+				<a
+					class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+					href="https://github.com/jouwdan"
 					target="_blank"
 					rel="noreferrer"
 				>
