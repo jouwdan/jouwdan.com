@@ -3051,6 +3051,9 @@ a.card:hover {
   --tw-gradient-to: rgb(var(--color-secondary-500) / 1) var(--tw-gradient-to-position);
   --tw-gradient-to-position:  ;
 }
+.bg-cover {
+  background-size: cover;
+}
 .fill-current {
   fill: currentColor;
 }
@@ -3127,6 +3130,12 @@ a.card:hover {
 .pb-12 {
   padding-bottom: 3rem;
 }
+.pb-20 {
+  padding-bottom: 5rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
+}
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -3141,6 +3150,9 @@ a.card:hover {
 }
 .pt-1 {
   padding-top: 0.25rem;
+}
+.pt-20 {
+  padding-top: 5rem;
 }
 .pt-4 {
   padding-top: 1rem;
