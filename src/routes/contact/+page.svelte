@@ -1,7 +1,7 @@
 
 <h1 class="font-bold pt-4 pb-8">Contact</h1>
 <div class="container mx-auto p-16 rounded-xl border border-surface-700 bg-surface-800">
-  <form action="#" method="POST" class="space-y-1">
+  <form action="https://formspree.io/f/xpzeoagn" method="POST" class="space-y-1">
     <label class="label" for="name">Name</label>
     <input class="input" type="text" name="name" id="name" placeholder="Your Name" />
     <label class="label" for="email">Email</label>
