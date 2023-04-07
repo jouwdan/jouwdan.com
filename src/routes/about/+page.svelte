@@ -59,7 +59,7 @@
 				<div class="flex-1">
 					<h4>Bachelor of Science in Network Management</h4>
 					<h5>Athlone Institute of Technology</h5>
-					<h6 class="text-surface-300">2014-2017</h6>
+					<h6 class="text-surface-300">2014 - 2017</h6>
 					<p class="text-justify text-surface-300 mt-2">
 						Graduated with a Merit Grade 2 in 2017.
 					</p>
