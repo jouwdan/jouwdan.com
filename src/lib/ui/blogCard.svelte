@@ -1,14 +1,14 @@
 <script lang="ts">
   export let post: any
 </script>
-
 <a
-	class="card bg-initial card-hover overflow-hidden h-[26rem] lg:h-[30rem] xl:h-[28rem] 2xl:h-[26rem] mx-auto lg:mx-4 my-4 flex flex-col justify-between"
+	class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4"
 	href={post.path}
-	><header>
+	>
+	<header>
 		<img src={post.meta.cover} class="h-48 w-full object-cover" alt="Post" />
 	</header>
-	<div class="px-4 space-y-4">
+	<div class="p-4 space-y-4">
 		<h4 data-toc-ignore="" class="font-bold">{post.meta.title}</h4>
 		<article>
 			<p>
