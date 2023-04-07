@@ -8,6 +8,8 @@
 					I'm a creative full stack developer based in Ireland with have a passion for web tech &
 					open source. Oh, and i'm a total tech nerd.
 				</h3>
+				<a class="btn variant-ghost-primary mt-4" href="/about">About Me</a>
+				<a class="btn variant-ghost-secondary mt-4" href="/contact">Get in Touch</a>
 			</div>
 			<img src="images/waving-avatar.png" alt="avatar of Jordan waving" class="mx-auto pb-12" />
 		</div>
