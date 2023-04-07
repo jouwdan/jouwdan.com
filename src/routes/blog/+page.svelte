@@ -30,7 +30,7 @@
 		>
 			<img
 				class="avatar-image w-full h-full object-cover"
-				src="https://i.pravatar.cc/160?img=48"
+				src="/images/avatar-thumb.png"
 				alt=""
 				style=""
 			/>
