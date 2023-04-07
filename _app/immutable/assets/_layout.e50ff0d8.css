@@ -2556,6 +2556,84 @@ a.card:hover {
   background-color: rgb(var(--color-surface-500) / 0.2);
 }
 /* Soft */
+.variant-soft-primary {
+  background-color: rgb(var(--color-primary-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-primary-700));
+}
+.dark .variant-soft-primary {
+  color: rgb(var(--color-primary-200));
+}
+:is(.dark .variant-soft-primary) {
+  background-color: rgb(var(--color-primary-500) / 0.2);
+}
+.variant-soft-secondary {
+  background-color: rgb(var(--color-secondary-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-secondary-700));
+}
+.dark .variant-soft-secondary {
+  color: rgb(var(--color-secondary-200));
+}
+:is(.dark .variant-soft-secondary) {
+  background-color: rgb(var(--color-secondary-500) / 0.2);
+}
+.variant-soft-tertiary {
+  background-color: rgb(var(--color-tertiary-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-tertiary-700));
+}
+.dark .variant-soft-tertiary {
+  color: rgb(var(--color-tertiary-200));
+}
+:is(.dark .variant-soft-tertiary) {
+  background-color: rgb(var(--color-tertiary-500) / 0.2);
+}
+.variant-soft-success {
+  background-color: rgb(var(--color-success-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-success-700));
+}
+.dark .variant-soft-success {
+  color: rgb(var(--color-success-200));
+}
+:is(.dark .variant-soft-success) {
+  background-color: rgb(var(--color-success-500) / 0.2);
+}
+.variant-soft-warning {
+  background-color: rgb(var(--color-warning-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-warning-700));
+}
+.dark .variant-soft-warning {
+  color: rgb(var(--color-warning-200));
+}
+:is(.dark .variant-soft-warning) {
+  background-color: rgb(var(--color-warning-500) / 0.2);
+}
+.variant-soft-error {
+  background-color: rgb(var(--color-error-400) / 0.2);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color) !important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color) !important;
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
+  color: rgb(var(--color-error-700));
+}
+.dark .variant-soft-error {
+  color: rgb(var(--color-error-200));
+}
+:is(.dark .variant-soft-error) {
+  background-color: rgb(var(--color-error-500) / 0.2);
+}
 .variant-soft,
 	.variant-soft-surface {
   background-color: rgb(var(--color-surface-400) / 0.2);
@@ -2631,6 +2709,10 @@ a.card:hover {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .my-4 {
   margin-top: 1rem;
