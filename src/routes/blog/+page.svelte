@@ -1,5 +1,5 @@
 <script>
-	import BlogCard from '$lib/ui/blogCard.svelte';
+	import BlogCard from '$lib/ui/BlogCard.svelte';
 	export let data;
 </script>
 

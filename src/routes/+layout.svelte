@@ -230,10 +230,11 @@
 		</div>
 	{/key}
 	<svelte:fragment slot="pageFooter">
+		<div class="container mx-auto">
 		<div
-			class="container mx-auto py-4 px-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"
+			class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"
 		>
 			<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
-		</div>
+		</div></div>
 	</svelte:fragment>
 </AppShell>
