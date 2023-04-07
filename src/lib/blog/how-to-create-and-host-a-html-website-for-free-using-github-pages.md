@@ -1,10 +1,9 @@
 ---
 title: How to create and host a HTML website for free using GitHub Pages
-date: 01/05/2021
+date: May 14, 2021
 cover: https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80
+excerpt: In this blog post, I will show you how to create and host a basic HTML website for free using GitHub Pages.
 ---
-
-## How to create and host a HTML website for free using GitHub Pages
 
 [GitHub Pages](https://pages.github.com) is by far the best tool you can use for hosting a basic HTML website. In just a few minutes, you can turn a basic HTML template into a fully functional website, all for free. Below you can see an example of what we will be creating in this blog post.
 
