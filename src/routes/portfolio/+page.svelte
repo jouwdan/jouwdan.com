@@ -92,6 +92,52 @@
 </div>
 <div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
 	<div class="block lg:flex items-center">
+		<img src="/images/filmtrack.png" alt="Filmtrack" class="w-full lg:w-1/4" />
+		<div class="flex-1">
+			<div class="block lg:pl-12">
+				<h2 class="font-bold">Filmtrack</h2>
+				<div class="py-2">
+					<span class="chip variant-soft-secondary">
+						<span><Icon icon="mdi:react" /></span>
+						<span>React</span>
+					</span>
+					<span class="chip variant-soft-tertiary">
+						<span><Icon icon="mdi:tailwind" /></span>
+						<span>TailwindCSS</span>
+					</span>
+					<span class="chip variant-soft-success">
+						<span><Icon icon="simple-icons:axios" /></span>
+						<span>Axios</span>
+					</span>
+					<span class="chip variant-soft-warning">
+						<span><Icon icon="mdi:firebase" /></span>
+						<span>Firebase</span>
+					</span>
+				</div>
+				<p>
+					Filmtrack is a React & Firebase app that uses the TMDB API to track movies and keep a log
+					of favourites & a watch list.
+				</p>
+				<div class="mt-4">
+					<a
+						class="btn variant-ghost-secondary"
+						href="https://film-track.netlify.app"
+						target="_blank"
+						rel="noreferrer">View Deployment</a
+					>
+					<a
+						class="btn variant-ghost-surface"
+						href="https://github.com/jouwdan/filmtrack"
+						target="_blank"
+						rel="noreferrer">View GitHub Repo</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
+	<div class="block lg:flex items-center">
 		<img src="https://crem.netlify.app//course.png" alt="CREM" class="w-full lg:w-1/4" />
 		<div class="flex-1">
 			<div class="block lg:pl-12">
@@ -119,10 +165,10 @@
 					</span>
 				</div>
 				<p>
-					CREM, Comms Room Environment Monitor, is an experiment hosted on a Raspberry Pi
-					which is used to monitor, log and alert temperature & humidity changes in one or multiple
-					comms rooms by connecting wirelessly to DHT22 temperature sensors attached to ESP32
-					NodeMCU boards.
+					CREM, Comms Room Environment Monitor, is an experiment hosted on a Raspberry Pi which is
+					used to monitor, log and alert temperature & humidity changes in one or multiple comms
+					rooms by connecting wirelessly to DHT22 temperature sensors attached to ESP32 NodeMCU
+					boards.
 				</p>
 				<div class="mt-4">
 					<a
