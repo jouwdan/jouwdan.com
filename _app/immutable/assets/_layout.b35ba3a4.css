@@ -3129,9 +3129,6 @@ a.card:hover {
 .pb-8 {
   padding-bottom: 2rem;
 }
-.pl-12 {
-  padding-left: 3rem;
-}
 .pl-4 {
   padding-left: 1rem;
 }
@@ -4369,6 +4366,9 @@ a.card:hover {
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  .lg\:pl-12 {
+    padding-left: 3rem;
   }
   .lg\:pl-24 {
     padding-left: 6rem;
