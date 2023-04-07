@@ -7,8 +7,8 @@
 <a class="card bg-initial card-hover overflow-hidden w-96" href="{post.path}"
 	><header>
 		<img
-			src="https://source.unsplash.com/random/1280x540?skeleton"
-			class="bg-black/50 w-full aspect-[21/9]"
+			src={post.meta.cover}
+			class="bg-black/50 w-full aspect-[16/9]"
 			alt="Post"
 		/>
 	</header>
