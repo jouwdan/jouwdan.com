@@ -2806,9 +2806,6 @@ a.card:hover {
 .h-8 {
   height: 2rem;
 }
-.h-\[26rem\] {
-  height: 26rem;
-}
 .h-\[50\%\] {
   height: 50%;
 }
@@ -4446,9 +4443,6 @@ a.card:hover {
   .lg\:hidden {
     display: none;
   }
-  .lg\:h-\[30rem\] {
-    height: 30rem;
-  }
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -4470,16 +4464,6 @@ a.card:hover {
   }
   .lg\:pl-24 {
     padding-left: 6rem;
-  }
-}
-@media (min-width: 1280px) {
-  .xl\:h-\[28rem\] {
-    height: 28rem;
-  }
-}
-@media (min-width: 1536px) {
-  .\32xl\:h-\[26rem\] {
-    height: 26rem;
   }
 }
 /* Global Styles */
