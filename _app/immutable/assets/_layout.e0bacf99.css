@@ -2757,9 +2757,6 @@ a.card:hover {
 .w-3 {
   width: 0.75rem;
 }
-.w-3\/4 {
-  width: 75%;
-}
 .w-32 {
   width: 8rem;
 }
@@ -4361,6 +4358,9 @@ a.card:hover {
   .lg\:flex {
     display: flex;
   }
+  .lg\:grid {
+    display: grid;
+  }
   .lg\:hidden {
     display: none;
   }
@@ -4373,8 +4373,8 @@ a.card:hover {
   .lg\:w-1\/4 {
     width: 25%;
   }
-  .lg\:w-96 {
-    width: 24rem;
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .lg\:flex-row {
     flex-direction: row;
