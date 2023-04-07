@@ -222,7 +222,7 @@
 	</svelte:fragment>
 	{#key data.pathname}
 		<div
-			class="container mx-auto"
+			class="container mx-auto px-4"
 			in:fly={{ easing: cubicOut, y:10, duration: 150, delay: 200 }}
 			out:fly={{ easing: cubicIn,y: 10, duration: 150 }}
 		>
