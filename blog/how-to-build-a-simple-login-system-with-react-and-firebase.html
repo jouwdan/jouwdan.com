@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.eaeb4e6d.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.5107550a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.d9ce5f1b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4a6008f0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.1efbfae4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.cdefa061.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.de5a3f7b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.60fe7920.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.3f8e919b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.0f9cef4e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.8dcb251c.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full overflow-hidden">
+
+
+
+
+
+
+
+
+<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
+	
+
+	
+	<div class="flex-auto w-full h-full flex overflow-hidden">
+		
+
+		
+		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
+		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
+		
+		<div class="app-bar-slot-default flex-auto "></div>
+		
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
+						</a>
+						<hr class="divider-vertical h-6">
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
+					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
+				</div></div>
+	
+	</div></div>
+	</header>
+
+			
+			<main id="page-content" class="flex-auto "><div class="container mx-auto"><article class="prose prose-invert mx-auto"><h1 class="pt-4">How to build a simple Login system with React &amp; Firebase</h1>
+  <p>Published: Aug 2, 2022</p>
+  <p>This guide will step you through how to build a React app using the create-react-app tool and implement a login system using Firebase. The front end for this application is built with TailwindCSS using the DaisyUI component library.</p>
+<p>The final code can be found on my GitHub page <a href="https://github.com/jouwdan/react-firebase-login" rel="nofollow">here</a>.</p>
+<h2>Prerequisites</h2>
+<p>Before starting, ensure the below is installed on your system.</p>
+<ul><li>NodeJS</li>
+<li>Visual Studio Code (or your favourite IDE)</li></ul>
+<h2>Getting Started</h2>
+<p>Let’s get started. Open up a terminal and type the below commands to set up the app and install all the required dependancies.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx create-react-app my-app
+cd my-app
+npm install --save dotenv firebase react-firebase-hooks react-router-dom tailwindcss postcss autoprefixer daisyui
+npx tailwindcss init -p</code><!-- HTML_TAG_END --></pre>
+<blockquote><p>npx is not a typo, it’s a <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b" rel="nofollow">package runner tool that was released alongside npm 5.2+</a>.</p></blockquote>
+<p>Create a new file <code>.env</code> in the my-app folder and add the below to it. We will update these values later once we set up our Firebase app.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTHDOMAIN=
+REACT_APP_FIREBASE_PROJECTID=
+REACT_APP_FIREBASE_STORAGEBUCKET=
+REACT_APP_FIREBASE_MESSAGINGSENDERID=
+REACT_APP_FIREBASE_APPID=</code><!-- HTML_TAG_END --></pre>
+<p>To set up Tailwind, open up the newly generated tailwind.config.js and replace all of the contents with the below. This will also ensure that we can use the daisyui component library.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
+  content: [&quot;./src/**/*.&#123;js,jsx,ts,tsx&#125;&quot;, &quot;./public/index.html&quot;],
+  theme: &#123;
+    extend: &#123;&#125;,
+  &#125;,
+  variants: &#123;
+    extend: &#123;&#125;,
+  &#125;,
+  plugins: [require(&quot;daisyui&quot;)],
+&#125;;</code><!-- HTML_TAG_END --></pre>
+<p>Then open up <code>src/index.css</code> and replace the contents with</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">@tailwind base;
+@tailwind components;
+@tailwind utilities;</code><!-- HTML_TAG_END --></pre>
+<p>We now have a simple React app set up, our dependancies installed and TailwindCSS initialised. Let’s move on to setting up Firebase so we can implement the login system.</p>
+<h2>Firebase Setup</h2>
+<p>Head on over to the <a href="https://firebase.google.com/" rel="nofollow">Firebase</a> website and hit <code>Get Started</code>.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440560930/oSSw52H00.png" alt="image.png"></p>
+<p>Click <code>Add Project</code>, type in the project name and press Continue.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440716383/5QhPz1mON.png" alt="image.png"></p>
+<p>For simplicity of this tutorial, on the next page disable Google Analytics and press Create Project.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440814566/ILZVbyiEq.png" alt="image.png"></p>
+<p>Once your Project is set up, go to <code>All Products</code> in the sidebar then Authentication.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440988686/DRzArSh_H.png" alt="image.png"></p>
+<p>Once here, go ahead and click <code>Get Started</code>.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441028010/x46cog8T7.png" alt="image.png"></p>
+<p>We are going to want to set up Email/Password login, so under <code>Native providers</code> click this, enable it and click save.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441135155/5EofUjjgM.png" alt="image.png"></p>
+<p>Next, let’s get our application secrets to add to our <code>.env</code> file. Head on over to the Project Overview and select web app at the top, which looks like a <code>&lt;/&gt;</code> icon.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441375337/UvQe7wapu.png" alt="image.png"></p>
+<p>Create your app nickname and press <code>Register app</code></p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441424647/Ry9C6vvDg.png" alt="image.png"></p>
+<p>You will then be faced with your API key details. Copy the values of these and add them to the relevant variable in your <code>.env</code> file.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441634387/4auJu6RPb.png" alt="image.png"></p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441799376/4js19rSqp.png" alt="image.png"></p>
+<p>We also need to create a file which communicates with Firebase to authenticate / create users. Create the file <code>firebase.js</code> in the <code>src</code> folder and paste in the following code.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; initializeApp &#125; from &quot;firebase/app&quot;;
+import &#123;
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  sendPasswordResetEmail,
+  signOut,
+&#125; from &quot;firebase/auth&quot;;
+import &#123; getFirestore &#125; from &quot;firebase/firestore&quot;;
+
+const firebaseConfig = &#123;
+  apiKey: &#96;$&#123;process.env.REACT_APP_FIREBASE_API_KEY&#125;&#96;,
+  authDomain: &#96;$&#123;process.env.REACT_APP_FIREBASE_AUTHDOMAIN&#125;&#96;,
+  projectId: &#96;$&#123;process.env.REACT_APP_FIREBASE_PROJECTID&#125;&#96;,
+  storageBucket: &#96;$&#123;process.env.REACT_APP_FIREBASE_STORAGEBUCKET&#125;&#96;,
+  messagingSenderId: &#96;$&#123;process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID&#125;&#96;,
+  appId: &#96;$&#123;process.env.REACT_APP_FIREBASE_APPID&#125;&#96;,
+&#125;;
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+const logInWithEmailAndPassword = async (email, password) =&gt; &#123;
+  try &#123;
+    await signInWithEmailAndPassword(auth, email, password);
+  &#125; catch (err) &#123;
+    console.error(err);
+    alert(err.message);
+  &#125;
+&#125;;
+
+const registerWithEmailAndPassword = async (email, password) =&gt; &#123;
+  try &#123;
+    const res = await createUserWithEmailAndPassword(auth, email, password);
+    const user = res.user;
+  &#125; catch (err) &#123;
+    console.error(err);
+    alert(err.message);
+  &#125;
+&#125;;
+
+const sendPasswordReset = async (email) =&gt; &#123;
+  try &#123;
+    await sendPasswordResetEmail(auth, email);
+    alert(&quot;Password reset link sent!&quot;);
+  &#125; catch (err) &#123;
+    console.error(err);
+    alert(err.message);
+  &#125;
+&#125;;
+
+const logout = () =&gt; &#123;
+  signOut(auth);
+&#125;;
+
+export &#123;
+  auth,
+  db,
+  logInWithEmailAndPassword,
+  registerWithEmailAndPassword,
+  sendPasswordReset,
+  logout,
+&#125;;
+</code><!-- HTML_TAG_END --></pre>
+<h2>Routes Setup</h2>
+<p>We need to add our routes so our app can render the pages, which we will create next. Open the <code>App.js</code> file and replace the contents with the below.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React from &quot;react&quot;;
+import &#123; BrowserRouter as Router, Route, Routes &#125; from &quot;react-router-dom&quot;;
+
+import Home from &quot;./Pages/Home&quot;;
+import Login from &quot;./Pages/Login&quot;;
+import Logout from &quot;./Pages/Logout&quot;;
+import Register from &quot;./Pages/Register&quot;;
+import Reset from &quot;./Pages/Reset&quot;;
+import Dashboard from &quot;./Pages/Dashboard&quot;;
+
+import Navigation from &quot;./Components/nav/navigation&quot;;
+
+function App() &#123;
+  return (
+    &lt;Router&gt;
+      &lt;div
+        className=&quot;flex flex-col justify-between bg-base-100&quot;
+        data-theme=&quot;dark&quot;
+      &gt;
+        &lt;Navigation /&gt;
+        &lt;main className=&quot;container mx-auto px-3 pb-12&quot;&gt;
+          &lt;Routes&gt;
+            &lt;Route path=&quot;/&quot; element=&#123;&lt;Home /&gt;&#125; /&gt;
+            &lt;Route path=&quot;/login&quot; element=&#123;&lt;Login /&gt;&#125; /&gt;
+            &lt;Route path=&quot;/logout&quot; element=&#123;&lt;Logout /&gt;&#125; /&gt;
+            &lt;Route path=&quot;/register&quot; element=&#123;&lt;Register /&gt;&#125; /&gt;
+            &lt;Route path=&quot;/reset&quot; element=&#123;&lt;Reset /&gt;&#125; /&gt;
+            &lt;Route path=&quot;/dashboard&quot; element=&#123;&lt;Dashboard /&gt;&#125; /&gt;
+          &lt;/Routes&gt;
+        &lt;/main&gt;
+      &lt;/div&gt;
+    &lt;/Router&gt;
+  );
+&#125;
+export default App;
+</code><!-- HTML_TAG_END --></pre>
+<h2>Page Template Setup</h2>
+<p>Now let’s got our pages set up for our web application. Create a folder called <code>Pages</code> in the <code>/src</code> folder of your app and create the following files.</p>
+<p><code>Home.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import Hero from &quot;../Components/hero/hero&quot;;
+
+const Home = () =&gt; &#123;
+  return &lt;Hero /&gt;;
+&#125;;
+
+export default Home;</code><!-- HTML_TAG_END --></pre>
+<p><code>Dashboard.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState, useContext &#125; from &quot;react&quot;;
+import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
+import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
+import &#123; auth &#125; from &quot;../firebase&quot;;
+
+function Dashboard() &#123;
+  const [user, loading, error] = useAuthState(auth);
+  const navigate = useNavigate();
+
+  useEffect(() =&gt; &#123;
+    if (loading) return;
+    if (!user) return navigate(&quot;/login&quot;);
+  &#125;, [user, loading]);
+
+  return (
+    &lt;&gt;
+      &lt;div className=&quot;card justify-center h-60 bg-base-200 m-4&quot;&gt;
+        &lt;div className=&quot;hero-content text-center mx-auto&quot;&gt;
+          &lt;h1 className=&quot;text-5xl font-bold&quot;&gt;Welcome, &#123;user.email&#125;&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/&gt;
+  );
+&#125;
+
+export default Dashboard;</code><!-- HTML_TAG_END --></pre>
+<p><code>Login.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import LoginForm from &quot;../components/forms/loginForm&quot;;
+
+const Login = () =&gt; &#123;
+  return &lt;LoginForm /&gt;;
+&#125;;
+
+export default Login;</code><!-- HTML_TAG_END --></pre>
+<p><code>Logout.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; useEffect &#125; from &quot;react&quot;;
+import &#123; auth &#125; from &quot;../firebase&quot;;
+import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
+
+const Logout = () =&gt; &#123;
+  const navigate = useNavigate();
+  useEffect(() =&gt; &#123;
+    auth.signOut().then(navigate(&quot;/&quot;));
+  &#125;);
+&#125;;
+
+export default Logout;</code><!-- HTML_TAG_END --></pre>
+<p><code>Register.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import RegisterForm from &quot;../components/forms/registerForm&quot;;
+
+const Register = () =&gt; &#123;
+  return &lt;RegisterForm /&gt;;
+&#125;;
+
+export default Register;
+</code><!-- HTML_TAG_END --></pre>
+<p><code>Reset.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import ResetPasswordForm from &quot;../components/forms/resetPasswordForm&quot;;
+
+const Reset = () =&gt; &#123;
+  return &lt;ResetPasswordForm /&gt;;
+&#125;;
+
+export default Reset;</code><!-- HTML_TAG_END --></pre>
+<p>And then we’ll set up our components for the above. Create the <code>Components</code> folder in <code>/src</code> and create the following files.</p>
+<p><code>forms/loginForm.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+import &#123; Link, useNavigate &#125; from &quot;react-router-dom&quot;;
+import &#123; auth, logInWithEmailAndPassword &#125; from &quot;../../firebase&quot;;
+import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
+
+function LoginForm() &#123;
+  const [email, setEmail] = useState(&quot;&quot;);
+  const [password, setPassword] = useState(&quot;&quot;);
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() =&gt; &#123;
+    if (loading) return;
+    if (user) navigate(&quot;/dashboard&quot;, &#123; replace: true &#125;);
+  &#125;, [user]);
+  return (
+    &lt;div className=&quot;flex pt-6&quot;&gt;
+      &lt;div className=&quot;card shadow-2xl bg-base-200 flex-1 justify-center p-12&quot;&gt;
+        &lt;div className=&quot;card-header&quot;&gt;
+          &lt;h2 className=&quot;text-3xl&quot;&gt;Log In&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;card-body&quot;&gt;
+          &lt;div className=&quot;form-control&quot;&gt;
+            &lt;label className=&quot;label&quot;&gt;
+              &lt;span className=&quot;label-text&quot;&gt;Email&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input
+              type=&quot;text&quot;
+              className=&quot;input input-bordered&quot;
+              value=&#123;email&#125;
+              onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125;
+              placeholder=&quot;E-mail Address&quot;
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;form-control&quot;&gt;
+            &lt;label className=&quot;label&quot;&gt;
+              &lt;span className=&quot;label-text&quot;&gt;Password&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input
+              type=&quot;password&quot;
+              className=&quot;input input-bordered&quot;
+              value=&#123;password&#125;
+              onChange=&#123;(e) =&gt; setPassword(e.target.value)&#125;
+              placeholder=&quot;Password&quot;
+            /&gt;
+          &lt;/div&gt;
+          &lt;a
+            className=&quot;btn btn-primary w-full&quot;
+            onClick=&#123;() =&gt; logInWithEmailAndPassword(email, password)&#125;
+          &gt;
+            Login
+          &lt;/a&gt;
+          &lt;div&gt;
+            &lt;Link to=&quot;/reset&quot; className=&quot;btn btn-ghost w-full&quot;&gt;
+              Forgot Password
+            &lt;/Link&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;justify-end&quot;&gt;
+            Don&#39;t have an account?&#123;&quot; &quot;&#125;
+            &lt;Link to=&quot;/register&quot; className=&quot;link&quot;&gt;
+              Register now
+            &lt;/Link&gt;
+            .
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default LoginForm;</code><!-- HTML_TAG_END --></pre>
+<p><code>forms/registerForm.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+import &#123; Link, useNavigate &#125; from &quot;react-router-dom&quot;;
+import &#123; auth, registerWithEmailAndPassword &#125; from &quot;../../firebase&quot;;
+import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
+
+function RegisterForm() &#123;
+  const [email, setEmail] = useState(&quot;&quot;);
+  const [password, setPassword] = useState(&quot;&quot;);
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+  const register = () =&gt; &#123;
+    registerWithEmailAndPassword(email, password);
+    if (user) navigate(&quot;/dashboard&quot;, &#123; replace: true &#125;);
+  &#125;;
+
+  useEffect(() =&gt; &#123;
+    if (loading) return;
+    if (user) navigate(&quot;/dashboard&quot;, &#123; replace: true &#125;);
+  &#125;, [user, loading]);
+
+  return (
+    &lt;div className=&quot;flex pt-6&quot;&gt;
+      &lt;div className=&quot;card shadow-2xl bg-base-200 flex-1 justify-center p-12&quot;&gt;
+        &lt;div className=&quot;card-header&quot;&gt;
+          &lt;h2 className=&quot;text-3xl&quot;&gt;Register&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;card-body&quot;&gt;
+          &lt;div className=&quot;form-control&quot;&gt;
+            &lt;label className=&quot;label&quot;&gt;
+              &lt;span className=&quot;label-text&quot;&gt;Email&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input
+              type=&quot;text&quot;
+              className=&quot;input input-bordered&quot;
+              value=&#123;email&#125;
+              onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125;
+              placeholder=&quot;E-mail Address&quot;
+            /&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;form-control&quot;&gt;
+            &lt;label className=&quot;label&quot;&gt;
+              &lt;span className=&quot;label-text&quot;&gt;Password&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input
+              type=&quot;password&quot;
+              className=&quot;input input-bordered&quot;
+              value=&#123;password&#125;
+              onChange=&#123;(e) =&gt; setPassword(e.target.value)&#125;
+              placeholder=&quot;Password&quot;
+            /&gt;
+          &lt;/div&gt;
+          &lt;a className=&quot;btn btn-primary w-full&quot; onClick=&#123;register&#125;&gt;
+            Register
+          &lt;/a&gt;
+          &lt;div className=&quot;justify-end&quot;&gt;
+            Already have an account?&#123;&quot; &quot;&#125;
+            &lt;Link to=&quot;/login&quot; className=&quot;link&quot;&gt;
+              Login now
+            &lt;/Link&gt;
+            .
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default RegisterForm;</code><!-- HTML_TAG_END --></pre>
+<p><code>forms/resetPasswordForm.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
+import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
+import &#123; Link &#125; from &quot;react-router-dom&quot;;
+import &#123; auth, sendPasswordReset &#125; from &quot;../../firebase&quot;;
+
+function ResetPasswordForm() &#123;
+  const [email, setEmail] = useState(&quot;&quot;);
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() =&gt; &#123;
+    if (loading) return;
+    if (user) navigate(&quot;/dashboard&quot;, &#123; replace: true &#125;);
+  &#125;, [user, loading]);
+  return (
+    &lt;div className=&quot;flex pt-6&quot;&gt;
+      &lt;div className=&quot;card shadow-2xl bg-base-200 flex-1 justify-center p-12&quot;&gt;
+        &lt;div className=&quot;card-header&quot;&gt;
+          &lt;h2 className=&quot;text-3xl&quot;&gt;Reset Password&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div className=&quot;card-body&quot;&gt;
+          &lt;div className=&quot;form-control&quot;&gt;
+            &lt;label className=&quot;label&quot;&gt;
+              &lt;span className=&quot;label-text&quot;&gt;Email&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input
+              type=&quot;text&quot;
+              className=&quot;input input-bordered&quot;
+              value=&#123;email&#125;
+              onChange=&#123;(e) =&gt; setEmail(e.target.value)&#125;
+              placeholder=&quot;E-mail Address&quot;
+            /&gt;
+          &lt;/div&gt;
+          &lt;button
+            className=&quot;btn btn-primary w-full&quot;
+            onClick=&#123;() =&gt; sendPasswordReset(email)&#125;
+          &gt;
+            Send password reset Email
+          &lt;/button&gt;
+          &lt;div className=&quot;justify-end&quot;&gt;
+            Don&#39;t have an account?&#123;&quot; &quot;&#125;
+            &lt;Link to=&quot;/register&quot; className=&quot;link&quot;&gt;
+              Register now
+            &lt;/Link&gt;
+            .
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+&#125;
+
+export default ResetPasswordForm;</code><!-- HTML_TAG_END --></pre>
+<p><code>hero/hero.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
+
+const Hero = () =&gt; &#123;
+  return (
+    &lt;div className=&quot;card justify-center h-96 bg-base-200 m-4&quot;&gt;
+      &lt;div className=&quot;hero-content text-center mx-auto&quot;&gt;
+        &lt;div className=&quot;max-w-lg&quot;&gt;
+          &lt;h1 className=&quot;text-5xl font-bold&quot;&gt;React Firebase Login&lt;/h1&gt;
+          &lt;p className=&quot;py-6&quot;&gt;
+            A base template to implement a Firebase login system React.
+          &lt;/p&gt;
+          &lt;a className=&quot;btn btn-primary&quot; href=&quot;/login&quot;&gt;Get Started&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+&#125;;
+
+export default React.memo(Hero);</code><!-- HTML_TAG_END --></pre>
+<p><code>nav/navigation.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
+import &#123; Link, NavLink, useNavigate &#125; from &quot;react-router-dom&quot;;
+import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
+import &#123; auth, logout &#125; from &quot;../../firebase&quot;;
+
+function Navigation() &#123;
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  return (
+    &lt;nav className=&quot;navbar bg-base-200 text-base-content&quot;&gt;
+      &lt;div className=&quot;navbar-start&quot;&gt;
+        &lt;Link to=&quot;/&quot; className=&quot;btn btn-ghost normal-case text-xl&quot;&gt;
+          React Firebase Login
+        &lt;/Link&gt;
+      &lt;/div&gt;
+
+      &lt;div className=&quot;navbar-middle&quot;&gt;
+        &#123;!user ? (
+          &lt;NavLink
+            to=&quot;/&quot;
+            className=&#123;(&#123; isActive &#125;) =&gt;
+              isActive
+                ? &quot;btn btn-ghost btn-active mr-2 hidden lg:flex&quot;
+                : &quot;btn btn-ghost mr-2 hidden lg:flex&quot;
+            &#125;
+          &gt;
+            Home
+          &lt;/NavLink&gt;
+        ) : (
+          &lt;NavLink
+            to=&quot;/dashboard&quot;
+            className=&#123;(&#123; isActive &#125;) =&gt;
+              isActive
+                ? &quot;btn btn-ghost btn-active mr-2 hidden lg:flex&quot;
+                : &quot;btn btn-ghost mr-2 hidden lg:flex&quot;
+            &#125;
+          &gt;
+            Dashboard
+          &lt;/NavLink&gt;
+        )&#125;
+      &lt;/div&gt;
+      &#123;!user ? (
+        &lt;div className=&quot;navbar-end&quot;&gt;
+          &lt;Link to=&quot;/login&quot;&gt;
+            &lt;a className=&quot;btn mr-2&quot;&gt;Login&lt;/a&gt;
+          &lt;/Link&gt;
+          &lt;Link to=&quot;/register&quot;&gt;
+            &lt;a className=&quot;btn btn-primary mr-2&quot;&gt;Register&lt;/a&gt;
+          &lt;/Link&gt;
+          &lt;div className=&quot;dropdown dropdown-end&quot;&gt;
+            &lt;label tabIndex=&quot;0&quot; className=&quot;btn btn-ghost lg:hidden&quot;&gt;
+              &lt;svg
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                className=&quot;h-5 w-5&quot;
+                fill=&quot;none&quot;
+                viewBox=&quot;0 0 24 24&quot;
+                stroke=&quot;currentColor&quot;
+              &gt;
+                &lt;path
+                  strokeLinecap=&quot;round&quot;
+                  strokeLinejoin=&quot;round&quot;
+                  strokeWidth=&quot;2&quot;
+                  d=&quot;M4 6h16M4 12h8m-8 6h16&quot;
+                /&gt;
+              &lt;/svg&gt;
+            &lt;/label&gt;
+            &lt;ul
+              tabIndex=&quot;0&quot;
+              className=&quot;menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52&quot;
+            &gt;
+              &lt;li&gt;
+                &lt;NavLink
+                  to=&quot;/&quot;
+                  className=&#123;(&#123; isActive &#125;) =&gt;
+                    isActive
+                      ? &quot;btn btn-ghost btn-active mb-2&quot;
+                      : &quot;btn btn-ghost mb-2&quot;
+                  &#125;
+                &gt;
+                  Home
+                &lt;/NavLink&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      ) : (
+        &lt;div className=&quot;navbar-end&quot;&gt;
+          &lt;Link to=&quot;/logout&quot;&gt;
+            &lt;a className=&quot;btn mr-2&quot;&gt;Log Out&lt;/a&gt;
+          &lt;/Link&gt;
+          &lt;div className=&quot;dropdown dropdown-end&quot;&gt;
+            &lt;label tabIndex=&quot;0&quot; className=&quot;btn btn-ghost lg:hidden&quot;&gt;
+              &lt;svg
+                xmlns=&quot;http://www.w3.org/2000/svg&quot;
+                className=&quot;h-5 w-5&quot;
+                fill=&quot;none&quot;
+                viewBox=&quot;0 0 24 24&quot;
+                stroke=&quot;currentColor&quot;
+              &gt;
+                &lt;path
+                  strokeLinecap=&quot;round&quot;
+                  strokeLinejoin=&quot;round&quot;
+                  strokeWidth=&quot;2&quot;
+                  d=&quot;M4 6h16M4 12h8m-8 6h16&quot;
+                /&gt;
+              &lt;/svg&gt;
+            &lt;/label&gt;
+            &lt;ul
+              tabIndex=&quot;0&quot;
+              className=&quot;menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52&quot;
+            &gt;
+              &lt;li&gt;
+                &lt;NavLink
+                  to=&quot;/dashboard&quot;
+                  className=&#123;(&#123; isActive &#125;) =&gt;
+                    isActive
+                      ? &quot;btn btn-ghost btn-active mb-2&quot;
+                      : &quot;btn btn-ghost mb-2&quot;
+                  &#125;
+                &gt;
+                  Dashboard
+                &lt;/NavLink&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      )&#125;
+    &lt;/nav&gt;
+  );
+&#125;
+
+export default Navigation;</code><!-- HTML_TAG_END --></pre>
+<h2>Testing the Application</h2>
+<p>Now that we have the code wrote for our application - let’s go ahead and test it! Type <code>npm start</code> into the console and a browser window will open with our application.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449379981/AQbPd5BEp.png" alt="image.png"></p>
+<p>Try to register an account by clicking the <code>register</code> button.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659450151055/6FJcQshrk.png" alt="image.png"></p>
+<p>Once your account is created, you should be redirected to the dashboard with the email you registered with being displayed.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449434309/mTmu8UU9y.png" alt="image.png"></p>
+<p>Now let’s have a see where this user is stored. Head on over to Firebase and click <code>Authentication</code> in the sidebar. Your new user should be displayed here.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449498257/41AErDlk8.png" alt="image.png"></p>
+<h2>Conclusion</h2>
+<p>We now have a fully functional React application with a login system using Firebase! Let’s go back through what we done.</p>
+<ul><li>Create a new React app using create-react-app</li>
+<li>Install the dependancies required</li>
+<li>Initialise TailwindCSS and ensure it uses the DaisyUI library</li>
+<li>Create a Firebase application to store &amp; authenticate users</li>
+<li>Write the code that communicates with Firebase</li>
+<li>Create the Routes, Pages &amp; Components of our application</li></ul></article></div></main>
+
+			
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto py-4 px-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div>
+	</footer></div>
+
+		
+		</div>
+
+	
+	</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_14eowan = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.5107550a.js"),
+						import("../_app/immutable/entry/app.1efbfae4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_14eowan.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

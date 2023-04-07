@@ -6,11 +6,23 @@
 <link>https://jouwdan.com</link>
 <atom:link href="https://jouwdan.com/rss.xml" rel="self" type="application/rss+xml"/>
 <item>
+<guid isPermaLink="true">https://jouwdan.com/blog/blog/a-summers-work-redesigning-wits-tutors-open-source-software-using-daisyui</guid>
+<title>A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI</title>
+<link>https://jouwdan.com/blog/blog/a-summers-work-redesigning-wits-tutors-open-source-software-using-daisyui</link>
+<description>A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI</description>
+<pubDate>Thu, 09 Sep 2021 23:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://jouwdan.com/blog/blog/how-to-build-a-simple-login-system-with-react-and-firebase</guid>
+<title>How to build a simple Login system with React & Firebase</title>
+<link>https://jouwdan.com/blog/blog/how-to-build-a-simple-login-system-with-react-and-firebase</link>
+<description>How to build a simple Login system with React & Firebase</description>
+<pubDate>Mon, 01 Aug 2022 23:00:00 GMT</pubDate>
+</item><item>
 <guid isPermaLink="true">https://jouwdan.com/blog/blog/how-to-create-and-host-a-html-website-for-free-using-github-pages</guid>
 <title>How to create and host a HTML website for free using GitHub Pages</title>
 <link>https://jouwdan.com/blog/blog/how-to-create-and-host-a-html-website-for-free-using-github-pages</link>
 <description>How to create and host a HTML website for free using GitHub Pages</description>
-<pubDate>Tue, 05 Jan 2021 00:00:00 GMT</pubDate>
+<pubDate>Thu, 13 May 2021 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

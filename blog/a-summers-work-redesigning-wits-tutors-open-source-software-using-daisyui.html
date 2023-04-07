@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.eaeb4e6d.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.5107550a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.d9ce5f1b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4a6008f0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.1efbfae4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.cdefa061.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.de5a3f7b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.60fe7920.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.3f8e919b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.0f9cef4e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.8dcb251c.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full overflow-hidden">
+
+
+
+
+
+
+
+
+<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
+	
+
+	
+	<div class="flex-auto w-full h-full flex overflow-hidden">
+		
+
+		
+		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
+		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
+		
+		<div class="app-bar-slot-default flex-auto "></div>
+		
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
+						</a>
+						<hr class="divider-vertical h-6">
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
+					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
+				</div></div>
+	
+	</div></div>
+	</header>
+
+			
+			<main id="page-content" class="flex-auto "><div class="container mx-auto"><article class="prose prose-invert mx-auto"><h1 class="pt-4">A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI</h1>
+  <p>Published: Sep 10, 2021</p>
+  <p>During the summer, I tasked myself with redesigning the Tutors course reader software, built by Eamonn de Leaster for Waterford Institute of Technology. This software is used to deliver many of WIT’s online courses to students across Ireland.</p>
+<p><a href="https://github.com/tutors-sdk/tutors-next" rel="nofollow">Tutors-Next</a> (the current iteration) is a Svelte &amp; Typescript application which consumes JSON output from <a href="https://github.com/tutors-sdk/tutors-json" rel="nofollow">tutors-json</a> and renders an interactive experience for students. The application identifies the published course from a url, recovers the JSON version of the static site and then renders a Svelte application.</p>
+<p>Previous iterations of Tutors were a static site generator, which was succeeded by an aurelia reader app, and has progressed into the current Svelte reader. These last two are supported by a generator, which produces a type of headless version of a course.</p>
+<p>The original interface was created based on <a href="https://semantic-ui.com/" rel="nofollow">Semantic UI</a>, succeeded by UI kit and then replaced to use <a href="https://tailwindcss.com/" rel="nofollow">Tailwind CSS</a>. After plenty of research, it was decided that the redesign would go ahead using the <a href="https://daisyui.com/" rel="nofollow">DaisyUI</a> Tailwind components. These components were selected as they are functional, customizable components that suit perfectly to this use case.</p>
+<p>Below, you can see the redesign and an explanation of each page’s design choice.</p>
+<h2>Homepage</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631220063768/AL_rsdBTO.png" alt="Tutors Homepage"></p>
+<p>The first, most obvious change on the homepage is the navigation bar. The idea of this is to declutter the mixture of top sections, particularly at a deeper level of viewing modules &amp; topics, and combine everything into a neat section for navigation. The course image and information text was moved &amp; aligned to the left of the navigation bar for uniformity across all areas of the page. The icons to the right of the main navigation bar depict the Tutors version number, a theme switcher, a compressed/expanded view switcher &amp; a table of contents button. This navigation bar is also sticky on desktop view, so is always visible and usable.</p>
+<p>Next, the course contents was split up to more obviously show each semester, with a different background and a lighter drop shadow added. The cards for each module were also updated with a lighter, longer drop shadow. The icons on the cards were also updated to accept SVG icons from the <a href="https://iconify.design/" rel="nofollow">iconify framework</a> aswell as the screenshots of icons used by the original.</p>
+<p>The font across the whole site was also updated to use the <a href="https://rsms.me/inter/" rel="nofollow">Inter typeface family</a>.</p>
+<h2>Dark Mode &amp; Theme Switcher</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631220531990/0Sx561KlZ.png" alt="Tutors Homepage in Dark Mode"></p>
+<p>The dark mode design was also updated to use DaisyUI’s soft shades of blue instead of solid black, to be easier on the eye. Here, you can also notice the difference in using SVG images instead of screenshots.</p>
+<p>In the original Tutors design, the dark mode button was just used to switch between dark mode &amp; light mode. With the new design, this if a theme switcher with a dropdown with a choice of many themes. This was implemented using <a href="https://github.com/saadeghi/theme-change" rel="nofollow">theme-change</a>.</p>
+<h2>Module View &amp; Breadcrumb navigation</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631220806024/t9sZO1VRR.png" alt="Tutors Module View"></p>
+<p>As we go into module view, you can now see the lower-level cluttered menu of the original design. A new secondary navigation bar also displays, with a breadcrumb navigation - which give visibility on where you are on the course. This is a huge improvement from the original’s “go back to previous page” button, which needed multiple presses to go to the homepage.</p>
+<p>Beside this breadcrumb navigation you can see the icon sections for companion sites, course resource shortcuts &amp; additional tutors features. These are all organised and displayed in a row, making navigation more intuitive than previous. The cards are also redesigned with the same softer shadow as used on the homepage.</p>
+<h2>Topic View</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631221107436/wyy28TydU.png" alt="Tutors Topic View"></p>
+<p>The topic view has been updated with more padding for visibility of the topic titles, a larger video card on smaller displays (along with resizing to be smaller for larger displays), and the same soft drop shadow on the cards for uniformity. The background of each section is also broken up to be clearer for the student to view.</p>
+<h2>Talk View</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631221264622/lL_KVu2wi.png" alt="Tutors Talk View"></p>
+<p>The talk view has had minor improvements for usability. On the left is a PDF presentation, and I have changed the navigation icons to have more padding for easier pressing on touch devices. The right hand navigation gives visibility of the course topics, for students to navigate the the next talk, lab or video easily. This was functional as-is, so this was kept with minor design updates.</p>
+<h2>Lab View</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631221511174/1I1FUYbWD.png" alt="Tutors Lab View"></p>
+<p>The lab view has been redesigned with clearer sections in mind, using a left hand fixed navigation to change between lab steps, and a scrollable lab on the right, made clearer with a light card background. The active lab step has been highlighted with a left border and using bolder text, instead of the background change in the old UI.</p>
+<h2>Mobile View</h2>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1631221907900/I9Aw4IS0f.png" alt="Tutors Mobile View"></p>
+<p>This redesign was also done with mobile users in mind, for students looking to digest course content and study on-the-go. As you can see from the above image, the mobile interface has been vastly improved with better navigation, clearer sections and more functionality.</p>
+<p>All in all, I am proud of the work I have put into this redesign of the Tutors software, and it has been a great learning experience for me to work on. I intend to further improve this software alongside Eamonn and, until Christmas, the developers <a href="https://www.redhat.com/en" rel="nofollow">RedHat</a> have kindly gave to us to lend a hand.</p>
+<p>Cover Photo by <a href="https://unsplash.com/@domlafou?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Dom Fou</a> on  <a href="https://unsplash.com/s/photos/lecture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a>.
+</p></article></div></main>
+
+			
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto py-4 px-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div>
+	</footer></div>
+
+		
+		</div>
+
+	
+	</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_14eowan = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.5107550a.js"),
+						import("../_app/immutable/entry/app.1efbfae4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_14eowan.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

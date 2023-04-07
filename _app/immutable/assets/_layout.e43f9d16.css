@@ -2687,9 +2687,6 @@ a.card:hover {
 .hidden {
   display: none;
 }
-.aspect-\[16\/9\] {
-  aspect-ratio: 16/9;
-}
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -2702,11 +2699,17 @@ a.card:hover {
 .h-2 {
   height: 0.5rem;
 }
+.h-36 {
+  height: 9rem;
+}
 .h-6 {
   height: 1.5rem;
 }
 .h-8 {
   height: 2rem;
+}
+.h-\[30rem\] {
+  height: 30rem;
 }
 .h-\[50\%\] {
   height: 50%;
@@ -2738,6 +2741,9 @@ a.card:hover {
 .w-3 {
   width: 0.75rem;
 }
+.w-3\/4 {
+  width: 75%;
+}
 .w-36 {
   width: 9rem;
 }
@@ -2746,9 +2752,6 @@ a.card:hover {
 }
 .w-8 {
   width: 2rem;
-}
-.w-96 {
-  width: 24rem;
 }
 .w-\[240px\] {
   width: 240px;
@@ -2979,9 +2982,6 @@ a.card:hover {
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-.bg-black\/50 {
-  background-color: rgb(0 0 0 / 0.5);
 }
 .bg-neutral-900\/90 {
   background-color: rgb(23 23 23 / 0.9);
@@ -4310,14 +4310,24 @@ a.card:hover {
   }
 }
 @media (min-width: 1024px) {
+  .lg\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
   .lg\:flex {
     display: flex;
   }
   .lg\:hidden {
     display: none;
   }
+  .lg\:h-48 {
+    height: 12rem;
+  }
   .lg\:w-1\/2 {
     width: 50%;
+  }
+  .lg\:w-96 {
+    width: 24rem;
   }
   .lg\:flex-row {
     flex-direction: row;
