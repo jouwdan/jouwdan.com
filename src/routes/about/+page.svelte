@@ -20,25 +20,21 @@
 			<div class="flex-1">
 				<h2 class="font-bold pt-8">Biography</h2>
 				<p class="pt-4 text-justify text-surface-300">
-					Hey, I'm Jordan. I'm what I like to call a 'creative full stack developer'. Web design has
-					been a hobby of mine for over 10 years, and in 2020 I decided to study for a Higher
-					Diploma in Computer Science at SETU Waterford, and turn the hobby into a career. I'm an
-					open source enthusiast and love tinkering with all things tech. I'm also an avid reader,
-					and am a huge fan of the Potterverse.
+					Hey, I'm Jordan. I like to think of myself as a 'creative full stack developer'. Web
+					design has been a hobby of mine for more than a decade now, and in 2020 I decided to take
+					the leap and pursue a Higher Diploma in Computer Science at SETU Waterfor to turn my hobby
+					into a career. I'm a member of the International High IQ Society, an open source
+					enthusiast and love tinkering with all things tech. I'm also an avid reader, and am a huge
+					fan of the Potterverse.
 				</p>
 			</div>
 		</div>
-    <div class="my-4">
+		<div class="my-4">
 			<div>
 				<h2 class="font-bold pt-8">Education</h2>
 			</div>
-      <div class="flex pt-4">
-				<Avatar
-					width="w-12"
-					src="/images/setu.png"
-					alt="avatar of SETU"
-					class="mr-8 h-12"
-				/>
+			<div class="flex pt-4">
+				<Avatar width="w-12" src="/images/setu.png" alt="avatar of SETU" class="mr-8 h-12" />
 				<div class="flex-1">
 					<h4>Higher Diploma in Computer Science</h4>
 					<h5>South East Technological University, Waterford</h5>
@@ -48,24 +44,17 @@
 					</p>
 				</div>
 			</div>
-      <hr class="my-4" />
-      <div class="flex pt-4">
-				<Avatar
-					width="w-12"
-					src="/images/ait.jpg"
-					alt="avatar of AIT"
-					class="mr-8 h-12"
-				/>
+			<hr class="my-4" />
+			<div class="flex pt-4">
+				<Avatar width="w-12" src="/images/ait.jpg" alt="avatar of AIT" class="mr-8 h-12" />
 				<div class="flex-1">
 					<h4>Bachelor of Science in Network Management</h4>
 					<h5>Athlone Institute of Technology</h5>
 					<h6 class="text-surface-300">2014 - 2017</h6>
-					<p class="text-justify text-surface-300 mt-2">
-						Graduated with a Merit Grade 2 in 2017.
-					</p>
+					<p class="text-justify text-surface-300 mt-2">Graduated with a Merit Grade 2 in 2017.</p>
 				</div>
 			</div>
-    </div>
+		</div>
 		<div class="my-4">
 			<div>
 				<h2 class="font-bold pt-8">Experience</h2>
@@ -119,12 +108,7 @@
 			</div>
 			<hr class="my-4" />
 			<div class="flex">
-				<Avatar
-					width="w-12"
-					src="/images/rps.jpeg"
-					alt="avatar of RPS"
-					class="mr-8 h-12"
-				/>
+				<Avatar width="w-12" src="/images/rps.jpeg" alt="avatar of RPS" class="mr-8 h-12" />
 				<div class="flex-1">
 					<h4>Junior IT Administrator</h4>
 					<h5>RPS Group</h5>
