@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.1d8ea02f.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.e1bd55cf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dfa3183f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.0f20343b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c5757aa3.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.c5ce0eaa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.ab3ba3dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.23069ca6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.2aaecd10.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.de5a3f7b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.60fe7920.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.87aa15df.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.51e84223.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.afa79a9c.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full overflow-hidden">
+
+
+
+
+
+
+
+
+<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
+	
+
+	
+	<div class="flex-auto w-full h-full flex overflow-hidden">
+		
+
+		
+		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
+		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
+		
+		<div class="app-bar-slot-default flex-auto "></div>
+		
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
+						</a>
+						<hr class="divider-vertical h-6">
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
+					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
+				</div></div>
+	
+	</div></div>
+	</header>
+
+			
+			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">How to enforce Conventional Commit messages using Git hooks with husky &amp; commitlint</h1>
+    <p class="pb-20">Published: Aug 18, 2022</p></div></div>
+  <p>In this guide I will be showing you how to enforce the use of <a href="https://www.conventionalcommits.org/en/v1.0.0/" rel="nofollow">Conventional Commit</a> messages in Git. If you don’t know what Conventional Commits are, <a href="https://jouwdan.com/blog/an-introduction-to-conventional-commits" rel="nofollow">you can read my other post here</a>. Let’s get right into it.</p>
+<p>Go ahead and open up your repo in Terminal. Let’s install husky, commitlint cli &amp; config-conventional as development dependencies:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npm install --save-dev husky @commitlint/cli @commitlint/config-conventional</code><!-- HTML_TAG_END --></pre>
+<p>Next, we will enable Git hooks using Husky and add the <code>commit-msg</code> by entering the following commands:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx husky install
+npx husky add .husky/commit-msg &#39;npx commitlint --edit $1&#39;</code><!-- HTML_TAG_END --></pre>
+<p>Create the following files in the root of your repo to configure commitlint</p>
+<p><code>.commitlintrc.json</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&#123;
+  &quot;extends&quot;: [&quot;@commitlint/config-conventional&quot;]
+&#125;</code><!-- HTML_TAG_END --></pre>
+<p><code>commitlint.config.js</code></p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
+  extends: [&#39;@commitlint/config-conventional&#39;],
+&#125;;</code><!-- HTML_TAG_END --></pre>
+<p>And we’re done! A quick and painless method of enforcing conventional commit messages. Give it a go by trying to commit to Git with a non-conventional messages.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -a -m &quot;Set up Conventional Commits using Husky and commitlint&quot;</code><!-- HTML_TAG_END --></pre>
+<p>You should get the below error</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">⧗   input: Set up Conventional Commits using Husky and commitlint
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky - commit-msg hook exited with code 1 (error)</code><!-- HTML_TAG_END --></pre>
+<p>Let’s now change this to be a conventional commit:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -m &#39;feat: enforce conventional commits using husky and commitlint&#39;</code><!-- HTML_TAG_END --></pre>
+<p>Cover Photo by <a href="https://unsplash.com/@praveentcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Praveen Thirumurugan</a> on <a href="https://unsplash.com/photos/KPAQpJYzH0Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a></p></article></div></main>
+
+			
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
+	</footer></div>
+
+		
+		</div>
+
+	
+	</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_11wk7md = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.e1bd55cf.js"),
+						import("../_app/immutable/entry/app.c5ce0eaa.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_11wk7md.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

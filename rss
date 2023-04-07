@@ -12,6 +12,12 @@
 <description>A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI</description>
 <pubDate>Thu, 09 Sep 2021 23:00:00 GMT</pubDate>
 </item><item>
+<guid isPermaLink="true">https://jouwdan.com/blog/blog/an-introduction-to-conventional-commits</guid>
+<title>An introduction to Conventional Commits</title>
+<link>https://jouwdan.com/blog/blog/an-introduction-to-conventional-commits</link>
+<description>An introduction to Conventional Commits</description>
+<pubDate>Sat, 06 Aug 2022 23:00:00 GMT</pubDate>
+</item><item>
 <guid isPermaLink="true">https://jouwdan.com/blog/blog/how-to-build-a-simple-login-system-with-react-and-firebase</guid>
 <title>How to build a simple Login system with React & Firebase</title>
 <link>https://jouwdan.com/blog/blog/how-to-build-a-simple-login-system-with-react-and-firebase</link>
@@ -23,6 +29,12 @@
 <link>https://jouwdan.com/blog/blog/how-to-create-and-host-a-html-website-for-free-using-github-pages</link>
 <description>How to create and host a HTML website for free using GitHub Pages</description>
 <pubDate>Thu, 13 May 2021 23:00:00 GMT</pubDate>
+</item><item>
+<guid isPermaLink="true">https://jouwdan.com/blog/blog/how-to-enforce-conventional-commit-messages-using-git-hooks-with-husky-commitlint</guid>
+<title>How to enforce Conventional Commit messages using Git hooks with husky & commitlint</title>
+<link>https://jouwdan.com/blog/blog/how-to-enforce-conventional-commit-messages-using-git-hooks-with-husky-commitlint</link>
+<description>How to enforce Conventional Commit messages using Git hooks with husky & commitlint</description>
+<pubDate>Wed, 17 Aug 2022 23:00:00 GMT</pubDate>
 </item><item>
 <guid isPermaLink="true">https://jouwdan.com/blog/blog/reflecting-on-my-time-at-nodeconf-eu-2022</guid>
 <title>Reflecting on my time at NodeConf EU 2022</title>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.1d8ea02f.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.e1bd55cf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dfa3183f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.0f20343b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c5757aa3.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.c5ce0eaa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.ab3ba3dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.23069ca6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.2aaecd10.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.de5a3f7b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.60fe7920.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.87aa15df.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.51e84223.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.afa79a9c.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full overflow-hidden">
+
+
+
+
+
+
+
+
+<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
+	
+
+	
+	<div class="flex-auto w-full h-full flex overflow-hidden">
+		
+
+		
+		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
+		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
+		
+		<div class="app-bar-slot-default flex-auto "></div>
+		
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
+						</a>
+						<hr class="divider-vertical h-6">
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
+					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
+				</div></div>
+	
+	</div></div>
+	</header>
+
+			
+			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1476&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">An introduction to Conventional Commits</h1>
+    <p class="pb-20">Published: Aug 7, 2022</p></div></div>
+  <p>As a student, i’ve always wondered if there is a standard around commit messages. I thought it would make sense for them to be standardised, and when I started my new role I learned about <a href="https://www.conventionalcommits.org/en/v1.0.0/" rel="nofollow">Conventional Commits</a> - and it just makes sense! I see a lot of people don’t follow any rules and, when it comes to working with a team, without standardisation the commit log can become quite chaotic and uninformative.</p>
+<p>Conventional Commits is a specification for adding human and machine-readable meaning to commit messages. It is a lightweight convention on top of commit messages that provides an easy set of rules to help you create an explicit commit history, making it easier to write automated tools on top of. This convention dovetails with <a href="https://semver.org/" rel="nofollow">SemVer</a>, by describing the features, fixes, and breaking changes made in commit messages.</p>
+<p>Conventional Commits have the following structure:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;type&gt;[optional scope]: &lt;description&gt;
+
+[optional body]
+
+[optional footer(s)]</code><!-- HTML_TAG_END --></pre>
+<p>With Conventional Commits, there are multiple types of commit you can make.</p>
+<ul><li><code>feat:</code> Add a new feature to the codebase (MINOR in semantic versioning).</li>
+<li><code>fix:</code> Fix a bug (equivalent to a PATCH in Semantic Versioning).</li>
+<li><code>docs:</code> Documentation changes.</li>
+<li><code>style:</code> Code style change (semicolon, indentation…).</li>
+<li><code>refactor:</code> Refactor code without changing public API.</li>
+<li><code>perf:</code> Update code performances.</li>
+<li><code>test:</code> Add test to an existing feature.</li>
+<li><code>chore:</code> Update something without impacting the user (ex: bump a dependency in package.json).</li></ul>
+<h2>Examples</h2>
+<p>Some examples of the above would be</p>
+<h4>Commit with no body</h4>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">feat: allow provided config object to extend other configs</code><!-- HTML_TAG_END --></pre>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">docs: correct spelling of CHANGELOG</code><!-- HTML_TAG_END --></pre>
+<h4>Commit with ! to draw attention to breaking change</h4>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">feat!: send an email to the customer when a product is shipped</code><!-- HTML_TAG_END --></pre>
+<h4>Commit with scope and ! to draw attention to breaking change</h4>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">feat(api)!: send an email to the customer when a product is shipped</code><!-- HTML_TAG_END --></pre>
+<h4>Commit with multi-paragraph body and footer</h4>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">fix: prevent racing of requests
+
+Introduce a request id and a reference to latest request. Dismiss
+incoming responses other than from latest request.
+
+Remove timeouts which were used to mitigate the racing issue but are
+obsolete now.
+
+Story-ref: #1234</code><!-- HTML_TAG_END --></pre>
+<h2>Benefits</h2>
+<h4>Readability</h4>
+<p>Commits are more descriptive, making it easier for teammates and stakeholders to read and understand them. It also makes it easier to contribute.</p>
+<h4>Changelog</h4>
+<p>Allows you to automatically generate a changelog.</p>
+<h4>Version Control</h4>
+<p>Helps to automatically determine a semantic version bump based on the types of commits landed.</p>
+<h4>Revert changes</h4>
+<p>If only one action is made per commit, it makes it simpler to revert a change or git conflict</p></article></div></main>
+
+			
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
+	</footer></div>
+
+		
+		</div>
+
+	
+	</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_11wk7md = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.e1bd55cf.js"),
+						import("../_app/immutable/entry/app.c5ce0eaa.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_11wk7md.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
