@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.1d8ea02f.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.347aeb14.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dfa3183f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b3d527e2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c5757aa3.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.6b906cd1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.27ffd722.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.23069ca6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.2aaecd10.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.de5a3f7b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.60fe7920.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.87aa15df.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.99802b6e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b4c77086.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
+		<div style="display: contents" class="h-full overflow-hidden">
+
+
+
+
+
+
+
+
+<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
+	
+
+	
+	<div class="flex-auto w-full h-full flex overflow-hidden">
+		
+
+		
+		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
+		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
+		
+		<div class="app-bar-slot-default flex-auto "></div>
+		
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
+						</a>
+						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
+						</a>
+						<hr class="divider-vertical h-6">
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
+						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
+					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
+				</div></div>
+	
+	</div></div>
+	</header>
+
+			
+			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">Getting started with Unit Testing in Node using Jest</h1>
+    <p class="pb-20">Published: Aug 5, 2022</p></div></div>
+  <p>In this post we’re going to take a look at the basics of unit testing, particularly with <a href="https://jestjs.io/" rel="nofollow">Jest</a>. By the time you’ve finished up reading, you’ll have learned what unit testing is, the benefits of unit testing and have created and run basic unit tests.</p>
+<h2>Introduction to Unit Testing</h2>
+<p>Let’s break down what unit testing is. A unit is a single functionality or component of an application. Testing is a review of how your code will execute. Therefore, unit testing is reviewing a single functionality to ensure that it performs as expected. A suite of unit tests are then created to test that every function of the application performs as expected. Unit testing really comes into use when an update is made to a piece of code. After the code has been updated, the test can be ran to ensure that the functionality of the code has not been broken.</p>
+<p>Unit testing differs greatly from testing a whole application end-to-end, but is equally as important.</p>
+<h2>So, why should you write Unit Tests?</h2>
+<p>Usually, unit tests are wrote <em>before</em> the software code by developers. Known as TDD, Test Driven Development, the requirements are turned into specific test cases, which are developed so that the software can be improved to pass the new tests. In the case of unit tests, it allows code to be modified without affecting other unit’s functionality or the entire software package. Aided by Unit Tests, the early discovery of bugs in the software development lifecycle can greatly reduce the overall cost of development, as less time is spent on bug fixing in the later stage of the project and therefore increasing overall customer satisfaction.</p>
+<p>Within unit test environments, all modules of a product become individually isolated from one another. This means that the tests are more reliable as they are run in a contained environment. This, in turn, causes the code written to be more reliable.</p>
+<h3>Benefits of Unit Tests</h3>
+<ul><li>They ensure the functionality of components and applications</li>
+<li>They prove the effective reliability and performance of applications</li>
+<li>They help find and fix bugs quickly and easily</li>
+<li>They contribute to higher code quality &amp; better application architecture</li>
+<li>They can act as an additional source of documentation</li></ul>
+<p>Unit Testing makes an application more robust and less error prone. It is a method of verification to show that your code performs it’s intended function and that your application works as intended for your users. </p>
+<h2>Getting Started</h2>
+<p>Let’s get cracking by putting together our testing environment. Create a new folder, open the terminal and type <code>npm init -y</code> to generate a <code>package.json</code> file. Next let’s install Jest as a dev dependancy. Type <code>npm i -save-dev jest</code> into the console. </p>
+<p>Open up this folder in your favourite IDE and we’ll get started. There’s a few methods of file management that are generally accepted when writing unit tests. The method we will be using is we will be creating the tests in the same directory as the unit being tested. For example:</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"> src
+- utils
+-- unit-one
+--- unit-one.js
+--- unit-one.test.js
+-- unit-two
+--- unit-two.js
+--- unit-two.test.js</code><!-- HTML_TAG_END --></pre>
+<p>So let’s go ahead and create a couple of units to test. Create the <code>src</code> folder and within this create a folder called <code>mathOperations</code>. Within this folder create two files, <code>mathOperations.js</code> &amp; <code>mathOperations.test.js</code>.</p>
+<h2>Basic tests</h2>
+<p>So what we want these functions to do is to take 2 numbers as an input, run a math operation on them and return the answer. Let’s write the tests for this first, so our use cases are clearly defined. Open up <code>mathOperations.test.js</code> and add the below, which we will look further into.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
+
+describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
+  test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
+    
+  &#125;);
+  test(&quot;Subtract 2 numbers from each other&quot;, () =&gt; &#123;
+
+  &#125;);
+&#125;);</code><!-- HTML_TAG_END --></pre>
+<p>Here we can see that we are describing a test suite using the <code>describe</code> method. It takes a basic string input and a function, in which we add our unit tests. Let’s break down the test to add 2 numbers together.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
+  var result = mathOperations.add(1, 2);
+  expect(result).toBe(3);
+&#125;);</code><!-- HTML_TAG_END --></pre>
+<p>We create a variable, <code>result</code>, which uses the function <code>add</code> in the <code>mathOperations</code> module and inputs 2 numbers, in our case <code>1</code> and <code>2</code>. We then <code>expect</code> our <code>result</code> variable to be <code>3</code>. Jest uses a very plain-English style typing for it’s language, as we can see here, so it is very easy to pick up.</p>
+<p>Go ahead and write the rest of the tests - you should get something similar to the below.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
+
+describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
+  test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
+    var result = mathOperations.add(1, 2);
+    expect(result).toBe(3);
+  &#125;);
+  test(&quot;Subtract 2 numbers from each other&quot;, () =&gt; &#123;
+    var result = mathOperations.subtract(3, 2);
+    expect(result).toBe(1);
+  &#125;);
+  test(&quot;Multiply 2 numbers together&quot;, () =&gt; &#123;
+    var result = mathOperations.multiply(2, 3);
+    expect(result).toBe(6);
+  &#125;);
+  test(&quot;Divide 2 numbers from each other&quot;, () =&gt; &#123;
+    var result = mathOperations.divide(4, 2);
+    expect(result).toBe(2);
+  &#125;);
+&#125;);</code><!-- HTML_TAG_END --></pre>
+<p>Now that we have wrote our tests, open up <code>mathOperations.js</code> and create our functions like below.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = &#123;
+  add: function (a, b) &#123;
+    return a + b;
+  &#125;,
+  subtract: function (a, b) &#123;
+    return a - b;
+  &#125;,
+  multiply: function (a, b) &#123;
+    return a * b;
+  &#125;,
+  divide: function (a, b) &#123;
+    return a / b;
+  &#125;,
+&#125;;
+
+module.exports = mathOperations;</code><!-- HTML_TAG_END --></pre>
+<p>For us to be able to then run these tests, you will need to modify <code>package.json</code>. Update the <code>&quot;scripts&quot;</code> section as below.</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&quot;scripts&quot;: &#123;
+    &quot;test&quot;: &quot;jest --verbose&quot;
+  &#125;,</code><!-- HTML_TAG_END --></pre>
+<p>We are using the <code>verbose</code> flag so that we get a full output of our tests. You should now be able to run your tests. In the terminal, type <code>npm test</code> and take a look at the output.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713394090/91LVsB2J9.png" alt="image.png"></p>
+<p>Here we can see that all 4 of our unit tests have passed! Try changing one of the unit tests to something that is incorrect, re-run <code>npm test</code> and note the output.</p>
+<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713516440/TUM9uhJbA.png" alt="image.png"></p>
+<p>As we can see from the above output, one of the unit tests has failed, and it lets you know reasoning for the test to fail. In this case, I am multiplying 3 by 3. The expected result is 6, whereas the actual result is 9, so the test fails.</p>
+<h2>Conclusion</h2>
+<p>As you can see, the quality of your application can easily be improved with Unit Testing as it helps find bugs and defects in your code. This was just a very brief introduction to Unit Tests, and I hope it was informative for you.</p></article></div></main>
+
+			
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
+	</footer></div>
+
+		
+		</div>
+
+	
+	</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_1xek80n = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.347aeb14.js"),
+						import("../_app/immutable/entry/app.6b906cd1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_1xek80n.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
