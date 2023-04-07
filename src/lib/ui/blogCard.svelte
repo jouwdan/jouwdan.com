@@ -3,7 +3,7 @@
 </script>
 
 <a
-	class="card bg-initial card-hover overflow-hidden w-3/4 lg:w-96 h-[30rem] mx-auto lg:mx-4 my-4 flex flex-col justify-between"
+	class="card bg-initial card-hover overflow-hidden h-[30rem] mx-auto lg:mx-4 my-4 flex flex-col justify-between"
 	href={post.path}
 	><header>
 		<img src={post.meta.cover} class="h-36 lg:h-48 w-full object-cover" alt="Post" />
