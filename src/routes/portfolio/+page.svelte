@@ -3,7 +3,7 @@
 	<div class="block lg:flex items-center">
 		<img src="/images/tutors.png" alt="Tutors" class="w-full lg:w-1/4" />
 		<div class="flex-1">
-			<div class="block pl-12">
+			<div class="block lg:pl-12">
 				<h2 class="font-bold">Tutors Open Source Project</h2>
 				<h3>Maintainer</h3>
 				<p class="mt-2">
