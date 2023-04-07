@@ -5,7 +5,7 @@
 			<div class="my-auto lg:w-1/2 lg:pl-24">
 				<h1 class="font-bold mb-4">Hey, I'm Jordan.</h1>
 				<h3>
-					I'm a creative full stack developer based in Ireland with have a passion for web tech &
+					I'm a creative full stack developer based in Ireland with a passion for web tech &
 					open source. Oh, and i'm a total tech nerd.
 				</h3>
 				<a class="btn variant-ghost-primary mt-4" href="/about">About Me</a>
