@@ -4430,6 +4430,9 @@ a.card:hover {
   }
 }
 @media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
   .md\:w-auto {
     width: auto;
   }
