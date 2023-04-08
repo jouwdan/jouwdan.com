@@ -1996,6 +1996,14 @@ button:disabled:active {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.btn-xl {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 /* === Icon Button === */
 /* A circular button meant for housing icons. */
 .btn-icon {
@@ -2955,6 +2963,9 @@ a.card:hover {
 .place-items-center {
   place-items: center;
 }
+.content-center {
+  align-content: center;
+}
 .items-start {
   align-items: flex-start;
 }
@@ -3251,6 +3262,10 @@ a.card:hover {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-base {
   font-size: 1rem;
