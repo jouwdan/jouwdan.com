@@ -68,37 +68,13 @@
 	</header>
 
 			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">How to enforce Conventional Commit messages using Git hooks with husky &amp; commitlint</h1>
-    <p class="pb-20">Published: Aug 18, 2022</p></div></div>
-  <p>In this guide I will be showing you how to enforce the use of <a href="https://www.conventionalcommits.org/en/v1.0.0/" rel="nofollow">Conventional Commit</a> messages in Git. If you don’t know what Conventional Commits are, <a href="https://jouwdan.com/blog/an-introduction-to-conventional-commits" rel="nofollow">you can read my other post here</a>. Let’s get right into it.</p>
-<p>Go ahead and open up your repo in Terminal. Let’s install husky, commitlint cli &amp; config-conventional as development dependencies:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npm install --save-dev husky @commitlint/cli @commitlint/config-conventional</code><!-- HTML_TAG_END --></pre>
-<p>Next, we will enable Git hooks using Husky and add the <code>commit-msg</code> by entering the following commands:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx husky install
-npx husky add .husky/commit-msg &#39;npx commitlint --edit $1&#39;</code><!-- HTML_TAG_END --></pre>
-<p>Create the following files in the root of your repo to configure commitlint</p>
-<p><code>.commitlintrc.json</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&#123;
-  &quot;extends&quot;: [&quot;@commitlint/config-conventional&quot;]
-&#125;</code><!-- HTML_TAG_END --></pre>
-<p><code>commitlint.config.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
-  extends: [&#39;@commitlint/config-conventional&#39;],
-&#125;;</code><!-- HTML_TAG_END --></pre>
-<p>And we’re done! A quick and painless method of enforcing conventional commit messages. Give it a go by trying to commit to Git with a non-conventional messages.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -a -m &quot;Set up Conventional Commits using Husky and commitlint&quot;</code><!-- HTML_TAG_END --></pre>
-<p>You should get the below error</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">⧗   input: Set up Conventional Commits using Husky and commitlint
-✖   subject may not be empty [subject-empty]
-✖   type may not be empty [type-empty]
-
-✖   found 2 problems, 0 warnings
-ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
-
-husky - commit-msg hook exited with code 1 (error)</code><!-- HTML_TAG_END --></pre>
-<p>Let’s now change this to be a conventional commit:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -m &#39;feat: enforce conventional commits using husky and commitlint&#39;</code><!-- HTML_TAG_END --></pre>
-<p>Cover Photo by <a href="https://unsplash.com/@praveentcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Praveen Thirumurugan</a> on <a href="https://unsplash.com/photos/KPAQpJYzH0Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a></p></article></div></main>
+			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1334&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">Is serverless truly... serverless?</h1>
+    <p class="pb-20">Published: Dec 10, 2022</p></div></div>
+  <p>Serverless technology has become increasingly popular in recent years, but there is still some confusion about what it actually means. Many people believe that the term “serverless” implies that there are no servers involved at all, but this is not the case. In reality, serverless technology simply means that the server infrastructure is managed by a cloud provider, allowing developers to focus on building their applications without worrying about maintaining the underlying servers.</p>
+<p>So, is serverless technology truly “serverless”? The answer is both yes and no. On the one hand, developers don’t have to worry about managing and maintaining the servers that their applications run on, which can save a lot of time and effort. On the other hand, the servers still exist, and the cloud provider is responsible for managing them.</p>
+<p>In many ways, the term “serverless” is a misnomer. It’s more accurate to think of serverless technology as a way of abstracting away the underlying server infrastructure, allowing developers to focus on building their applications without worrying about the details of the underlying infrastructure. This can be a great benefit for many organizations, as it allows them to quickly and easily deploy applications without having to worry about the underlying infrastructure.</p>
+<p>However, it’s important to keep in mind that the servers are still there, and the cloud provider is responsible for managing them. This means that developers still need to consider factors like scalability, reliability, and performance when building their applications. In many cases, this will require careful planning and coordination with the cloud provider to ensure that the underlying infrastructure is capable of supporting the demands of the application.</p>
+<p>In conclusion, while serverless technology is not truly “serverless” in the strictest sense of the word, it does provide a number of benefits for organizations that are looking to deploy applications quickly and easily. By abstracting away the underlying server infrastructure, serverless technology allows developers to focus on building their applications without worrying about the details of the underlying infrastructure. While this can be a great benefit, it’s important to keep in mind that the servers are still there, and they need to be carefully managed in order to ensure the best possible performance for the application.</p></article></div></main>
 
 			
 			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
