@@ -12,7 +12,6 @@ jobs:
 
       - name: Install, Build & deploy
         run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/jouwdan/jouwdan.github.io.git
           npm install
           npm run gh-pages -- -u "github-actions-bot <support+actions@github.com>"
         env:
