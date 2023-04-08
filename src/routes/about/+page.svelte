@@ -6,7 +6,7 @@
 
 <div class="p-16 rounded-xl border border-surface-700 bg-surface-800">
 	<div class="max-w-[65ch] mx-auto">
-		<div class="flex items-center">
+		<div class="block md:flex items-center">
 			<Avatar width="w-32" src="images/me.jpeg" alt="avatar of Jordan" class="mr-12" />
 			<div class="flex-1">
 				<h2 class="font-bold">Jordan Harrison</h2>

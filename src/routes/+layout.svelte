@@ -39,7 +39,7 @@
 			<ul>
 				<li>
 					<a
-						class="btn transition-all duration-200"
+						class="btn btn-xl my-2 transition-all duration-200"
 						href="/"
 						class:variant-ghost-surface={currentRoute !== '/'}
 						class:variant-ghost-primary={currentRoute === '/'}
@@ -50,7 +50,7 @@
 				</li>
 				<li>
 					<a
-						class="btn transition-all duration-200"
+						class="btn btn-xl my-2 transition-all duration-200"
 						href="/about"
 						class:variant-ghost-surface={!currentRoute.includes('/about')}
 						class:variant-ghost-primary={currentRoute.includes('/about')}
@@ -61,7 +61,7 @@
 				</li>
 				<li>
 					<a
-						class="btn transition-all duration-200"
+						class="btn btn-xl my-2 transition-all duration-200"
 						href="/portfolio"
 						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
 						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
@@ -72,7 +72,7 @@
 				</li>
 				<li>
 					<a
-						class="btn transition-all duration-200"
+						class="btn btn-xl my-2 transition-all duration-200"
 						href="/blog"
 						class:variant-ghost-surface={!currentRoute.includes('/blog')}
 						class:variant-ghost-primary={currentRoute.includes('/blog')}
@@ -83,7 +83,7 @@
 				</li>
 				<li>
 					<a
-						class="btn transition-all duration-200"
+						class="btn btn-xl my-2 transition-all duration-200"
 						href="/contact"
 						class:variant-ghost-surface={!currentRoute.includes('/contact')}
 						class:variant-ghost-primary={currentRoute.includes('/contact')}
@@ -95,26 +95,28 @@
 				<li>
 					<hr class="divider my-4 w-24 mx-auto" />
 				</li>
+			</ul>
+			<ul class="flex space-x-4 items-center justify-center content-center">
 				<li>
 					<a
-						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						class="btn variant-soft-surface hover:variant-soft-primary"
 						href="https://twitter.com/jouwdan"
 						target="_blank"
 						rel="noreferrer"
 						on:click={() => drawerStore.close()}
 					>
-						<Icon icon="mdi:twitter" class="text-xl" />
+						<Icon icon="mdi:twitter" class="text-3xl" />
 					</a>
 				</li>
 				<li>
 					<a
-						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
+						class="btn variant-soft-surface hover:variant-soft-primary"
 						href="https://linkedin.com/in/jouwdan"
 						target="_blank"
 						rel="noreferrer"
 						on:click={() => drawerStore.close()}
 					>
-						<Icon icon="mdi:linkedin" class="text-xl" />
+						<Icon icon="mdi:linkedin" class="text-3xl" />
 					</a>
 				</li>
 				<li>
@@ -125,10 +127,9 @@
 						rel="noreferrer"
 						on:click={() => drawerStore.close()}
 					>
-						<Icon icon="mdi:github" class="text-xl" />
+						<Icon icon="mdi:github" class="text-3xl" />
 					</a>
 				</li>
-				<!-- ... -->
 			</ul>
 		</nav>
 	{/if}
