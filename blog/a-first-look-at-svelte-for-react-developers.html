@@ -68,37 +68,79 @@
 	</header>
 
 			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">How to enforce Conventional Commit messages using Git hooks with husky &amp; commitlint</h1>
-    <p class="pb-20">Published: Aug 18, 2022</p></div></div>
-  <p>In this guide I will be showing you how to enforce the use of <a href="https://www.conventionalcommits.org/en/v1.0.0/" rel="nofollow">Conventional Commit</a> messages in Git. If you don’t know what Conventional Commits are, <a href="https://jouwdan.com/blog/an-introduction-to-conventional-commits" rel="nofollow">you can read my other post here</a>. Let’s get right into it.</p>
-<p>Go ahead and open up your repo in Terminal. Let’s install husky, commitlint cli &amp; config-conventional as development dependencies:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npm install --save-dev husky @commitlint/cli @commitlint/config-conventional</code><!-- HTML_TAG_END --></pre>
-<p>Next, we will enable Git hooks using Husky and add the <code>commit-msg</code> by entering the following commands:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx husky install
-npx husky add .husky/commit-msg &#39;npx commitlint --edit $1&#39;</code><!-- HTML_TAG_END --></pre>
-<p>Create the following files in the root of your repo to configure commitlint</p>
-<p><code>.commitlintrc.json</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&#123;
-  &quot;extends&quot;: [&quot;@commitlint/config-conventional&quot;]
+			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1479&amp;q=80);"><div class="w-full h-full px-12 bg-surface-900 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold">A first look at Svelte for React Developers</h1>
+    <p class="pb-20">Published: Feb 28, 2023</p></div></div>
+  <p>If you’re a React developer looking for a new way to build web applications, you may have heard of Svelte. Svelte is a modern framework which aims to provide a more efficient and performant way of building web applications compared to traditional frameworks like React. In this post, we’re going to look at some common snippets of react code and their equivalent in Svelte.</p>
+<p><code>useState()</code> hook</p>
+<p>React</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">let [var, setVar] = useState(initialValue)
+
+// mutate
+setVar(newValue)</code><!-- HTML_TAG_END --></pre>
+<p>Svelte</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">let var = initialValue
+
+// mutate
+var = newValue</code><!-- HTML_TAG_END --></pre>
+<p>As we can see here, react uses a useState hook, which has an initial value, a state variable and a function to update the variable. Whereas in svelte, the variable’s initial value is declared, and mutated by overwriting the variable, without the need of a function for updating. This results in much cleaner, easier to read code.</p>
+<p><code>useMemo()</code> hook</p>
+<p>React</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const memoized = useMemo(() =&gt; expression,
+[dependancy1, dependancy2, ...]
+)</code><!-- HTML_TAG_END --></pre>
+<p>Svelte</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">$: memoized = expression</code><!-- HTML_TAG_END --></pre>
+<p>Here, the useMemo hook takes 2 arguments, a function that returns the value to be memoized and an array of dependencies that the function depends on. If any of the dependencies change, the memoized value is recomputed, otherwise, it is returned from cache without re-executing the function. Whereas in Svelte, the $ sign is used, which means it is a reactive declaration, which is then used to define a variable that depends on one or more other variables. When any of the variables that the reactive declaration depends on change, the reactive declaration is re-evaluated. This, again, results in a much cleaner, easier to read code.</p>
+<p>Iteration when rendering</p>
+<p>React</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;ul&gt;
+&#123;list.map(item =&gt; &#123;
+return &lt;li&gt;&#123;item&#125;&lt;/li&gt;
+&#125;)&#125;
+&lt;/ul&gt;
+
+// with index
+&#123;list.map((item, index) =&gt; &#123;
+&#125;))
+
+// with key
+&#123;list.map(item =&gt;
+&lt;div key=&#123;item.key&#125;&gt;...&lt;/div&gt;
+)&#125;</code><!-- HTML_TAG_END --></pre>
+<p>Svelte</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;ul&gt;
+&#123;#each list as item&#125;
+&lt;li&gt;&#123;item&#125;&lt;/li&gt;
+&#123;/each&#125;
+&lt;/ul&gt;
+
+// with index
+&#123;#each list as item, index&#125;
+...
+&#123;/each&#125;
+
+// with key
+&#123;#each list as item (item.key)&#125;
+...
+&#123;/each&#125;</code><!-- HTML_TAG_END --></pre>
+<p>Event handlers</p>
+<p>React</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;div onClick=&#123;handler&#125; /&gt;
+
+const handler = event =&gt; &#123;
+event.preventDefault()
+&#125;
+
+const handler = event =&gt; &#123;
+event.stopPropagation()
 &#125;</code><!-- HTML_TAG_END --></pre>
-<p><code>commitlint.config.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
-  extends: [&#39;@commitlint/config-conventional&#39;],
-&#125;;</code><!-- HTML_TAG_END --></pre>
-<p>And we’re done! A quick and painless method of enforcing conventional commit messages. Give it a go by trying to commit to Git with a non-conventional messages.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -a -m &quot;Set up Conventional Commits using Husky and commitlint&quot;</code><!-- HTML_TAG_END --></pre>
-<p>You should get the below error</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">⧗   input: Set up Conventional Commits using Husky and commitlint
-✖   subject may not be empty [subject-empty]
-✖   type may not be empty [type-empty]
+<p>Svelte</p>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;div on:click=&#123;handler&#125; /&gt;
 
-✖   found 2 problems, 0 warnings
-ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+&lt;div on:click|preventDefault=&#123;handler&#125; /&gt;
 
-husky - commit-msg hook exited with code 1 (error)</code><!-- HTML_TAG_END --></pre>
-<p>Let’s now change this to be a conventional commit:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">git commit -m &#39;feat: enforce conventional commits using husky and commitlint&#39;</code><!-- HTML_TAG_END --></pre>
-<p>Cover Photo by <a href="https://unsplash.com/@praveentcom?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Praveen Thirumurugan</a> on <a href="https://unsplash.com/photos/KPAQpJYzH0Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a></p></article></div></main>
+&lt;div on:click|stopPropagation=&#123;handler&#125; /&gt;</code><!-- HTML_TAG_END --></pre>
+<p>In conclusion, Svelte offers a fresh and more efficient approach to building web applications compared to traditional frameworks like React. As we have seen from the snippets of code in this post, Svelte’s syntax is simpler and more concise, resulting in cleaner and easier to read code. While there may be a learning curve for React developers transitioning to Svelte, the benefits of improved performance and developer experience make it well worth the effort. Whether you’re building a small application or a large-scale project, Svelte’s modern approach to web development can help you create better user experiences while saving you time and effort.</p></article></div></main>
 
 			
 			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
