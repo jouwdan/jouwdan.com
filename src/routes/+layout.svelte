@@ -8,6 +8,15 @@
 	import Icon from '@iconify/svelte';
 	import { fly } from 'svelte/transition';
   import { cubicIn, cubicOut } from 'svelte/easing'
+	import { afterNavigate } from '$app/navigation';
+
+	afterNavigate((params: any) => {
+    const isNewPage: boolean = params.from && params.to && params.from.route.id !== params.to.route.id;
+    const elemPage = document.querySelector("#page");
+    if (isNewPage && elemPage !== null) {
+      elemPage.scrollTop = 0;
+    }
+  });
 
 	const menu: DrawerSettings = {
 		id: 'menu',
