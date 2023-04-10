@@ -17,8 +17,6 @@ const fetchPosts = async () => {
 
 export const GET = async () => {
 	const allPosts = await fetchPosts();
-
 	const sortedPosts = allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
-
 	return json(sortedPosts);
 };
