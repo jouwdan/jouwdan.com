@@ -53,8 +53,7 @@
 						href="/"
 						class:variant-ghost-surface={currentRoute !== '/'}
 						class:variant-ghost-primary={currentRoute === '/'}
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						Home
 					</a>
 				</li>
@@ -64,8 +63,7 @@
 						href="/about"
 						class:variant-ghost-surface={!currentRoute.includes('/about')}
 						class:variant-ghost-primary={currentRoute.includes('/about')}
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						About
 					</a>
 				</li>
@@ -75,8 +73,7 @@
 						href="/portfolio"
 						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
 						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						Portfolio
 					</a>
 				</li>
@@ -86,8 +83,7 @@
 						href="/blog"
 						class:variant-ghost-surface={!currentRoute.includes('/blog')}
 						class:variant-ghost-primary={currentRoute.includes('/blog')}
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						Blog
 					</a>
 				</li>
@@ -97,8 +93,7 @@
 						href="/contact"
 						class:variant-ghost-surface={!currentRoute.includes('/contact')}
 						class:variant-ghost-primary={currentRoute.includes('/contact')}
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						Contact
 					</a>
 				</li>
@@ -113,8 +108,7 @@
 						href="https://twitter.com/jouwdan"
 						target="_blank"
 						rel="noreferrer"
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						<Icon icon="mdi:twitter" class="text-3xl" />
 					</a>
 				</li>
@@ -124,8 +118,7 @@
 						href="https://linkedin.com/in/jouwdan"
 						target="_blank"
 						rel="noreferrer"
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						<Icon icon="mdi:linkedin" class="text-3xl" />
 					</a>
 				</li>
@@ -135,8 +128,7 @@
 						href="https://github.com/jouwdan"
 						target="_blank"
 						rel="noreferrer"
-						on:click={() => drawerStore.close()}
-					>
+						on:click={() => drawerStore.close()}>
 						<Icon icon="mdi:github" class="text-3xl" />
 					</a>
 				</li>
@@ -160,40 +152,35 @@
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 							href="/"
 							class:variant-ghost-surface={currentRoute !== '/'}
-							class:variant-ghost-primary={currentRoute === '/'}
-						>
+							class:variant-ghost-primary={currentRoute === '/'}>
 							Home
 						</a>
 						<a
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 							href="/about"
 							class:variant-ghost-surface={!currentRoute.includes('/about')}
-							class:variant-ghost-primary={currentRoute.includes('/about')}
-						>
+							class:variant-ghost-primary={currentRoute.includes('/about')}>
 							About
 						</a>
 						<a
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 							href="/portfolio"
 							class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
-							class:variant-ghost-primary={currentRoute.includes('/portfolio')}
-						>
+							class:variant-ghost-primary={currentRoute.includes('/portfolio')}>
 							Portfolio
 						</a>
 						<a
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 							href="/blog"
 							class:variant-ghost-surface={!currentRoute.includes('/blog')}
-							class:variant-ghost-primary={currentRoute.includes('/blog')}
-						>
+							class:variant-ghost-primary={currentRoute.includes('/blog')}>
 							Blog
 						</a>
 						<a
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
 							href="/contact"
 							class:variant-ghost-surface={!currentRoute.includes('/contact')}
-							class:variant-ghost-primary={currentRoute.includes('/contact')}
-						>
+							class:variant-ghost-primary={currentRoute.includes('/contact')}>
 							Contact
 						</a>
 						<hr class="divider-vertical h-6" />
@@ -201,24 +188,21 @@
 							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
 							href="https://twitter.com/jouwdan"
 							target="_blank"
-							rel="noreferrer"
-						>
+							rel="noreferrer">
 							<Icon icon="mdi:twitter" class="text-xl" />
 						</a>
 						<a
 							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
 							href="https://linkedin.com/in/jouwdan"
 							target="_blank"
-							rel="noreferrer"
-						>
+							rel="noreferrer">
 							<Icon icon="mdi:linkedin" class="text-xl" />
 						</a>
 						<a
 							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
 							href="https://github.com/jouwdan"
 							target="_blank"
-							rel="noreferrer"
-						>
+							rel="noreferrer">
 							<Icon icon="mdi:github" class="text-xl" />
 						</a>
 					</div>
@@ -235,16 +219,14 @@
 		<div
 			class="container mx-auto px-4"
 			in:fly={{ easing: cubicOut, y: 10, duration: 150, delay: 200 }}
-			out:fly={{ easing: cubicIn, y: 10, duration: 150 }}
-		>
+			out:fly={{ easing: cubicIn, y: 10, duration: 150 }}>
 			<slot />
 		</div>
 	{/key}
 	<svelte:fragment slot="pageFooter">
 		<div class="container mx-auto">
 			<div
-				class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"
-			>
+				class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700">
 				<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
 			</div>
 		</div>

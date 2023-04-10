@@ -22,14 +22,12 @@
 				<div class="p-4 flex justify-end items-center space-x-4">
 					<figure
 						class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-8 rounded-full"
-						data-testid="avatar"
-					>
+						data-testid="avatar">
 						<img
 							class="avatar-image w-full h-full object-cover"
 							src="/images/avatar-thumb.png"
 							alt=""
-							style=""
-						/>
+							style="" />
 					</figure>
 					<div class="flex-auto flex justify-between items-center align">
 						<h6 class="font-bold">By Jordan Harrison</h6>

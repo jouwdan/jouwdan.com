@@ -37,14 +37,12 @@
 						class="btn variant-ghost-primary"
 						href="https://tutors.dev"
 						target="_blank"
-						rel="noreferrer">Visit Tutors</a
-					>
+						rel="noreferrer">Visit Tutors</a>
 					<a
 						class="btn variant-ghost-surface"
 						href="https://github.com/tutors-sdk/tutors"
 						target="_blank"
-						rel="noreferrer">View GitHub Repo</a
-					>
+						rel="noreferrer">View GitHub Repo</a>
 				</div>
 			</div>
 		</div>
@@ -55,8 +53,7 @@
 		<img
 			src="https://github.com/jouwdan/Todo/raw/main/images/todo-screenshots.png"
 			alt="Todo"
-			class="w-full lg:w-1/4"
-		/>
+			class="w-full lg:w-1/4" />
 		<div class="flex-1">
 			<div class="block lg:pl-12">
 				<h2 class="font-bold">Todo</h2>
@@ -83,8 +80,7 @@
 						class="btn variant-ghost-surface"
 						href="https://github.com/jouwdan/Todo"
 						target="_blank"
-						rel="noreferrer">View GitHub Repo</a
-					>
+						rel="noreferrer">View GitHub Repo</a>
 				</div>
 			</div>
 		</div>
@@ -123,14 +119,12 @@
 						class="btn variant-ghost-secondary"
 						href="https://film-track.netlify.app"
 						target="_blank"
-						rel="noreferrer">View Deployment</a
-					>
+						rel="noreferrer">View Deployment</a>
 					<a
 						class="btn variant-ghost-surface"
 						href="https://github.com/jouwdan/filmtrack"
 						target="_blank"
-						rel="noreferrer">View GitHub Repo</a
-					>
+						rel="noreferrer">View GitHub Repo</a>
 				</div>
 			</div>
 		</div>
@@ -175,8 +169,7 @@
 						class="btn variant-ghost-surface"
 						href="https://github.com/jouwdan/CREM"
 						target="_blank"
-						rel="noreferrer">View GitHub Repo</a
-					>
+						rel="noreferrer">View GitHub Repo</a>
 				</div>
 			</div>
 		</div>
