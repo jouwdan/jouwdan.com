@@ -7,16 +7,17 @@
 	import type { DrawerSettings } from '@skeletonlabs/skeleton';
 	import Icon from '@iconify/svelte';
 	import { fly } from 'svelte/transition';
-  import { cubicIn, cubicOut } from 'svelte/easing'
+	import { cubicIn, cubicOut } from 'svelte/easing';
 	import { afterNavigate } from '$app/navigation';
 
 	afterNavigate((params: any) => {
-    const isNewPage: boolean = params.from && params.to && params.from.route.id !== params.to.route.id;
-    const elemPage = document.querySelector("#page");
-    if (isNewPage && elemPage !== null) {
-      elemPage.scrollTop = 0;
-    }
-  });
+		const isNewPage: boolean =
+			params.from && params.to && params.from.route.id !== params.to.route.id;
+		const elemPage = document.querySelector('#page');
+		if (isNewPage && elemPage !== null) {
+			elemPage.scrollTop = 0;
+		}
+	});
 
 	const menu: DrawerSettings = {
 		id: 'menu',
@@ -233,18 +234,19 @@
 	{#key data.pathname}
 		<div
 			class="container mx-auto px-4"
-			in:fly={{ easing: cubicOut, y:10, duration: 150, delay: 200 }}
-			out:fly={{ easing: cubicIn,y: 10, duration: 150 }}
+			in:fly={{ easing: cubicOut, y: 10, duration: 150, delay: 200 }}
+			out:fly={{ easing: cubicIn, y: 10, duration: 150 }}
 		>
 			<slot />
 		</div>
 	{/key}
 	<svelte:fragment slot="pageFooter">
 		<div class="container mx-auto">
-		<div
-			class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"
-		>
-			<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
-		</div></div>
+			<div
+				class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"
+			>
+				<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
+			</div>
+		</div>
 	</svelte:fragment>
 </AppShell>
