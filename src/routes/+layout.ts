@@ -1,8 +1,3 @@
 export const prerender = true;
 
-export const load = ({ url }) => {
-	const { pathname } = url;
-	return {
-		pathname
-	};
-};
+export const load = ({ url }) => ({ pathname: url.pathname });
