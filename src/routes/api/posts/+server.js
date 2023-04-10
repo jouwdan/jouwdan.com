@@ -8,10 +8,7 @@ const fetchPosts = async () => {
 			const { metadata } = await resolver();
 			const postPath = path.slice(9, -3);
 
-			return {
-				meta: metadata,
-				path: postPath
-			};
+			return { meta: metadata, path: postPath };
 		})
 	);
 
@@ -21,9 +18,7 @@ const fetchPosts = async () => {
 export const GET = async () => {
 	const allPosts = await fetchPosts();
 
-	const sortedPosts = allPosts.sort((a, b) => {
-		return new Date(b.meta.date) - new Date(a.meta.date);
-	});
+	const sortedPosts = allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
 
 	return json(sortedPosts);
 };
