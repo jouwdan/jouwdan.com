@@ -9,6 +9,7 @@
 	import { fly } from 'svelte/transition';
 	import { cubicIn, cubicOut } from 'svelte/easing';
 	import { afterNavigate } from '$app/navigation';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
 
 	afterNavigate((params: any) => {
 		const isNewPage: boolean =
@@ -22,11 +23,12 @@
 	const menu: DrawerSettings = {
 		id: 'menu',
 		position: 'right',
-		bgDrawer: 'bg-surface-800 text-white',
+		bgDrawer: 'bg-surface-100 dark:bg-surface-800 dark:text-white',
 		bgBackdrop: 'backdrop-blur',
 		width: 'w-full',
 		padding: 'p-4',
-		rounded: 'rounded-xl'
+		rounded: 'rounded-xl',
+		border: 'border border-surface-300 dark:border-surface-700',
 	};
 
 	$: currentRoute = $page.url.pathname;
@@ -139,7 +141,7 @@
 
 <AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
 	<svelte:fragment slot="pageHeader">
-		<div class="bg-surface-900 backdrop-blur-xl bg-opacity-80">
+		<div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80">
 			<AppBar background="none" class="py-4 container mx-auto">
 				<svelte:fragment slot="lead">
 					<a href="/">
@@ -147,6 +149,7 @@
 					</a>
 				</svelte:fragment>
 				<svelte:fragment slot="trail">
+					<LightSwitch />
 					<div class="hidden lg:flex space-x-3 items-center">
 						<a
 							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
@@ -226,7 +229,7 @@
 	<svelte:fragment slot="pageFooter">
 		<div class="container mx-auto">
 			<div
-				class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700">
+				class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700">
 				<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
 			</div>
 		</div>

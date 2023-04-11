@@ -3,7 +3,7 @@
 </script>
 
 <h1 class="font-bold pt-4 pb-8">Portfolio</h1>
-<div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
+<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800 my-2">
 	<div class="block lg:flex items-center">
 		<img src="/images/tutors.png" alt="Tutors" class="w-full lg:w-1/4" />
 		<div class="flex-1">
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 </div>
-<div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
+<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800 my-2">
 	<div class="block lg:flex items-center">
 		<img
 			src="https://github.com/jouwdan/Todo/raw/main/images/todo-screenshots.png"
@@ -86,7 +86,7 @@
 		</div>
 	</div>
 </div>
-<div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
+<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800 my-2">
 	<div class="block lg:flex items-center">
 		<img src="/images/filmtrack.png" alt="Filmtrack" class="w-full lg:w-1/4" />
 		<div class="flex-1">
@@ -130,7 +130,7 @@
 		</div>
 	</div>
 </div>
-<div class="p-16 rounded-xl border border-surface-700 bg-surface-800 my-2">
+<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800 my-2">
 	<div class="block lg:flex items-center">
 		<img src="https://crem.netlify.app//course.png" alt="CREM" class="w-full lg:w-1/4" />
 		<div class="flex-1">

@@ -18,7 +18,7 @@
 	</div>
 </div>
 
-<div class="my-8 py-6 lg:py-12 mx-auto px-8 rounded-xl border border-surface-700 bg-surface-800">
+<div class="mt-4 py-6 lg:py-12 mx-auto px-8 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800">
 	<h2 class="font-bold">Latest Posts</h2>
 	<div class="grid grid-cols-1 lg:grid-cols-3 my-2">
 		{#each data.posts as post}

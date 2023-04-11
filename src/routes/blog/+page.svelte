@@ -5,7 +5,7 @@
 <h1 class="font-bold pt-4 pb-8">Blog</h1>
 <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
 	{#each data.posts as post}
-		<a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href={post.path}>
+		<a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href={post.path}>
 			<header>
 				<img src={post.meta.cover} class="h-48 w-full object-cover" alt="Post" />
 			</header>
