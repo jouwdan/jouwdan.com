@@ -15,8 +15,13 @@ const fetchPosts = async () => {
 	return allPosts;
 };
 
-export const GET = async () => {
+export async function GET({ params }) {
 	const allPosts = await fetchPosts();
 	const sortedPosts = allPosts.sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date));
-	return json(sortedPosts.slice(0, 3));
-};
+	const amount = params.amount;
+	if (params.amount === 'all') {
+		return json(sortedPosts);
+	}
+	const posts = amount ? sortedPosts.slice(0, amount) : sortedPosts;
+	return json(posts);
+}
