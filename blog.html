@@ -5,22 +5,32 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.741e16c3.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_layout.2482ca56.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.c21ce0a6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.2663ad10.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.b1a7366e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.b081fc40.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.83f5610d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.b391ec6e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.41bbe901.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.80f15cbf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.ef874e6e.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5f4f2476.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.43b09497.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.7da24d98.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Icon.bffab9d7.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.a1bb9b3e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Icon.d519490d.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.e35f58d8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/blog-page.svelte.b5a8e0fb.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/blog-page.svelte.e655f6d6.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/blog-page.ts.bd2b8ba5.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_page.95c1abdd.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page.95c1abdd.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
+  const elemHtmlClasses = document.documentElement.classList;
+  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
+  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
+  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
+    elemHtmlClasses.add("dark");
+  } else {
+    elemHtmlClasses.remove("dark");
+  }
+})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
 		<div style="display: contents" class="h-full overflow-hidden">
@@ -41,13 +51,18 @@
 
 		
 		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
 	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
 		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
 		
 		<div class="app-bar-slot-default flex-auto "></div>
 		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
+
+<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
+	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
+		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
+					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
 						</a>
 						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
 						</a>
@@ -69,7 +84,7 @@
 
 			
 			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><h1 class="font-bold pt-4 pb-8">Blog</h1>
-<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/a-first-look-at-svelte-for-react-developers"><header><img src="https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1479&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4"><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/a-first-look-at-svelte-for-react-developers"><header><img src="https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1479&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">A first look at Svelte for React Developers</h4>
 				<article><p>Svelte is a framework which aims to provide a more efficient way of building web applications compared to traditional frameworks like React.</p>
 				</article></div>
@@ -78,7 +93,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Feb 28, 2023</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/is-serverless-truly-serverless"><header><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1334&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/is-serverless-truly-serverless"><header><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1334&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">Is serverless truly... serverless?</h4>
 				<article><p>Serverless technology has become increasingly popular in recent years, but there is still some confusion about what it actually means.</p>
 				</article></div>
@@ -87,7 +102,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Dec 10, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/react-hooks-and-best-practises-to-use-them-effectively"><header><img src="https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1461&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/react-hooks-and-best-practises-to-use-them-effectively"><header><img src="https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1461&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">React hooks and best practises to use them effectively</h4>
 				<article><p>Hooks are a powerful feature in React that allows you to use state and other React features without writing a class.</p>
 				</article></div>
@@ -96,7 +111,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Dec 6, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/reflecting-on-my-time-at-nodeconf-eu-2022"><header><img src="/images/nodeconf-eu-2022.jpg" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/reflecting-on-my-time-at-nodeconf-eu-2022"><header><img src="/images/nodeconf-eu-2022.jpg" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">Reflecting on my time at NodeConf EU 2022</h4>
 				<article><p>In this post i'll be reflecting on my time at NodeConf EU - along with my thoughts on the talks I attended.</p>
 				</article></div>
@@ -105,7 +120,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Oct 5, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-enforce-conventional-commit-messages-using-git-hooks-with-husky-commitlint"><header><img src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-enforce-conventional-commit-messages-using-git-hooks-with-husky-commitlint"><header><img src="https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">How to enforce Conventional Commit messages using Git hooks with husky &amp; commitlint</h4>
 				<article><p>In this guide I will be showing you how to enforce the use of Conventional Commit messages in Git.</p>
 				</article></div>
@@ -114,7 +129,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Aug 18, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/an-introduction-to-conventional-commits"><header><img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1476&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/an-introduction-to-conventional-commits"><header><img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1476&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">An introduction to Conventional Commits</h4>
 				<article><p>Conventional Commits is a specification for adding human and machine-readable meaning to commit messages.</p>
 				</article></div>
@@ -123,7 +138,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Aug 7, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/getting-started-with-unit-testing-in-node-using-jest"><header><img src="https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/getting-started-with-unit-testing-in-node-using-jest"><header><img src="https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">Getting started with Unit Testing in Node using Jest</h4>
 				<article><p>In this post we're going to take a look at the basics of unit testing, particularly with Jest.</p>
 				</article></div>
@@ -132,7 +147,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Aug 5, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-build-a-simple-login-system-with-react-and-firebase"><header><img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-build-a-simple-login-system-with-react-and-firebase"><header><img src="https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">How to build a simple Login system with React &amp; Firebase</h4>
 				<article><p>This guide will step you through how to build a React app and implement a login system using Firebase.</p>
 				</article></div>
@@ -141,7 +156,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Aug 2, 2022</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/a-summers-work-redesigning-wits-tutors-open-source-software-using-daisyui"><header><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1074&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/a-summers-work-redesigning-wits-tutors-open-source-software-using-daisyui"><header><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1074&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI</h4>
 				<article><p>During the summer of 2021, I tasked myself with redesigning the Tutors course reader software.</p>
 				</article></div>
@@ -150,7 +165,7 @@
 					<div class="flex-auto flex justify-between items-center align"><h6 class="font-bold">By Jordan Harrison</h6>
 						<small>On Sep 10, 2021</small></div>
 				</div></footer>
-		</a><a class="card bg-initial card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-create-and-host-a-html-website-for-free-using-github-pages"><header><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
+		</a><a class="card bg-surface-100-800-token card-hover overflow-hidden mx-auto lg:mx-4 my-4" href="blog/how-to-create-and-host-a-html-website-for-free-using-github-pages"><header><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80" class="h-48 w-full object-cover" alt="Post"></header>
 			<div class="p-4 space-y-4"><h4 data-toc-ignore="" class="font-bold">How to create and host a HTML website for free using GitHub Pages</h4>
 				<article><p>In this blog post, I will show you how to create and host a basic HTML website for free using GitHub Pages.</p>
 				</article></div>
@@ -162,7 +177,7 @@
 		</a></div></div></main>
 
 			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
 	</footer></div>
 
 		
@@ -175,7 +190,7 @@
 			<script type="application/json" data-sveltekit-fetched data-url="/api/posts/all">{"status":200,"statusText":"","headers":{},"body":"[{\"meta\":{\"title\":\"A first look at Svelte for React Developers\",\"date\":\"Feb 28, 2023\",\"cover\":\"https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80\",\"excerpt\":\"Svelte is a framework which aims to provide a more efficient way of building web applications compared to traditional frameworks like React.\"},\"path\":\"blog/a-first-look-at-svelte-for-react-developers\"},{\"meta\":{\"title\":\"Is serverless truly... serverless?\",\"date\":\"Dec 10, 2022\",\"cover\":\"https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1334&q=80\",\"excerpt\":\"Serverless technology has become increasingly popular in recent years, but there is still some confusion about what it actually means.\"},\"path\":\"blog/is-serverless-truly-serverless\"},{\"meta\":{\"title\":\"React hooks and best practises to use them effectively\",\"date\":\"Dec 6, 2022\",\"cover\":\"https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1461&q=80\",\"excerpt\":\"Hooks are a powerful feature in React that allows you to use state and other React features without writing a class.\"},\"path\":\"blog/react-hooks-and-best-practises-to-use-them-effectively\"},{\"meta\":{\"title\":\"Reflecting on my time at NodeConf EU 2022\",\"date\":\"Oct 5, 2022\",\"cover\":\"/images/nodeconf-eu-2022.jpg\",\"excerpt\":\"In this post i'll be reflecting on my time at NodeConf EU - along with my thoughts on the talks I attended.\"},\"path\":\"blog/reflecting-on-my-time-at-nodeconf-eu-2022\"},{\"meta\":{\"title\":\"How to enforce Conventional Commit messages using Git hooks with husky & commitlint\",\"date\":\"Aug 18, 2022\",\"cover\":\"https://images.unsplash.com/photo-1647166545674-ce28ce93bdca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80\",\"excerpt\":\"In this guide I will be showing you how to enforce the use of Conventional Commit messages in Git.\"},\"path\":\"blog/how-to-enforce-conventional-commit-messages-using-git-hooks-with-husky-commitlint\"},{\"meta\":{\"title\":\"An introduction to Conventional Commits\",\"date\":\"Aug 7, 2022\",\"cover\":\"https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80\",\"excerpt\":\"Conventional Commits is a specification for adding human and machine-readable meaning to commit messages.\"},\"path\":\"blog/an-introduction-to-conventional-commits\"},{\"meta\":{\"title\":\"Getting started with Unit Testing in Node using Jest\",\"date\":\"Aug 5, 2022\",\"cover\":\"https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80\",\"excerpt\":\"In this post we're going to take a look at the basics of unit testing, particularly with Jest.\"},\"path\":\"blog/getting-started-with-unit-testing-in-node-using-jest\"},{\"meta\":{\"title\":\"How to build a simple Login system with React & Firebase\",\"date\":\"Aug 2, 2022\",\"cover\":\"https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\",\"excerpt\":\"This guide will step you through how to build a React app and implement a login system using Firebase.\"},\"path\":\"blog/how-to-build-a-simple-login-system-with-react-and-firebase\"},{\"meta\":{\"title\":\"A Summer's Work... Redesigning WIT's Tutors Open Source Software Using DaisyUI\",\"date\":\"Sep 10, 2021\",\"cover\":\"https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80\",\"excerpt\":\"During the summer of 2021, I tasked myself with redesigning the Tutors course reader software.\"},\"path\":\"blog/a-summers-work-redesigning-wits-tutors-open-source-software-using-daisyui\"},{\"meta\":{\"title\":\"How to create and host a HTML website for free using GitHub Pages\",\"date\":\"May 14, 2021\",\"cover\":\"https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80\",\"excerpt\":\"In this blog post, I will show you how to create and host a basic HTML website for free using GitHub Pages.\"},\"path\":\"blog/how-to-create-and-host-a-html-website-for-free-using-github-pages\"}]"}</script>
 			<script>
 				{
-					__sveltekit_17lijw9 = {
+					__sveltekit_1uhue61 = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -184,10 +199,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.c21ce0a6.js"),
-						import("./_app/immutable/entry/app.83f5610d.js")
+						import("./_app/immutable/entry/start.b391ec6e.js"),
+						import("./_app/immutable/entry/app.5f4f2476.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_17lijw9.element, {
+						kit.start(app, __sveltekit_1uhue61.element, {
 							node_ids: [0, 4],
 							data,
 							form: null,

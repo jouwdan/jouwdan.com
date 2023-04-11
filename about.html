@@ -5,20 +5,30 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.741e16c3.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_layout.2482ca56.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.c21ce0a6.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.2663ad10.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.b1a7366e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.b081fc40.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.83f5610d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.b391ec6e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.41bbe901.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.80f15cbf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.ef874e6e.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.5f4f2476.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.43b09497.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.7da24d98.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Icon.bffab9d7.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.a1bb9b3e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Icon.d519490d.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.e35f58d8.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/about-page.svelte.97023de0.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END -->
+		<link rel="modulepreload" href="./_app/immutable/entry/about-page.svelte.2f3b1029.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
+  const elemHtmlClasses = document.documentElement.classList;
+  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
+  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
+  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
+    elemHtmlClasses.add("dark");
+  } else {
+    elemHtmlClasses.remove("dark");
+  }
+})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
 		<div style="display: contents" class="h-full overflow-hidden">
@@ -39,13 +49,18 @@
 
 		
 		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
+			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
 	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
 		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
 		
 		<div class="app-bar-slot-default flex-auto "></div>
 		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 "><div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
+		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
+
+<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
+	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
+		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
+					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
 						</a>
 						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/about">About
 						</a>
@@ -68,13 +83,13 @@
 			
 			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><h1 class="font-bold pt-4 pb-8">About Me</h1>
 
-<div class="p-16 rounded-xl border border-surface-700 bg-surface-800"><div class="max-w-[65ch] mx-auto"><div class="block md:flex items-center"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-32  rounded-full   mr-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="images/me.jpeg" alt="avatar of Jordan"></figure>
+<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800"><div class="max-w-[65ch] mx-auto"><div class="block md:flex items-center"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-32  rounded-full   mr-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="images/me.jpeg" alt="avatar of Jordan"></figure>
 			<div class="flex-1"><h2 class="font-bold">Jordan Harrison</h2>
 				<h4>Software Developer I, CXE @ Charles River Labs</h4>
-				<h6 class="text-surface-300">Creative Full Stack Developer. Web Tech &amp; Open Source Enthusiast.
+				<h6 class="dark:text-surface-300 text-surface-700">Creative Full Stack Developer. Web Tech &amp; Open Source Enthusiast.
 				</h6></div></div>
 		<div class="flex my-4"><div class="flex-1"><h2 class="font-bold pt-8">Biography</h2>
-				<p class="pt-4 text-justify text-surface-300">Hey, I&#39;m Jordan. I like to think of myself as a &#39;creative full stack developer&#39;. Web
+				<p class="pt-4 text-justify text-surface-700 dark:text-surface-300">Hey, I&#39;m Jordan. I like to think of myself as a &#39;creative full stack developer&#39;. Web
 					design has been a hobby of mine for more than a decade now, and in 2020 I decided to take
 					the leap and pursue a Higher Diploma in Computer Science at SETU Waterfor to turn my hobby
 					into a career. I&#39;m a member of the International High IQ Society, an open source
@@ -85,29 +100,29 @@
 			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/setu.png" alt="avatar of SETU"></figure>
 				<div class="flex-1"><h4>Higher Diploma in Computer Science</h4>
 					<h5>South East Technological University, Waterford</h5>
-					<h6 class="text-surface-300">2021 - 2023</h6>
-					<p class="text-justify text-surface-300 mt-2">Graduating with a First Class Honors in late 2023.
+					<h6 class="dark:text-surface-300 text-surface-700">2021 - 2023</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Graduating with a First Class Honors in late 2023.
 					</p></div></div>
 			<hr class="my-4">
 			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/ait.jpg" alt="avatar of AIT"></figure>
 				<div class="flex-1"><h4>Bachelor of Science in Network Management</h4>
 					<h5>Athlone Institute of Technology</h5>
-					<h6 class="text-surface-300">2014 - 2017</h6>
-					<p class="text-justify text-surface-300 mt-2">Graduated with a Merit Grade 2 in 2017.</p></div></div></div>
+					<h6 class="dark:text-surface-300 text-surface-700">2014 - 2017</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Graduated with a Merit Grade 2 in 2017.</p></div></div></div>
 		<div class="my-4"><div><h2 class="font-bold pt-8">Experience</h2></div>
 			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/crl.png" alt="avatar of Charles River Labs"></figure>
 				<div class="flex-1"><h4>Software Developer I, CXE</h4>
 					<h5>Charles River Labs</h5>
-					<h6 class="text-surface-300">Jan 2023 - Present</h6>
-					<p class="text-justify text-surface-300 mt-2">Working in a full stack capacity on the MVP of an internal user management application.
+					<h6 class="dark:text-surface-300 text-surface-700">Jan 2023 - Present</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Working in a full stack capacity on the MVP of an internal user management application.
 						Migrated the app from Webpack to Vite (and Jest to Vitest) in early stages to improve
 						DevEx. Tech stack: NodeJS, Fastify, React, Azure, CosmosDB, Gremlin Query Language.
 					</p>
 					<hr class="my-4">
 					<h4>Associate Software Developer, CXE</h4>
 					<h5>Charles River Labs</h5>
-					<h6 class="text-surface-300">Jul 2022 - Dec 2022</h6>
-					<p class="text-justify text-surface-300 mt-2">Worked on the frontend of Apollo, a large client-facing application, from MVP stage -
+					<h6 class="dark:text-surface-300 text-surface-700">Jul 2022 - Dec 2022</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Worked on the frontend of Apollo, a large client-facing application, from MVP stage -
 						implementing new functionality and working with large datasets. Tech Stack: NodeJS,
 						Fastify, React, Jest, Cypress, Azure.
 					</p></div></div>
@@ -115,8 +130,8 @@
 			<div class="flex"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/glanbia-cheese-eu.jpeg" alt="avatar of Glanbia Cheese EU"></figure>
 				<div class="flex-1"><h4>IT Support Officer</h4>
 					<h5>Glanbia Cheese EU</h5>
-					<h6 class="text-surface-300">Nov 2019 - Jul 2022</h6>
-					<p class="text-justify text-surface-300 mt-2">Overseen and implemented IT infrastructure &amp; systems during the green field build and
+					<h6 class="dark:text-surface-300 text-surface-700">Nov 2019 - Jul 2022</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Overseen and implemented IT infrastructure &amp; systems during the green field build and
 						commissioning phase of a €135 million processing facility. Sole IT System Administrator
 						on site supporting all internal IT systems, including servers, networks, printers &amp; end
 						user hardware.
@@ -125,14 +140,14 @@
 			<div class="flex"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/rps.jpeg" alt="avatar of RPS"></figure>
 				<div class="flex-1"><h4>Junior IT Administrator</h4>
 					<h5>RPS Group</h5>
-					<h6 class="text-surface-300">Dec 2017 - Nov 2019</h6>
-					<p class="text-justify text-surface-300 mt-2">First &amp; second line support role to 2 offices of circa 150 users in a heavily CAD
+					<h6 class="dark:text-surface-300 text-surface-700">Dec 2017 - Nov 2019</h6>
+					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">First &amp; second line support role to 2 offices of circa 150 users in a heavily CAD
 						focused environment. Responsible for the rollout of Windows 10 before Windows 7 became
 						EOL.
 					</p></div></div></div></div></div></div></main>
 
 			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
+			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
 	</footer></div>
 
 		
@@ -145,7 +160,7 @@
 			
 			<script>
 				{
-					__sveltekit_17lijw9 = {
+					__sveltekit_1uhue61 = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -154,10 +169,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.c21ce0a6.js"),
-						import("./_app/immutable/entry/app.83f5610d.js")
+						import("./_app/immutable/entry/start.b391ec6e.js"),
+						import("./_app/immutable/entry/app.5f4f2476.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_17lijw9.element, {
+						kit.start(app, __sveltekit_1uhue61.element, {
 							node_ids: [0, 3],
 							data,
 							form: null,
