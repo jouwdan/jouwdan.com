@@ -7,7 +7,7 @@
 <div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800">
 	<div class="max-w-[65ch] mx-auto">
 		<div class="block md:flex items-center">
-			<Avatar width="w-32" src="images/me.jpeg" alt="avatar of Jordan" class="mr-12" />
+			<Avatar width="w-32" src="images/me.jpg" alt="avatar of Jordan" class="mr-12" />
 			<div class="flex-1">
 				<h2 class="font-bold">Jordan Harrison</h2>
 				<h4>Software Developer I, CXE @ Charles River Labs</h4>
