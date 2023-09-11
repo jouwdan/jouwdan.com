@@ -21,11 +21,10 @@
 			<div class="flex-1">
 				<h2 class="font-bold pt-8">Biography</h2>
 				<p class="pt-4 text-justify text-surface-700 dark:text-surface-300">
-					Hey, I'm Jordan. I'm an all-around tech enthusiast, maintainer of the <a
-						href="tutors.dev"
-						target="_blank">Tutors Open Source Project</a
-					>, on which I spoke at GDG Glasgow 2022, and won the Red Hat Best Project 2023 award for.
-					I'm an avid reader, and am a huge fan of the Potterverse.
+					Hey, I'm Jordan. I'm an all-around tech enthusiast, maintainer of the
+					<a href="https://tutors.dev" target="_blank"> Tutors Open Source Project </a>, on which I
+					spoke at GDG Glasgow 2022, and won the Red Hat Best Project 2023 award for. I'm an avid
+					reader, and am a huge fan of the Potterverse.
 				</p>
 			</div>
 		</div>
