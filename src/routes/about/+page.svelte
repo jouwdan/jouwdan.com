@@ -13,7 +13,7 @@
 				<h2 class="font-bold">Jordan Harrison</h2>
 				<h4>Software Developer I, CXE @ Charles River Labs</h4>
 				<h6 class="dark:text-surface-300 text-surface-700">
-					Creative Full Stack Developer. Web Tech & Open Source Enthusiast.
+					Creative Full Stack Developer. GDG Portlaoise Founder & Organizer. Web Tech & Open Source Enthusiast.
 				</h6>
 			</div>
 		</div>
@@ -21,10 +21,10 @@
 			<div class="flex-1">
 				<h2 class="font-bold pt-8">Biography</h2>
 				<p class="pt-4 text-justify text-surface-700 dark:text-surface-300">
-					Hey, I'm Jordan. I'm an all-around tech enthusiast, maintainer of the
-					<a href="https://tutors.dev" target="_blank"> Tutors Open Source Project </a>, on which I
-					spoke at GDG Glasgow 2022, and won the Red Hat Best Project 2023 award for. I'm an avid
-					reader, and am a huge fan of the Potterverse.
+					Hey, I'm Jordan. I'm the founder of Google Developer Groups Portlaoise, an all-around tech enthusiast & maintainer of the
+					<a href="https://tutors.dev" target="_blank"> Tutors Open Source Project.</a>.<br />
+					I spoke at NodeConf EU 2023, GDG Glasgow 2022, and was the SETU Red Hat Best Project 2023 award winner.<br />
+					I'm an avid reader, and am a huge fan of the Potterverse.
 				</p>
 			</div>
 		</div>
