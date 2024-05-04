@@ -8,6 +8,10 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
 	import { Github, Linkedin, Twitter } from 'lucide-svelte';
+
+	import { fly } from 'svelte/transition';
+	import { cubicIn, cubicOut } from 'svelte/easing';
+	export let data;
 </script>
 
 <header
@@ -46,7 +50,15 @@
 </header>
 
 <ModeWatcher />
-<slot />
+
+{#key data.pathname}
+	<div
+		in:fly={{ easing: cubicOut, y: 10, duration: 150, delay: 200 }}
+		out:fly={{ easing: cubicIn, y: 10, duration: 150 }}
+	>
+		<slot />
+	</div>
+{/key}
 
 <footer>
 	<div class="container py-8 text-center">
