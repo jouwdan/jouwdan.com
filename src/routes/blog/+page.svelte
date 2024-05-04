@@ -5,6 +5,10 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Jordan Harrison | Blog</title>
+</svelte:head>
+
 <div class="container">
 	<h1 class="py-8 text-3xl font-bold">Blog</h1>
 	<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">

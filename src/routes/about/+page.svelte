@@ -65,6 +65,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Jordan Harrison | About</title>
+</svelte:head>
+
 <div class="container">
 	<h1 class="py-8 text-3xl font-bold">About Me</h1>
 	<div class="mx-auto max-w-[65ch]">

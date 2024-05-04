@@ -4,6 +4,14 @@
 	export let data;
 </script>
 
+<svelte:head>
+	<title>Jordan Harrison | Frontend Developer & GDG Portlaoise Organizer</title>
+	<meta
+		name="description"
+		content="Jordan Harrison is a frontend developer, creative, and founder & organizer of GDG Portlaoise."
+	/>
+</svelte:head>
+
 <div class="container min-h-[70vh] content-center 2xl:min-h-[50vh]">
 	<div class="flex flex-col-reverse lg:flex-row">
 		<div class="w-full content-center lg:max-w-[60%]">
