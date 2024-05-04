@@ -25,15 +25,9 @@
 			</Avatar>
 		</a>
 		<div class="flex-1 space-x-1 lg:space-x-4">
-			<Button variant="a" asChild>
-				<a href="/">Home</a>
-			</Button>
-			<Button variant="a" asChild>
-				<a href="/about">About</a>
-			</Button>
-			<Button variant="a" asChild>
-				<a href="/blog">Blog</a>
-			</Button>
+			<Button variant="link" href="/">Home</Button>
+			<Button variant="link" href="/about">About</Button>
+			<Button variant="link" href="/blog">Blog</Button>
 		</div>
 		<div class="right">
 			<Button on:click={toggleMode} variant="outline" size="icon">
