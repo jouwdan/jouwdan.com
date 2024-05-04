@@ -1,7 +1,5 @@
 import { json } from '@sveltejs/kit';
 
-export const prerender = true;
-
 const fetchPosts = async () => {
 	const allPostFiles = import.meta.glob('$lib/blog/*.md');
 
