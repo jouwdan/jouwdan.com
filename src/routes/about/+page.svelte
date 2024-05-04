@@ -74,7 +74,7 @@
 	<div class="mx-auto max-w-[65ch]">
 		<div class="flex items-center md:flex">
 			<Avatar class="h-24 w-24 border-2 border-[#f3d03e]">
-				<AvatarImage class="h-20 w-20" src="https://github.com/jouwdan.png" />
+				<AvatarImage src="https://github.com/jouwdan.png" />
 				<AvatarFallback class="text-8xl">JH</AvatarFallback>
 			</Avatar>
 			<div class="ml-8 flex-1">
