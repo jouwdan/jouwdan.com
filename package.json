@@ -6,8 +6,6 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"gh-pages": "npm run build && echo jouwdan.com > ./build/CNAME && touch ./build/.nojekyll && npx gh-pages -d build -t true"
