@@ -22,9 +22,8 @@
 				Frontend developer. Creative. GDG organizer.
 			</h2>
 			<p class="text-lg font-normal tracking-tight">
-				As a frontend developer, I have a passion for crafting enjoyable and engaging experiences
-				for users. I founded & organize the local Google Developer Group chapter, and have spoke at
-				various events.
+				I have a passion for crafting enjoyable and engaging experiences for users. I founded &
+				organize the local Google Developer Group chapter, and have spoke at various events.
 			</p>
 		</div>
 		<div class="mx-auto my-8">
