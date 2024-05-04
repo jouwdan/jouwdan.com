@@ -1,5 +1,4 @@
 <script>
-	export const prerender = true;
 	import '../app.pcss';
 	import '@fontsource-variable/bricolage-grotesque';
 	import { ModeWatcher, toggleMode } from 'mode-watcher';
