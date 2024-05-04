@@ -1,112 +1,46 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout.bd470f04.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.a92ee234.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.41bbe901.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.19a283cb.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.ef874e6e.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.570c8b79.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.63a5a99b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.d519490d.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.e35f58d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.d8fbf1c2.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.88d118c8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b4796a44.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
-  const elemHtmlClasses = document.documentElement.classList;
-  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
-  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
-  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
-    elemHtmlClasses.add("dark");
-  } else {
-    elemHtmlClasses.remove("dark");
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BJ4O3mkF.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.C1-VyPba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.fljWJh5z.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.K6Z9mYfZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.-liJSYxy.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DoK81HJa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CVV3iqrd.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Fvnlom0W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/avatar-fallback.DzOVIs2J.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.C7mCj8ms.js"><!-- HEAD_svelte-cpyj77_START --><!-- HTML_TAG_START --><script nonce="%sveltekit.nonce%">(function setInitialMode(defaultMode, themeColors2) {
+  const rootEl = document.documentElement;
+  const mode = localStorage.getItem("mode-watcher-mode") || defaultMode;
+  const light = mode === "light" || mode === "system" && window.matchMedia("(prefers-color-scheme: light)").matches;
+  rootEl.classList[light ? "remove" : "add"]("dark");
+  rootEl.style.colorScheme = light ? "light" : "dark";
+  if (themeColors2) {
+    const themeMetaEl = document.querySelector('meta[name="theme-color"]');
+    if (themeMetaEl) {
+      themeMetaEl.setAttribute("content", mode === "light" ? themeColors2.light : themeColors2.dark);
+    }
   }
-})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
+  localStorage.setItem("mode-watcher-mode", mode);
+})("system");</script><!-- HTML_TAG_END --><!-- HEAD_svelte-cpyj77_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full overflow-hidden">
-
-
-
-
-
-
-
-
-<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
-	
-
-	
-	<div class="flex-auto w-full h-full flex overflow-hidden">
-		
-
-		
-		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
-	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
-		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
-		
-		<div class="app-bar-slot-default flex-auto "></div>
-		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
-
-<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
-	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
-		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
-					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
-						</a>
-						<hr class="divider-vertical h-6">
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
-					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
-				</div></div>
-	
-	</div></div>
-	</header>
-
-			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose dark:prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80);"><div class="w-full h-full px-12 bg-surface-800 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold text-white">How to build a simple Login system with React &amp; Firebase</h1>
-			<p class="pb-20 text-white">Published: Aug 2, 2022</p></div></div>
-	<p>This guide will step you through how to build a React app using the create-react-app tool and implement a login system using Firebase. The front end for this application is built with TailwindCSS using the DaisyUI component library.</p>
-<p>The final code can be found on my GitHub page <a href="https://github.com/jouwdan/react-firebase-login" rel="nofollow">here</a>.</p>
-<h2>Prerequisites</h2>
-<p>Before starting, ensure the below is installed on your system.</p>
-<ul><li>NodeJS</li>
-<li>Visual Studio Code (or your favourite IDE)</li></ul>
-<h2>Getting Started</h2>
-<p>Let’s get started. Open up a terminal and type the below commands to set up the app and install all the required dependancies.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx create-react-app my-app
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-14 items-center"><a class="mr-4 items-center space-x-4" href="/"><div class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10" data-avatar-root=""><img src="/logo.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">JH</span></div></a> <div class="flex-1 space-x-1 lg:space-x-4"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/" data-svelte-h="svelte-5a0zws">Home</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/about" data-svelte-h="svelte-iphxk9">About</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/blog" data-svelte-h="svelte-1ygd05f">Blog</a></button></div> <div class="right"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10" data-button-root=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> <span class="sr-only" data-svelte-h="svelte-ntgole">Toggle theme</span></button></div></div></header>  <div class="bg-cover bg-center text-center" style="background-image: url(https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1170&amp;q=80);"><div class="h-full w-full bg-slate-900 bg-opacity-80 px-12"><h1 class="pb-4 pt-20 text-2xl font-bold text-white">How to build a simple Login system with React &amp; Firebase</h1> <p class="pb-20 text-white">Published: Aug 2, 2022</p></div></div> <article class="prose mx-auto my-8 dark:prose-invert"><p data-svelte-h="svelte-ltr2cp">This guide will step you through how to build a React app using the create-react-app tool and implement a login system using Firebase. The front end for this application is built with TailwindCSS using the DaisyUI component library.</p> <p data-svelte-h="svelte-1cezmcv">The final code can be found on my GitHub page <a href="https://github.com/jouwdan/react-firebase-login" rel="nofollow">here</a>.</p> <h2 data-svelte-h="svelte-1yr04vb">Prerequisites</h2> <p data-svelte-h="svelte-1p8hg9c">Before starting, ensure the below is installed on your system.</p> <ul data-svelte-h="svelte-f8fya6"><li>NodeJS</li> <li>Visual Studio Code (or your favourite IDE)</li></ul> <h2 data-svelte-h="svelte-1ris1ql">Getting Started</h2> <p data-svelte-h="svelte-1a7u0st">Let’s get started. Open up a terminal and type the below commands to set up the app and install all the required dependancies.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">npx create-react-app my-app
 cd my-app
 npm install --save dotenv firebase react-firebase-hooks react-router-dom tailwindcss postcss autoprefixer daisyui
-npx tailwindcss init -p</code><!-- HTML_TAG_END --></pre>
-<blockquote><p>npx is not a typo, it’s a <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b" rel="nofollow">package runner tool that was released alongside npm 5.2+</a>.</p></blockquote>
-<p>Create a new file <code>.env</code> in the my-app folder and add the below to it. We will update these values later once we set up our Firebase app.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">REACT_APP_FIREBASE_API_KEY=
+npx tailwindcss init -p</code><!-- HTML_TAG_END --></pre> <blockquote data-svelte-h="svelte-3lzpps"><p>npx is not a typo, it’s a <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b" rel="nofollow">package runner tool that was released alongside npm 5.2+</a>.</p></blockquote> <p data-svelte-h="svelte-9drtsj">Create a new file <code>.env</code> in the my-app folder and add the below to it. We will update these values later once we set up our Firebase app.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">REACT_APP_FIREBASE_API_KEY=
 REACT_APP_FIREBASE_AUTHDOMAIN=
 REACT_APP_FIREBASE_PROJECTID=
 REACT_APP_FIREBASE_STORAGEBUCKET=
 REACT_APP_FIREBASE_MESSAGINGSENDERID=
-REACT_APP_FIREBASE_APPID=</code><!-- HTML_TAG_END --></pre>
-<p>To set up Tailwind, open up the newly generated tailwind.config.js and replace all of the contents with the below. This will also ensure that we can use the daisyui component library.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
+REACT_APP_FIREBASE_APPID=</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-a7ankx">To set up Tailwind, open up the newly generated tailwind.config.js and replace all of the contents with the below. This will also ensure that we can use the daisyui component library.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">module.exports = &#123;
   content: [&quot;./src/**/*.&#123;js,jsx,ts,tsx&#125;&quot;, &quot;./public/index.html&quot;],
   theme: &#123;
     extend: &#123;&#125;,
@@ -115,34 +49,9 @@ REACT_APP_FIREBASE_APPID=</code><!-- HTML_TAG_END --></pre>
     extend: &#123;&#125;,
   &#125;,
   plugins: [require(&quot;daisyui&quot;)],
-&#125;;</code><!-- HTML_TAG_END --></pre>
-<p>Then open up <code>src/index.css</code> and replace the contents with</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">@tailwind base;
+&#125;;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1v6lu19">Then open up <code>src/index.css</code> and replace the contents with</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">@tailwind base;
 @tailwind components;
-@tailwind utilities;</code><!-- HTML_TAG_END --></pre>
-<p>We now have a simple React app set up, our dependancies installed and TailwindCSS initialised. Let’s move on to setting up Firebase so we can implement the login system.</p>
-<h2>Firebase Setup</h2>
-<p>Head on over to the <a href="https://firebase.google.com/" rel="nofollow">Firebase</a> website and hit <code>Get Started</code>.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440560930/oSSw52H00.png" alt="image.png"></p>
-<p>Click <code>Add Project</code>, type in the project name and press Continue.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440716383/5QhPz1mON.png" alt="image.png"></p>
-<p>For simplicity of this tutorial, on the next page disable Google Analytics and press Create Project.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440814566/ILZVbyiEq.png" alt="image.png"></p>
-<p>Once your Project is set up, go to <code>All Products</code> in the sidebar then Authentication.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440988686/DRzArSh_H.png" alt="image.png"></p>
-<p>Once here, go ahead and click <code>Get Started</code>.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441028010/x46cog8T7.png" alt="image.png"></p>
-<p>We are going to want to set up Email/Password login, so under <code>Native providers</code> click this, enable it and click save.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441135155/5EofUjjgM.png" alt="image.png"></p>
-<p>Next, let’s get our application secrets to add to our <code>.env</code> file. Head on over to the Project Overview and select web app at the top, which looks like a <code>&lt;/&gt;</code> icon.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441375337/UvQe7wapu.png" alt="image.png"></p>
-<p>Create your app nickname and press <code>Register app</code></p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441424647/Ry9C6vvDg.png" alt="image.png"></p>
-<p>You will then be faced with your API key details. Copy the values of these and add them to the relevant variable in your <code>.env</code> file.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441634387/4auJu6RPb.png" alt="image.png"></p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441799376/4js19rSqp.png" alt="image.png"></p>
-<p>We also need to create a file which communicates with Firebase to authenticate / create users. Create the file <code>firebase.js</code> in the <code>src</code> folder and paste in the following code.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; initializeApp &#125; from &quot;firebase/app&quot;;
+@tailwind utilities;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-zo17y">We now have a simple React app set up, our dependancies installed and TailwindCSS initialised. Let’s move on to setting up Firebase so we can implement the login system.</p> <h2 data-svelte-h="svelte-r8ib5a">Firebase Setup</h2> <p data-svelte-h="svelte-1gq6oz3">Head on over to the <a href="https://firebase.google.com/" rel="nofollow">Firebase</a> website and hit <code>Get Started</code>.</p> <p data-svelte-h="svelte-11gxpxv"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440560930/oSSw52H00.png" alt="image.png"></p> <p data-svelte-h="svelte-1vdzmrm">Click <code>Add Project</code>, type in the project name and press Continue.</p> <p data-svelte-h="svelte-f41jvw"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440716383/5QhPz1mON.png" alt="image.png"></p> <p data-svelte-h="svelte-1c326j9">For simplicity of this tutorial, on the next page disable Google Analytics and press Create Project.</p> <p data-svelte-h="svelte-18oanjw"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440814566/ILZVbyiEq.png" alt="image.png"></p> <p data-svelte-h="svelte-1ji3if4">Once your Project is set up, go to <code>All Products</code> in the sidebar then Authentication.</p> <p data-svelte-h="svelte-h2j11z"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659440988686/DRzArSh_H.png" alt="image.png"></p> <p data-svelte-h="svelte-1m5y4tp">Once here, go ahead and click <code>Get Started</code>.</p> <p data-svelte-h="svelte-oz9onf"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441028010/x46cog8T7.png" alt="image.png"></p> <p data-svelte-h="svelte-13ob3vu">We are going to want to set up Email/Password login, so under <code>Native providers</code> click this, enable it and click save.</p> <p data-svelte-h="svelte-f5rsx8"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441135155/5EofUjjgM.png" alt="image.png"></p> <p data-svelte-h="svelte-1ox9giz">Next, let’s get our application secrets to add to our <code>.env</code> file. Head on over to the Project Overview and select web app at the top, which looks like a <code>&lt;/&gt;</code> icon.</p> <p data-svelte-h="svelte-2qxqrb"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441375337/UvQe7wapu.png" alt="image.png"></p> <p data-svelte-h="svelte-zvfj77">Create your app nickname and press <code>Register app</code></p> <p data-svelte-h="svelte-5dqcir"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441424647/Ry9C6vvDg.png" alt="image.png"></p> <p data-svelte-h="svelte-1mwlmiv">You will then be faced with your API key details. Copy the values of these and add them to the relevant variable in your <code>.env</code> file.</p> <p data-svelte-h="svelte-165a5pg"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441634387/4auJu6RPb.png" alt="image.png"></p> <p data-svelte-h="svelte-x662lk"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659441799376/4js19rSqp.png" alt="image.png"></p> <p data-svelte-h="svelte-17u08tz">We also need to create a file which communicates with Firebase to authenticate / create users. Create the file <code>firebase.js</code> in the <code>src</code> folder and paste in the following code.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; initializeApp &#125; from &quot;firebase/app&quot;;
 import &#123;
   getAuth,
   signInWithEmailAndPassword,
@@ -206,10 +115,7 @@ export &#123;
   sendPasswordReset,
   logout,
 &#125;;
-</code><!-- HTML_TAG_END --></pre>
-<h2>Routes Setup</h2>
-<p>We need to add our routes so our app can render the pages, which we will create next. Open the <code>App.js</code> file and replace the contents with the below.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React from &quot;react&quot;;
+</code><!-- HTML_TAG_END --></pre> <h2 data-svelte-h="svelte-1413b95">Routes Setup</h2> <p data-svelte-h="svelte-kj4d0w">We need to add our routes so our app can render the pages, which we will create next. Open the <code>App.js</code> file and replace the contents with the below.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React from &quot;react&quot;;
 import &#123; BrowserRouter as Router, Route, Routes &#125; from &quot;react-router-dom&quot;;
 
 import Home from &quot;./Pages/Home&quot;;
@@ -244,19 +150,13 @@ function App() &#123;
   );
 &#125;
 export default App;
-</code><!-- HTML_TAG_END --></pre>
-<h2>Page Template Setup</h2>
-<p>Now let’s got our pages set up for our web application. Create a folder called <code>Pages</code> in the <code>/src</code> folder of your app and create the following files.</p>
-<p><code>Home.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import Hero from &quot;../Components/hero/hero&quot;;
+</code><!-- HTML_TAG_END --></pre> <h2 data-svelte-h="svelte-ib5pu8">Page Template Setup</h2> <p data-svelte-h="svelte-ojsbt9">Now let’s got our pages set up for our web application. Create a folder called <code>Pages</code> in the <code>/src</code> folder of your app and create the following files.</p> <p data-svelte-h="svelte-ffg7lh"><code>Home.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import Hero from &quot;../Components/hero/hero&quot;;
 
 const Home = () =&gt; &#123;
   return &lt;Hero /&gt;;
 &#125;;
 
-export default Home;</code><!-- HTML_TAG_END --></pre>
-<p><code>Dashboard.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState, useContext &#125; from &quot;react&quot;;
+export default Home;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1n7kxa2"><code>Dashboard.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState, useContext &#125; from &quot;react&quot;;
 import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
 import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
 import &#123; auth &#125; from &quot;../firebase&quot;;
@@ -281,17 +181,13 @@ function Dashboard() &#123;
   );
 &#125;
 
-export default Dashboard;</code><!-- HTML_TAG_END --></pre>
-<p><code>Login.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import LoginForm from &quot;../components/forms/loginForm&quot;;
+export default Dashboard;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-lpdhxr"><code>Login.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import LoginForm from &quot;../components/forms/loginForm&quot;;
 
 const Login = () =&gt; &#123;
   return &lt;LoginForm /&gt;;
 &#125;;
 
-export default Login;</code><!-- HTML_TAG_END --></pre>
-<p><code>Logout.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; useEffect &#125; from &quot;react&quot;;
+export default Login;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-18dyome"><code>Logout.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import &#123; useEffect &#125; from &quot;react&quot;;
 import &#123; auth &#125; from &quot;../firebase&quot;;
 import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
 
@@ -302,27 +198,20 @@ const Logout = () =&gt; &#123;
   &#125;);
 &#125;;
 
-export default Logout;</code><!-- HTML_TAG_END --></pre>
-<p><code>Register.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import RegisterForm from &quot;../components/forms/registerForm&quot;;
+export default Logout;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-3sbhcv"><code>Register.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import RegisterForm from &quot;../components/forms/registerForm&quot;;
 
 const Register = () =&gt; &#123;
   return &lt;RegisterForm /&gt;;
 &#125;;
 
 export default Register;
-</code><!-- HTML_TAG_END --></pre>
-<p><code>Reset.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import ResetPasswordForm from &quot;../components/forms/resetPasswordForm&quot;;
+</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1us3kop"><code>Reset.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import ResetPasswordForm from &quot;../components/forms/resetPasswordForm&quot;;
 
 const Reset = () =&gt; &#123;
   return &lt;ResetPasswordForm /&gt;;
 &#125;;
 
-export default Reset;</code><!-- HTML_TAG_END --></pre>
-<p>And then we’ll set up our components for the above. Create the <code>Components</code> folder in <code>/src</code> and create the following files.</p>
-<p><code>forms/loginForm.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+export default Reset;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1bm9xt0">And then we’ll set up our components for the above. Create the <code>Components</code> folder in <code>/src</code> and create the following files.</p> <p data-svelte-h="svelte-9mw65h"><code>forms/loginForm.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
 import &#123; Link, useNavigate &#125; from &quot;react-router-dom&quot;;
 import &#123; auth, logInWithEmailAndPassword &#125; from &quot;../../firebase&quot;;
 import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
@@ -391,9 +280,7 @@ function LoginForm() &#123;
   );
 &#125;
 
-export default LoginForm;</code><!-- HTML_TAG_END --></pre>
-<p><code>forms/registerForm.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+export default LoginForm;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-q04ij9"><code>forms/registerForm.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
 import &#123; Link, useNavigate &#125; from &quot;react-router-dom&quot;;
 import &#123; auth, registerWithEmailAndPassword &#125; from &quot;../../firebase&quot;;
 import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
@@ -460,9 +347,7 @@ function RegisterForm() &#123;
   );
 &#125;
 
-export default RegisterForm;</code><!-- HTML_TAG_END --></pre>
-<p><code>forms/resetPasswordForm.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
+export default RegisterForm;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-tcmxhm"><code>forms/resetPasswordForm.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useEffect, useState &#125; from &quot;react&quot;;
 import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
 import &#123; useNavigate &#125; from &quot;react-router-dom&quot;;
 import &#123; Link &#125; from &quot;react-router-dom&quot;;
@@ -514,9 +399,7 @@ function ResetPasswordForm() &#123;
   );
 &#125;
 
-export default ResetPasswordForm;</code><!-- HTML_TAG_END --></pre>
-<p><code>hero/hero.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
+export default ResetPasswordForm;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1y11gxn"><code>hero/hero.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
 
 const Hero = () =&gt; &#123;
   return (
@@ -534,9 +417,7 @@ const Hero = () =&gt; &#123;
   );
 &#125;;
 
-export default React.memo(Hero);</code><!-- HTML_TAG_END --></pre>
-<p><code>nav/navigation.js</code></p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
+export default React.memo(Hero);</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-12oslxo"><code>nav/navigation.js</code></p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">import React, &#123; useContext &#125; from &quot;react&quot;;
 import &#123; Link, NavLink, useNavigate &#125; from &quot;react-router-dom&quot;;
 import &#123; useAuthState &#125; from &quot;react-firebase-hooks/auth&quot;;
 import &#123; auth, logout &#125; from &quot;../../firebase&quot;;
@@ -667,52 +548,23 @@ function Navigation() &#123;
   );
 &#125;
 
-export default Navigation;</code><!-- HTML_TAG_END --></pre>
-<h2>Testing the Application</h2>
-<p>Now that we have the code wrote for our application - let’s go ahead and test it! Type <code>npm start</code> into the console and a browser window will open with our application.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449379981/AQbPd5BEp.png" alt="image.png"></p>
-<p>Try to register an account by clicking the <code>register</code> button.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659450151055/6FJcQshrk.png" alt="image.png"></p>
-<p>Once your account is created, you should be redirected to the dashboard with the email you registered with being displayed.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449434309/mTmu8UU9y.png" alt="image.png"></p>
-<p>Now let’s have a see where this user is stored. Head on over to Firebase and click <code>Authentication</code> in the sidebar. Your new user should be displayed here.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449498257/41AErDlk8.png" alt="image.png"></p>
-<h2>Conclusion</h2>
-<p>We now have a fully functional React application with a login system using Firebase! Let’s go back through what we done.</p>
-<ul><li>Create a new React app using create-react-app</li>
-<li>Install the dependancies required</li>
-<li>Initialise TailwindCSS and ensure it uses the DaisyUI library</li>
-<li>Create a Firebase application to store &amp; authenticate users</li>
-<li>Write the code that communicates with Firebase</li>
-<li>Create the Routes, Pages &amp; Components of our application</li></ul></article></div></main>
-
-			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
-	</footer></div>
-
-		
-		</div>
-
-	
-	</div>
-
-
+export default Navigation;</code><!-- HTML_TAG_END --></pre> <h2 data-svelte-h="svelte-1ho2dcx">Testing the Application</h2> <p data-svelte-h="svelte-1dfj6uz">Now that we have the code wrote for our application - let’s go ahead and test it! Type <code>npm start</code> into the console and a browser window will open with our application.</p> <p data-svelte-h="svelte-1qnnrer"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449379981/AQbPd5BEp.png" alt="image.png"></p> <p data-svelte-h="svelte-1r5q8x7">Try to register an account by clicking the <code>register</code> button.</p> <p data-svelte-h="svelte-dv2p6j"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659450151055/6FJcQshrk.png" alt="image.png"></p> <p data-svelte-h="svelte-1xsugbz">Once your account is created, you should be redirected to the dashboard with the email you registered with being displayed.</p> <p data-svelte-h="svelte-fhptyc"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449434309/mTmu8UU9y.png" alt="image.png"></p> <p data-svelte-h="svelte-9ibc40">Now let’s have a see where this user is stored. Head on over to Firebase and click <code>Authentication</code> in the sidebar. Your new user should be displayed here.</p> <p data-svelte-h="svelte-g0ojph"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659449498257/41AErDlk8.png" alt="image.png"></p> <h2 data-svelte-h="svelte-grw4hp">Conclusion</h2> <p data-svelte-h="svelte-100n5n">We now have a fully functional React application with a login system using Firebase! Let’s go back through what we done.</p> <ul data-svelte-h="svelte-zeo68x"><li>Create a new React app using create-react-app</li> <li>Install the dependancies required</li> <li>Initialise TailwindCSS and ensure it uses the DaisyUI library</li> <li>Create a Firebase application to store &amp; authenticate users</li> <li>Write the code that communicates with Firebase</li> <li>Create the Routes, Pages &amp; Components of our application</li></ul></article> <footer><div class="container py-8 text-center"><p class="text-sm text-gray-500">© 2024 Jordan Harrison. All rights reserved.</p> <div class="mt-4 flex justify-center space-x-4"><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a> <a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div></div></footer> 
 			
 			<script>
 				{
-					__sveltekit_uxycpl = {
-						env: {},
-						base: new URL("..", location).pathname.slice(0, -1),
-						element: document.currentScript.parentElement
+					__sveltekit_1ir8y5v = {
+						base: new URL("..", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.a92ee234.js"),
-						import("../_app/immutable/entry/app.570c8b79.js")
+						import("../_app/immutable/entry/start.C1-VyPba.js"),
+						import("../_app/immutable/entry/app.DoK81HJa.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_uxycpl.element, {
+						kit.start(app, element, {
 							node_ids: [0, 5],
 							data,
 							form: null,

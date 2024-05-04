@@ -1,119 +1,45 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout.bd470f04.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.a92ee234.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.41bbe901.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.19a283cb.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.ef874e6e.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.570c8b79.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.63a5a99b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.d519490d.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.e35f58d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.d8fbf1c2.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.88d118c8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b4796a44.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
-  const elemHtmlClasses = document.documentElement.classList;
-  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
-  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
-  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
-    elemHtmlClasses.add("dark");
-  } else {
-    elemHtmlClasses.remove("dark");
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BJ4O3mkF.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.C1-VyPba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.fljWJh5z.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.K6Z9mYfZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.-liJSYxy.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DoK81HJa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CVV3iqrd.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Fvnlom0W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/avatar-fallback.DzOVIs2J.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.C7mCj8ms.js"><!-- HEAD_svelte-cpyj77_START --><!-- HTML_TAG_START --><script nonce="%sveltekit.nonce%">(function setInitialMode(defaultMode, themeColors2) {
+  const rootEl = document.documentElement;
+  const mode = localStorage.getItem("mode-watcher-mode") || defaultMode;
+  const light = mode === "light" || mode === "system" && window.matchMedia("(prefers-color-scheme: light)").matches;
+  rootEl.classList[light ? "remove" : "add"]("dark");
+  rootEl.style.colorScheme = light ? "light" : "dark";
+  if (themeColors2) {
+    const themeMetaEl = document.querySelector('meta[name="theme-color"]');
+    if (themeMetaEl) {
+      themeMetaEl.setAttribute("content", mode === "light" ? themeColors2.light : themeColors2.dark);
+    }
   }
-})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
+  localStorage.setItem("mode-watcher-mode", mode);
+})("system");</script><!-- HTML_TAG_END --><!-- HEAD_svelte-cpyj77_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full overflow-hidden">
-
-
-
-
-
-
-
-
-<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
-	
-
-	
-	<div class="flex-auto w-full h-full flex overflow-hidden">
-		
-
-		
-		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
-	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
-		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
-		
-		<div class="app-bar-slot-default flex-auto "></div>
-		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
-
-<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
-	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
-		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
-					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
-						</a>
-						<hr class="divider-vertical h-6">
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
-					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
-				</div></div>
-	
-	</div></div>
-	</header>
-
-			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose dark:prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="w-full h-full px-12 bg-surface-800 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold text-white">Getting started with Unit Testing in Node using Jest</h1>
-			<p class="pb-20 text-white">Published: Aug 5, 2022</p></div></div>
-	<p>In this post we’re going to take a look at the basics of unit testing, particularly with <a href="https://jestjs.io/" rel="nofollow">Jest</a>. By the time you’ve finished up reading, you’ll have learned what unit testing is, the benefits of unit testing and have created and run basic unit tests.</p>
-<h2>Introduction to Unit Testing</h2>
-<p>Let’s break down what unit testing is. A unit is a single functionality or component of an application. Testing is a review of how your code will execute. Therefore, unit testing is reviewing a single functionality to ensure that it performs as expected. A suite of unit tests are then created to test that every function of the application performs as expected. Unit testing really comes into use when an update is made to a piece of code. After the code has been updated, the test can be ran to ensure that the functionality of the code has not been broken.</p>
-<p>Unit testing differs greatly from testing a whole application end-to-end, but is equally as important.</p>
-<h2>So, why should you write Unit Tests?</h2>
-<p>Usually, unit tests are wrote <em>before</em> the software code by developers. Known as TDD, Test Driven Development, the requirements are turned into specific test cases, which are developed so that the software can be improved to pass the new tests. In the case of unit tests, it allows code to be modified without affecting other unit’s functionality or the entire software package. Aided by Unit Tests, the early discovery of bugs in the software development lifecycle can greatly reduce the overall cost of development, as less time is spent on bug fixing in the later stage of the project and therefore increasing overall customer satisfaction.</p>
-<p>Within unit test environments, all modules of a product become individually isolated from one another. This means that the tests are more reliable as they are run in a contained environment. This, in turn, causes the code written to be more reliable.</p>
-<h3>Benefits of Unit Tests</h3>
-<ul><li>They ensure the functionality of components and applications</li>
-<li>They prove the effective reliability and performance of applications</li>
-<li>They help find and fix bugs quickly and easily</li>
-<li>They contribute to higher code quality &amp; better application architecture</li>
-<li>They can act as an additional source of documentation</li></ul>
-<p>Unit Testing makes an application more robust and less error prone. It is a method of verification to show that your code performs it’s intended function and that your application works as intended for your users. </p>
-<h2>Getting Started</h2>
-<p>Let’s get cracking by putting together our testing environment. Create a new folder, open the terminal and type <code>npm init -y</code> to generate a <code>package.json</code> file. Next let’s install Jest as a dev dependancy. Type <code>npm i -save-dev jest</code> into the console. </p>
-<p>Open up this folder in your favourite IDE and we’ll get started. There’s a few methods of file management that are generally accepted when writing unit tests. The method we will be using is we will be creating the tests in the same directory as the unit being tested. For example:</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"> src
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-14 items-center"><a class="mr-4 items-center space-x-4" href="/"><div class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10" data-avatar-root=""><img src="/logo.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">JH</span></div></a> <div class="flex-1 space-x-1 lg:space-x-4"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/" data-svelte-h="svelte-5a0zws">Home</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/about" data-svelte-h="svelte-iphxk9">About</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/blog" data-svelte-h="svelte-1ygd05f">Blog</a></button></div> <div class="right"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10" data-button-root=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> <span class="sr-only" data-svelte-h="svelte-ntgole">Toggle theme</span></button></div></div></header>  <div class="bg-cover bg-center text-center" style="background-image: url(https://images.unsplash.com/photo-1576444356170-66073046b1bc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80);"><div class="h-full w-full bg-slate-900 bg-opacity-80 px-12"><h1 class="pb-4 pt-20 text-2xl font-bold text-white">Getting started with Unit Testing in Node using Jest</h1> <p class="pb-20 text-white">Published: Aug 5, 2022</p></div></div> <article class="prose mx-auto my-8 dark:prose-invert"><p data-svelte-h="svelte-hej4ev">In this post we’re going to take a look at the basics of unit testing, particularly with <a href="https://jestjs.io/" rel="nofollow">Jest</a>. By the time you’ve finished up reading, you’ll have learned what unit testing is, the benefits of unit testing and have created and run basic unit tests.</p> <h2 data-svelte-h="svelte-i4nmg3">Introduction to Unit Testing</h2> <p data-svelte-h="svelte-19qr1if">Let’s break down what unit testing is. A unit is a single functionality or component of an application. Testing is a review of how your code will execute. Therefore, unit testing is reviewing a single functionality to ensure that it performs as expected. A suite of unit tests are then created to test that every function of the application performs as expected. Unit testing really comes into use when an update is made to a piece of code. After the code has been updated, the test can be ran to ensure that the functionality of the code has not been broken.</p> <p data-svelte-h="svelte-vt1pv4">Unit testing differs greatly from testing a whole application end-to-end, but is equally as important.</p> <h2 data-svelte-h="svelte-110bfi5">So, why should you write Unit Tests?</h2> <p data-svelte-h="svelte-4gon66">Usually, unit tests are wrote <em>before</em> the software code by developers. Known as TDD, Test Driven Development, the requirements are turned into specific test cases, which are developed so that the software can be improved to pass the new tests. In the case of unit tests, it allows code to be modified without affecting other unit’s functionality or the entire software package. Aided by Unit Tests, the early discovery of bugs in the software development lifecycle can greatly reduce the overall cost of development, as less time is spent on bug fixing in the later stage of the project and therefore increasing overall customer satisfaction.</p> <p data-svelte-h="svelte-ck3z3u">Within unit test environments, all modules of a product become individually isolated from one another. This means that the tests are more reliable as they are run in a contained environment. This, in turn, causes the code written to be more reliable.</p> <h3 data-svelte-h="svelte-tbckrc">Benefits of Unit Tests</h3> <ul data-svelte-h="svelte-8hucp8"><li>They ensure the functionality of components and applications</li> <li>They prove the effective reliability and performance of applications</li> <li>They help find and fix bugs quickly and easily</li> <li>They contribute to higher code quality &amp; better application architecture</li> <li>They can act as an additional source of documentation</li></ul> <p data-svelte-h="svelte-r79afs">Unit Testing makes an application more robust and less error prone. It is a method of verification to show that your code performs it’s intended function and that your application works as intended for your users.</p> <h2 data-svelte-h="svelte-1ris1ql">Getting Started</h2> <p data-svelte-h="svelte-2tvsru">Let’s get cracking by putting together our testing environment. Create a new folder, open the terminal and type <code>npm init -y</code> to generate a <code>package.json</code> file. Next let’s install Jest as a dev dependancy. Type <code>npm i -save-dev jest</code> into the console.</p> <p data-svelte-h="svelte-unqs4g">Open up this folder in your favourite IDE and we’ll get started. There’s a few methods of file management that are generally accepted when writing unit tests. The method we will be using is we will be creating the tests in the same directory as the unit being tested. For example:</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined"> src
 - utils
 -- unit-one
 --- unit-one.js
 --- unit-one.test.js
 -- unit-two
 --- unit-two.js
---- unit-two.test.js</code><!-- HTML_TAG_END --></pre>
-<p>So let’s go ahead and create a couple of units to test. Create the <code>src</code> folder and within this create a folder called <code>mathOperations</code>. Within this folder create two files, <code>mathOperations.js</code> &amp; <code>mathOperations.test.js</code>.</p>
-<h2>Basic tests</h2>
-<p>So what we want these functions to do is to take 2 numbers as an input, run a math operation on them and return the answer. Let’s write the tests for this first, so our use cases are clearly defined. Open up <code>mathOperations.test.js</code> and add the below, which we will look further into.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
+--- unit-two.test.js</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1pls6me">So let’s go ahead and create a couple of units to test. Create the <code>src</code> folder and within this create a folder called <code>mathOperations</code>. Within this folder create two files, <code>mathOperations.js</code> &amp; <code>mathOperations.test.js</code>.</p> <h2 data-svelte-h="svelte-1fymrrr">Basic tests</h2> <p data-svelte-h="svelte-xenob0">So what we want these functions to do is to take 2 numbers as an input, run a math operation on them and return the answer. Let’s write the tests for this first, so our use cases are clearly defined. Open up <code>mathOperations.test.js</code> and add the below, which we will look further into.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
 
 describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
   test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
@@ -122,15 +48,10 @@ describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
   test(&quot;Subtract 2 numbers from each other&quot;, () =&gt; &#123;
 
   &#125;);
-&#125;);</code><!-- HTML_TAG_END --></pre>
-<p>Here we can see that we are describing a test suite using the <code>describe</code> method. It takes a basic string input and a function, in which we add our unit tests. Let’s break down the test to add 2 numbers together.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
+&#125;);</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-x34rj3">Here we can see that we are describing a test suite using the <code>describe</code> method. It takes a basic string input and a function, in which we add our unit tests. Let’s break down the test to add 2 numbers together.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
   var result = mathOperations.add(1, 2);
   expect(result).toBe(3);
-&#125;);</code><!-- HTML_TAG_END --></pre>
-<p>We create a variable, <code>result</code>, which uses the function <code>add</code> in the <code>mathOperations</code> module and inputs 2 numbers, in our case <code>1</code> and <code>2</code>. We then <code>expect</code> our <code>result</code> variable to be <code>3</code>. Jest uses a very plain-English style typing for it’s language, as we can see here, so it is very easy to pick up.</p>
-<p>Go ahead and write the rest of the tests - you should get something similar to the below.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
+&#125;);</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1qw12u5">We create a variable, <code>result</code>, which uses the function <code>add</code> in the <code>mathOperations</code> module and inputs 2 numbers, in our case <code>1</code> and <code>2</code>. We then <code>expect</code> our <code>result</code> variable to be <code>3</code>. Jest uses a very plain-English style typing for it’s language, as we can see here, so it is very easy to pick up.</p> <p data-svelte-h="svelte-1npsx4w">Go ahead and write the rest of the tests - you should get something similar to the below.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = require(&quot;./mathOperations&quot;);
 
 describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
   test(&quot;Add 2 numbers together&quot;, () =&gt; &#123;
@@ -149,9 +70,7 @@ describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
     var result = mathOperations.divide(4, 2);
     expect(result).toBe(2);
   &#125;);
-&#125;);</code><!-- HTML_TAG_END --></pre>
-<p>Now that we have wrote our tests, open up <code>mathOperations.js</code> and create our functions like below.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = &#123;
+&#125;);</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1nw23lu">Now that we have wrote our tests, open up <code>mathOperations.js</code> and create our functions like below.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">const mathOperations = &#123;
   add: function (a, b) &#123;
     return a + b;
   &#125;,
@@ -166,46 +85,25 @@ describe(&quot;Math Operations on 2 numbers&quot;, () =&gt; &#123;
   &#125;,
 &#125;;
 
-module.exports = mathOperations;</code><!-- HTML_TAG_END --></pre>
-<p>For us to be able to then run these tests, you will need to modify <code>package.json</code>. Update the <code>&quot;scripts&quot;</code> section as below.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&quot;scripts&quot;: &#123;
+module.exports = mathOperations;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1pdnehy">For us to be able to then run these tests, you will need to modify <code>package.json</code>. Update the <code>&quot;scripts&quot;</code> section as below.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&quot;scripts&quot;: &#123;
     &quot;test&quot;: &quot;jest --verbose&quot;
-  &#125;,</code><!-- HTML_TAG_END --></pre>
-<p>We are using the <code>verbose</code> flag so that we get a full output of our tests. You should now be able to run your tests. In the terminal, type <code>npm test</code> and take a look at the output.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713394090/91LVsB2J9.png" alt="image.png"></p>
-<p>Here we can see that all 4 of our unit tests have passed! Try changing one of the unit tests to something that is incorrect, re-run <code>npm test</code> and note the output.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713516440/TUM9uhJbA.png" alt="image.png"></p>
-<p>As we can see from the above output, one of the unit tests has failed, and it lets you know reasoning for the test to fail. In this case, I am multiplying 3 by 3. The expected result is 6, whereas the actual result is 9, so the test fails.</p>
-<h2>Conclusion</h2>
-<p>As you can see, the quality of your application can easily be improved with Unit Testing as it helps find bugs and defects in your code. This was just a very brief introduction to Unit Tests, and I hope it was informative for you.</p></article></div></main>
-
-			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
-	</footer></div>
-
-		
-		</div>
-
-	
-	</div>
-
-
+  &#125;,</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-7gibsc">We are using the <code>verbose</code> flag so that we get a full output of our tests. You should now be able to run your tests. In the terminal, type <code>npm test</code> and take a look at the output.</p> <p data-svelte-h="svelte-1bdxmih"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713394090/91LVsB2J9.png" alt="image.png"></p> <p data-svelte-h="svelte-1ol6dzu">Here we can see that all 4 of our unit tests have passed! Try changing one of the unit tests to something that is incorrect, re-run <code>npm test</code> and note the output.</p> <p data-svelte-h="svelte-17d2sir"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1659713516440/TUM9uhJbA.png" alt="image.png"></p> <p data-svelte-h="svelte-r127wi">As we can see from the above output, one of the unit tests has failed, and it lets you know reasoning for the test to fail. In this case, I am multiplying 3 by 3. The expected result is 6, whereas the actual result is 9, so the test fails.</p> <h2 data-svelte-h="svelte-grw4hp">Conclusion</h2> <p data-svelte-h="svelte-1vy36z">As you can see, the quality of your application can easily be improved with Unit Testing as it helps find bugs and defects in your code. This was just a very brief introduction to Unit Tests, and I hope it was informative for you.</p></article> <footer><div class="container py-8 text-center"><p class="text-sm text-gray-500">© 2024 Jordan Harrison. All rights reserved.</p> <div class="mt-4 flex justify-center space-x-4"><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a> <a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div></div></footer> 
 			
 			<script>
 				{
-					__sveltekit_uxycpl = {
-						env: {},
-						base: new URL("..", location).pathname.slice(0, -1),
-						element: document.currentScript.parentElement
+					__sveltekit_1ir8y5v = {
+						base: new URL("..", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.a92ee234.js"),
-						import("../_app/immutable/entry/app.570c8b79.js")
+						import("../_app/immutable/entry/start.C1-VyPba.js"),
+						import("../_app/immutable/entry/app.DoK81HJa.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_uxycpl.element, {
+						kit.start(app, element, {
 							node_ids: [0, 5],
 							data,
 							form: null,

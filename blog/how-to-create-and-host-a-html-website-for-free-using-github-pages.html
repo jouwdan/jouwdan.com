@@ -1,111 +1,38 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout.bd470f04.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.a92ee234.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.41bbe901.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.19a283cb.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.ef874e6e.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.570c8b79.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.63a5a99b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.d519490d.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.e35f58d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.d8fbf1c2.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.88d118c8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b4796a44.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
-  const elemHtmlClasses = document.documentElement.classList;
-  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
-  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
-  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
-    elemHtmlClasses.add("dark");
-  } else {
-    elemHtmlClasses.remove("dark");
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BJ4O3mkF.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.C1-VyPba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.fljWJh5z.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.K6Z9mYfZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.-liJSYxy.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DoK81HJa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CVV3iqrd.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Fvnlom0W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/avatar-fallback.DzOVIs2J.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.C7mCj8ms.js"><!-- HEAD_svelte-cpyj77_START --><!-- HTML_TAG_START --><script nonce="%sveltekit.nonce%">(function setInitialMode(defaultMode, themeColors2) {
+  const rootEl = document.documentElement;
+  const mode = localStorage.getItem("mode-watcher-mode") || defaultMode;
+  const light = mode === "light" || mode === "system" && window.matchMedia("(prefers-color-scheme: light)").matches;
+  rootEl.classList[light ? "remove" : "add"]("dark");
+  rootEl.style.colorScheme = light ? "light" : "dark";
+  if (themeColors2) {
+    const themeMetaEl = document.querySelector('meta[name="theme-color"]');
+    if (themeMetaEl) {
+      themeMetaEl.setAttribute("content", mode === "light" ? themeColors2.light : themeColors2.dark);
+    }
   }
-})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
+  localStorage.setItem("mode-watcher-mode", mode);
+})("system");</script><!-- HTML_TAG_END --><!-- HEAD_svelte-cpyj77_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full overflow-hidden">
-
-
-
-
-
-
-
-
-<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
-	
-
-	
-	<div class="flex-auto w-full h-full flex overflow-hidden">
-		
-
-		
-		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
-	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
-		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
-		
-		<div class="app-bar-slot-default flex-auto "></div>
-		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
-
-<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
-	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
-		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
-					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
-						</a>
-						<hr class="divider-vertical h-6">
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
-					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
-				</div></div>
-	
-	</div></div>
-	</header>
-
-			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose dark:prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80);"><div class="w-full h-full px-12 bg-surface-800 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold text-white">How to create and host a HTML website for free using GitHub Pages</h1>
-			<p class="pb-20 text-white">Published: May 14, 2021</p></div></div>
-	<p><a href="https://pages.github.com" rel="nofollow">GitHub Pages</a> is by far the best tool you can use for hosting a basic HTML website. In just a few minutes, you can turn a basic HTML template into a fully functional website, all for free. Below you can see an example of what we will be creating in this blog post.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994277055/gT8pozKRN.png" alt="A preview of what your website will look like"></p>
-<p>In order to make GitHub Pages as accessible as possible, this guide is based around using the <a href="https://desktop.github.com" rel="nofollow">GitHub Desktop</a> client and <a href="https://code.visualstudio.com" rel="nofollow">Visual Studio Code</a>.</p>
-<h2>Getting Started</h2>
-<p>So, let’s get cracking. First up, if you haven’t got one already, you’ll need to <a href="https://github.com/join" rel="nofollow">create a GitHub Account</a>.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620988477864/an25mCQmc.png" alt="Creating a GitHub Account"></p>
-<p>After creating (and verifying!) your account, you’re going to want to <a href="https://github.com/new" rel="nofollow">create a new repository</a>. Now, for this to work, you’re going to want to name the repository with yourusername.github.io. As an example, my GitHub username is jordharr - so I would create the repository jordharr.github.io. See the screenshot below for a visual guidance. When you are done, click the green Create repository button!</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620989022264/ZM9zaCoSw.png" alt="Creating a new repository on GitHub"></p>
-<h2>Downloading GitHub Desktop and Visual Studio Code</h2>
-<p>We are now going to need to download &amp; install 2 pieces of software in order to create and upload your website to GitHub.</p>
-<p>First, download and install <a href="https://code.visualstudio.com" rel="nofollow">Visual Studio Code</a>. This is a free code editor made by Microsoft, and has rapidly become an industry standard software for code editing. It is available on all platforms (Windows, Mac OS and Linux) so this will work for everyone!</p>
-<p>Next, you’re going to want to install <a href="https://desktop.github.com" rel="nofollow">GitHub Desktop</a>. This is a very simple to use software which is used to save your repository locally, and upload files to a repository. During this installation, you will be asked for your default editor (select Visual Studio Code), and then asked to sign into GitHub, to link your account.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620989966630/7QtdxhmHN.png" alt="GitHub Desktop Website"></p>
-<h2>Setting up your repository</h2>
-<p>By now you have created an account, set up your website’s repository and installed the required software. Next up, we’re going to want to upload files to this repository to host our website. Once you have opened GitHub Desktop, press file and then Clone a repository… In the interface that pops up, choose the GitHub.com tab at the top, then select the repository we created earlier (yourusername.github.io) and press Clone.</p>
-<p>Once the repository has been cloned, it will create a new folder as specified above. You can navigate to this folder in Explorer/Finder to verify that it exists. From GitHub Desktop, press “Open in Visual Studio Code” to open this folder directly in Visual Studio Code, which we installed earlier.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620993627619/1sRYUDOui.png" alt="Repository view in GitHub Desktop"></p>
-<h2>Creating a basic HTML website</h2>
-<p>Next, we’re going to need to create a basic HTML website to upload to our repository. In the folder that opens in Visual Studio Code, which can be seen in the sidebar on the right, we’re going to want to right click in the empty space and press New File. We’ll call this file “index.html”</p>
-<p>Once this file is made, copy and paste the below code into the file.</p>
-<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;!DOCTYPE html&gt;
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-14 items-center"><a class="mr-4 items-center space-x-4" href="/"><div class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10" data-avatar-root=""><img src="/logo.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">JH</span></div></a> <div class="flex-1 space-x-1 lg:space-x-4"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/" data-svelte-h="svelte-5a0zws">Home</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/about" data-svelte-h="svelte-iphxk9">About</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/blog" data-svelte-h="svelte-1ygd05f">Blog</a></button></div> <div class="right"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10" data-button-root=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> <span class="sr-only" data-svelte-h="svelte-ntgole">Toggle theme</span></button></div></div></header>  <div class="bg-cover bg-center text-center" style="background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80);"><div class="h-full w-full bg-slate-900 bg-opacity-80 px-12"><h1 class="pb-4 pt-20 text-2xl font-bold text-white">How to create and host a HTML website for free using GitHub Pages</h1> <p class="pb-20 text-white">Published: May 14, 2021</p></div></div> <article class="prose mx-auto my-8 dark:prose-invert"><p data-svelte-h="svelte-1clu5lw"><a href="https://pages.github.com" rel="nofollow">GitHub Pages</a> is by far the best tool you can use for hosting a basic HTML website. In just a few minutes, you can turn a basic HTML template into a fully functional website, all for free. Below you can see an example of what we will be creating in this blog post.</p> <p data-svelte-h="svelte-w3sx5k"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994277055/gT8pozKRN.png" alt="A preview of what your website will look like"></p> <p data-svelte-h="svelte-x6wovx">In order to make GitHub Pages as accessible as possible, this guide is based around using the <a href="https://desktop.github.com" rel="nofollow">GitHub Desktop</a> client and <a href="https://code.visualstudio.com" rel="nofollow">Visual Studio Code</a>.</p> <h2 data-svelte-h="svelte-1ris1ql">Getting Started</h2> <p data-svelte-h="svelte-oz59pe">So, let’s get cracking. First up, if you haven’t got one already, you’ll need to <a href="https://github.com/join" rel="nofollow">create a GitHub Account</a>.</p> <p data-svelte-h="svelte-1x9b5vv"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620988477864/an25mCQmc.png" alt="Creating a GitHub Account"></p> <p data-svelte-h="svelte-pehwcq">After creating (and verifying!) your account, you’re going to want to <a href="https://github.com/new" rel="nofollow">create a new repository</a>. Now, for this to work, you’re going to want to name the repository with yourusername.github.io. As an example, my GitHub username is jordharr - so I would create the repository jordharr.github.io. See the screenshot below for a visual guidance. When you are done, click the green Create repository button!</p> <p data-svelte-h="svelte-rv4kpm"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620989022264/ZM9zaCoSw.png" alt="Creating a new repository on GitHub"></p> <h2 data-svelte-h="svelte-1loe7kx">Downloading GitHub Desktop and Visual Studio Code</h2> <p data-svelte-h="svelte-s54the">We are now going to need to download &amp; install 2 pieces of software in order to create and upload your website to GitHub.</p> <p data-svelte-h="svelte-5ahjqa">First, download and install <a href="https://code.visualstudio.com" rel="nofollow">Visual Studio Code</a>. This is a free code editor made by Microsoft, and has rapidly become an industry standard software for code editing. It is available on all platforms (Windows, Mac OS and Linux) so this will work for everyone!</p> <p data-svelte-h="svelte-hz5bl1">Next, you’re going to want to install <a href="https://desktop.github.com" rel="nofollow">GitHub Desktop</a>. This is a very simple to use software which is used to save your repository locally, and upload files to a repository. During this installation, you will be asked for your default editor (select Visual Studio Code), and then asked to sign into GitHub, to link your account.</p> <p data-svelte-h="svelte-387lhi"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620989966630/7QtdxhmHN.png" alt="GitHub Desktop Website"></p> <h2 data-svelte-h="svelte-16we1oe">Setting up your repository</h2> <p data-svelte-h="svelte-58303a">By now you have created an account, set up your website’s repository and installed the required software. Next up, we’re going to want to upload files to this repository to host our website. Once you have opened GitHub Desktop, press file and then Clone a repository… In the interface that pops up, choose the GitHub.com tab at the top, then select the repository we created earlier (yourusername.github.io) and press Clone.</p> <p data-svelte-h="svelte-9upn31">Once the repository has been cloned, it will create a new folder as specified above. You can navigate to this folder in Explorer/Finder to verify that it exists. From GitHub Desktop, press “Open in Visual Studio Code” to open this folder directly in Visual Studio Code, which we installed earlier.</p> <p data-svelte-h="svelte-165slth"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620993627619/1sRYUDOui.png" alt="Repository view in GitHub Desktop"></p> <h2 data-svelte-h="svelte-f76z8o">Creating a basic HTML website</h2> <p data-svelte-h="svelte-14b6t6w">Next, we’re going to need to create a basic HTML website to upload to our repository. In the folder that opens in Visual Studio Code, which can be seen in the sidebar on the right, we’re going to want to right click in the empty space and press New File. We’ll call this file “index.html”</p> <p data-svelte-h="svelte-tc4e1n">Once this file is made, copy and paste the below code into the file.</p> <pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;title&gt;Your Name&#39;s Website&lt;/title&gt;
@@ -136,44 +63,23 @@
         &lt;/div&gt;
     &lt;/section&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code><!-- HTML_TAG_END --></pre>
-<p>You’re going to want to replace anywhere it says “Your Name” with your actual name, the Lorem Ipsum text with about you, and the button URLs with your social links. Once this is done, press your keyboard shortcut to save the file (CTRL+S for Windows, Command + S for Mac).</p>
-<h2>Pushing to Github &amp; GitHub Pages setup</h2>
-<p>Now this is done, go back to GitHub Desktop and you will see that your new file is showing in the interface. We now need to “commit” these changes, and “push” them to GitHub. To do this, we press “Commit to main” at the bottom left, then at the top right press “Push origin”.</p>
-<p>After this, open up your repository in GitHub on your browser. You can do this by clicking “View on GitHub” in the desktop app, or heading to github.com/yourusername/yourusername.github.io. That will bring you to a page similar to below.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994663970/GWv9oZCHl.png" alt="Repository view on GitHub in the browser"></p>
-<p>From here, go to the Settings tab at the top, and then on the left hand menu choose Pages. Once here, under the “Source” section select main, and then press the save button to the right hand side.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994816448/BaYOBCcAc.png" alt="Selecting the main branch in GitHub"></p>
-<p>Once you have saved, wait 2 minutes and the URL that displays will be live, and your website will be hosted (free of charge) by GitHub Pages!</p>
-<p>Cover Photo by <a href="https://unsplash.com/@emilep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Emile Perron</a> on <a href="https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a></p></article></div></main>
-
-			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
-	</footer></div>
-
-		
-		</div>
-
-	
-	</div>
-
-
+&lt;/html&gt;</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-j4blru">You’re going to want to replace anywhere it says “Your Name” with your actual name, the Lorem Ipsum text with about you, and the button URLs with your social links. Once this is done, press your keyboard shortcut to save the file (CTRL+S for Windows, Command + S for Mac).</p> <h2 data-svelte-h="svelte-1cee9xy">Pushing to Github &amp; GitHub Pages setup</h2> <p data-svelte-h="svelte-1soo82a">Now this is done, go back to GitHub Desktop and you will see that your new file is showing in the interface. We now need to “commit” these changes, and “push” them to GitHub. To do this, we press “Commit to main” at the bottom left, then at the top right press “Push origin”.</p> <p data-svelte-h="svelte-c0492r">After this, open up your repository in GitHub on your browser. You can do this by clicking “View on GitHub” in the desktop app, or heading to github.com/yourusername/yourusername.github.io. That will bring you to a page similar to below.</p> <p data-svelte-h="svelte-17xtxim"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994663970/GWv9oZCHl.png" alt="Repository view on GitHub in the browser"></p> <p data-svelte-h="svelte-12ctt7m">From here, go to the Settings tab at the top, and then on the left hand menu choose Pages. Once here, under the “Source” section select main, and then press the save button to the right hand side.</p> <p data-svelte-h="svelte-qd8y13"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1620994816448/BaYOBCcAc.png" alt="Selecting the main branch in GitHub"></p> <p data-svelte-h="svelte-1xbjy19">Once you have saved, wait 2 minutes and the URL that displays will be live, and your website will be hosted (free of charge) by GitHub Pages!</p> <p data-svelte-h="svelte-q822zg">Cover Photo by <a href="https://unsplash.com/@emilep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Emile Perron</a> on <a href="https://unsplash.com/s/photos/website?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" rel="nofollow">Unsplash</a></p></article> <footer><div class="container py-8 text-center"><p class="text-sm text-gray-500">© 2024 Jordan Harrison. All rights reserved.</p> <div class="mt-4 flex justify-center space-x-4"><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a> <a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div></div></footer> 
 			
 			<script>
 				{
-					__sveltekit_uxycpl = {
-						env: {},
-						base: new URL("..", location).pathname.slice(0, -1),
-						element: document.currentScript.parentElement
+					__sveltekit_1ir8y5v = {
+						base: new URL("..", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.a92ee234.js"),
-						import("../_app/immutable/entry/app.570c8b79.js")
+						import("../_app/immutable/entry/start.C1-VyPba.js"),
+						import("../_app/immutable/entry/app.DoK81HJa.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_uxycpl.element, {
+						kit.start(app, element, {
 							node_ids: [0, 5],
 							data,
 							form: null,

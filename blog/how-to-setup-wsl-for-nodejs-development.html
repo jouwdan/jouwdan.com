@@ -1,185 +1,54 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="../favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout.bd470f04.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.a92ee234.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.41bbe901.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.19a283cb.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.ef874e6e.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.570c8b79.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.63a5a99b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.d519490d.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.ts.e35f58d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.svelte.d8fbf1c2.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/blog-_slug_-page.ts.88d118c8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.b4796a44.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
-  const elemHtmlClasses = document.documentElement.classList;
-  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
-  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
-  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
-    elemHtmlClasses.add("dark");
-  } else {
-    elemHtmlClasses.remove("dark");
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="../_app/immutable/assets/0.BJ4O3mkF.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.C1-VyPba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.fljWJh5z.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.K6Z9mYfZ.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.-liJSYxy.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.DoK81HJa.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.CVV3iqrd.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.Fvnlom0W.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/avatar-fallback.DzOVIs2J.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.C7mCj8ms.js"><!-- HEAD_svelte-cpyj77_START --><!-- HTML_TAG_START --><script nonce="%sveltekit.nonce%">(function setInitialMode(defaultMode, themeColors2) {
+  const rootEl = document.documentElement;
+  const mode = localStorage.getItem("mode-watcher-mode") || defaultMode;
+  const light = mode === "light" || mode === "system" && window.matchMedia("(prefers-color-scheme: light)").matches;
+  rootEl.classList[light ? "remove" : "add"]("dark");
+  rootEl.style.colorScheme = light ? "light" : "dark";
+  if (themeColors2) {
+    const themeMetaEl = document.querySelector('meta[name="theme-color"]');
+    if (themeMetaEl) {
+      themeMetaEl.setAttribute("content", mode === "light" ? themeColors2.light : themeColors2.dark);
+    }
   }
-})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
+  localStorage.setItem("mode-watcher-mode", mode);
+})("system");</script><!-- HTML_TAG_END --><!-- HEAD_svelte-cpyj77_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full overflow-hidden">
-
-
-
-
-
-
-
-
-<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
-	
-
-	
-	<div class="flex-auto w-full h-full flex overflow-hidden">
-		
-
-		
-		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
-	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
-		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
-		
-		<div class="app-bar-slot-default flex-auto "></div>
-		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
-
-<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
-	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
-		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
-					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/about">About
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/blog">Blog
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
-						</a>
-						<hr class="divider-vertical h-6">
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
-					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
-				</div></div>
-	
-	</div></div>
-	</header>
-
-			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><article class="prose dark:prose-invert mx-auto"><div class="card text-center bg-cover" style="background-image: url(https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format);"><div class="w-full h-full px-12 bg-surface-800 bg-opacity-80"><h1 class="pt-20 pb-4 font-bold text-white">How to set up WSL for NodeJS Development</h1>
-			<p class="pb-20 text-white">Published: Sep 7, 2023</p></div></div>
-	<h2>Getting Started</h2>
-<h3>Check build version</h3>
-<p>Before we begin, ensure that you are using a recent build of Windows 10 or 11. If you are using an earlier version than Build 20262, this will not work!</p>
-<h3>Installing WSL</h3>
-<p>To install Windows Subsystem for Linux, open up Powershell on your PC and enter the below.</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">wsl <span class="token parameter variable">--install</span></code><!-- HTML_TAG_END --></pre>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093436962/e482efb6-4763-4117-9d9d-c77e6c0eeabd.png"></p>
-<p>If you run into any issues with this, see the <a href="https://learn.microsoft.com/en-us/windows/wsl/troubleshooting" rel="nofollow">Troubleshooting Guide</a>.</p>
-<h2>Initial Setup</h2>
-<p>Once WSL has been installed, reboot your computer. This step is important to ensure it is setup completely.</p>
-<p>After rebooting, if Ubuntu does not open automatically then open the Ubuntu app from the start menu.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093532770/fdcc68d7-2b99-4386-8ad5-c9555286878b.png"></p>
-<p>You will be prompted to set up an account for your Linux system, so go ahead and do this.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093537496/283fdce8-c17a-4717-b8ca-45a99bd3b05a.png"></p>
-<ul><li>Note that when creating a password, nothing will appear on screen. This is called “blind typing” and this is completely normal.</li>
-<li>Once you create an account, this will be your default user and automatically sign-in on launch.</li>
-<li>This account will be considered the Linux administrator, with the ability to run <code>sudo</code> administrative commands.</li></ul>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093559745/8325c14f-8419-4a3d-9fc4-c3367adc6a79.png"></p>
-<h3>Ensure packages are up to date</h3>
-<p>It is recommended that you check for package updates after installing. Windows does not update or upgrade these automatically, so to do this manual process you should run:</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt</span> upgrade</code><!-- HTML_TAG_END --></pre>
-<p>in your ubuntu shell. It will ask for your password and then permission to install.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093613010/57c0cd73-d6ac-4869-b1e6-ecdac74b1f90.png"></p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093618196/52644162-7b95-4e57-a834-40a5f811d26c.png"></p>
-<h3>Install NodeJS &amp; npm via nvm (Node Version Manager)</h3>
-<p>It is recommended to use a node version manager when installing NodeJS. The reason for this is that you will likely require different node versions based on the needs of the project you are working on. NVM easily allows us to switch between different versions on the fly.</p>
-<p>Open your Ubuntu WSL command line and enter the below command to install cURL, a tool used to donload content from the internet in the command line.</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">curl</span></code><!-- HTML_TAG_END --></pre>
-<p>Once installed, enter the below to install nvm.</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh <span class="token operator">|</span> <span class="token function">bash</span></code><!-- HTML_TAG_END --></pre>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093637978/21e47831-00dc-499a-a666-c778c8e5d283.png"></p>
-<p>For this new install to take effect, you’re going to need to close the terminal and open a new one.</p>
-<p>Now let’s install the latest LTS version of node, by entering</p>
-<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">nvm <span class="token function">install</span> <span class="token parameter variable">--lts</span></code><!-- HTML_TAG_END --></pre>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093664064/08d1edfe-d252-4552-8518-2687696cabf5.png"></p>
-<h2>Setting up VS Code with WSL</h2>
-<h3>Getting Started</h3>
-<p>Before starting, make sure you have installed <a href="https://code.visualstudio.com/" rel="nofollow">Visual Studio Code</a> to your PC.</p>
-<p>Visual Studio Code, along with the WSL extension, enables you to use WSL as your full-time development environment directly from VS Code.</p>
-<h3>Installing the Remote Development Extension</h3>
-<p>Go to the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" rel="nofollow">Remote Development</a> page and press Install. It will prompt you to open Visual Studio Code.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093715977/941e048a-4374-4f7e-ae97-f43446ee835b.png"></p>
-<p>This will open Visual Studio Code and here you can press Install.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093723158/ba05cbbe-fba4-4d28-82a6-38d1bf9d5020.png"></p>
-<h3>Setting WSL as defualt terminal</h3>
-<p>Open a terminal window inside VS Code by pressing Terminal -&gt; New Terminal in the toolbar.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093734159/f6837f4c-4d88-4838-8759-67fe30b9b2f9.png"></p>
-<p>This should open a powershell terminal. To change the default to your WSL terminal, click the arrow beside the new terminal option, at the top right of the terminal, and choose <code>Select Default Profile</code>.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093745978/0ddfa466-e801-4231-881b-887c1ea4d6c7.png"></p>
-<p>You are then prompted to select the default profile. Here, choose <code>Ubuntu (WSL)</code> as default.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093750934/8b0942cf-a5ad-4e06-aefe-ad12848d8616.png"></p>
-<p>Go ahead and open an new terminal, and it will be using WSL as default!</p>
-<h2>Using WSL &amp; VSCode</h2>
-<h3>Running a simple project</h3>
-<p>Let’s try out our new set up and try running a project using Visual Studio Code &amp; Windows Subsystem for Linux.</p>
-<p>In this, we will be using the Windows Filesystem to store files, and Windows Subsystem for Linux to run the application using NodeJS.</p>
-<h3>Clone a project</h3>
-<p>Using your favourite Git client, clone the <a href="https://github.com/sveltejs/realworld" rel="nofollow">sveltejs/realworld</a> project. We will be using this as an example application to run.</p>
-<p>Open up this project’s files in Visual Studio Code and open a terminal.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093793520/31855466-5887-4611-a04f-e850133d2d24.png"></p>
-<h3>Run the code</h3>
-<p>In the WSL terminal, enter <code>npm install</code> to install the dependencies.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093802486/54b27dea-7b3a-443b-a308-07d4d0c74a04.png"></p>
-<p>Enter <code>npm run dev</code> and the app should run inside WSL.</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093817427/8dec887a-3878-4cf3-b424-a3e06290009c.png"></p>
-<p>Visit <a href="http://localhost:5173" rel="nofollow">http://localhost:5173</a> in your usual browser and you will be able to access the application in Windows when it is running on the Linux Subsystem!</p>
-<p><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093822485/3e94b4a3-e1e9-4ad2-aae9-d23a28d1dbc9.png"></p></article></div></main>
-
-			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
-	</footer></div>
-
-		
-		</div>
-
-	
-	</div>
-
-
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-14 items-center"><a class="mr-4 items-center space-x-4" href="/"><div class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10" data-avatar-root=""><img src="/logo.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">JH</span></div></a> <div class="flex-1 space-x-1 lg:space-x-4"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/" data-svelte-h="svelte-5a0zws">Home</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/about" data-svelte-h="svelte-iphxk9">About</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/blog" data-svelte-h="svelte-1ygd05f">Blog</a></button></div> <div class="right"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10" data-button-root=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> <span class="sr-only" data-svelte-h="svelte-ntgole">Toggle theme</span></button></div></div></header>  <div class="bg-cover bg-center text-center" style="background-image: url(https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format);"><div class="h-full w-full bg-slate-900 bg-opacity-80 px-12"><h1 class="pb-4 pt-20 text-2xl font-bold text-white">How to set up WSL for NodeJS Development</h1> <p class="pb-20 text-white">Published: Sep 7, 2023</p></div></div> <article class="prose mx-auto my-8 dark:prose-invert"><h2 data-svelte-h="svelte-1ris1ql">Getting Started</h2> <h3 data-svelte-h="svelte-7k9t66">Check build version</h3> <p data-svelte-h="svelte-1i63mfx">Before we begin, ensure that you are using a recent build of Windows 10 or 11. If you are using an earlier version than Build 20262, this will not work!</p> <h3 data-svelte-h="svelte-1dejpav">Installing WSL</h3> <p data-svelte-h="svelte-otpkbn">To install Windows Subsystem for Linux, open up Powershell on your PC and enter the below.</p> <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">wsl <span class="token parameter variable">--install</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-o49tgb"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093436962/e482efb6-4763-4117-9d9d-c77e6c0eeabd.png"></p> <p data-svelte-h="svelte-1vqn68z">If you run into any issues with this, see the <a href="https://learn.microsoft.com/en-us/windows/wsl/troubleshooting" rel="nofollow">Troubleshooting Guide</a>.</p> <h2 data-svelte-h="svelte-178xid1">Initial Setup</h2> <p data-svelte-h="svelte-1y1rmaj">Once WSL has been installed, reboot your computer. This step is important to ensure it is setup completely.</p> <p data-svelte-h="svelte-1pulbka">After rebooting, if Ubuntu does not open automatically then open the Ubuntu app from the start menu.</p> <p data-svelte-h="svelte-1g4vawc"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093532770/fdcc68d7-2b99-4386-8ad5-c9555286878b.png"></p> <p data-svelte-h="svelte-1wuqdof">You will be prompted to set up an account for your Linux system, so go ahead and do this.</p> <p data-svelte-h="svelte-1oi87q3"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093537496/283fdce8-c17a-4717-b8ca-45a99bd3b05a.png"></p> <ul data-svelte-h="svelte-rc5spk"><li>Note that when creating a password, nothing will appear on screen. This is called “blind typing” and this is completely normal.</li> <li>Once you create an account, this will be your default user and automatically sign-in on launch.</li> <li>This account will be considered the Linux administrator, with the ability to run <code>sudo</code> administrative commands.</li></ul> <p data-svelte-h="svelte-r2iehq"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093559745/8325c14f-8419-4a3d-9fc4-c3367adc6a79.png"></p> <h3 data-svelte-h="svelte-u3w8jh">Ensure packages are up to date</h3> <p data-svelte-h="svelte-18ajjkv">It is recommended that you check for package updates after installing. Windows does not update or upgrade these automatically, so to do this manual process you should run:</p> <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt</span> upgrade</code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-169b3o9">in your ubuntu shell. It will ask for your password and then permission to install.</p> <p data-svelte-h="svelte-1w1hnsr"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093613010/57c0cd73-d6ac-4869-b1e6-ecdac74b1f90.png"></p> <p data-svelte-h="svelte-1yj1s2c"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093618196/52644162-7b95-4e57-a834-40a5f811d26c.png"></p> <h3 data-svelte-h="svelte-w9zpq2">Install NodeJS &amp; npm via nvm (Node Version Manager)</h3> <p data-svelte-h="svelte-1qhh5z9">It is recommended to use a node version manager when installing NodeJS. The reason for this is that you will likely require different node versions based on the needs of the project you are working on. NVM easily allows us to switch between different versions on the fly.</p> <p data-svelte-h="svelte-npa5z7">Open your Ubuntu WSL command line and enter the below command to install cURL, a tool used to donload content from the internet in the command line.</p> <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">curl</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-xp2nzk">Once installed, enter the below to install nvm.</p> <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">curl</span> -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh <span class="token operator">|</span> <span class="token function">bash</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-1mx8v93"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093637978/21e47831-00dc-499a-a666-c778c8e5d283.png"></p> <p data-svelte-h="svelte-bck38x">For this new install to take effect, you’re going to need to close the terminal and open a new one.</p> <p data-svelte-h="svelte-1gxur4z">Now let’s install the latest LTS version of node, by entering</p> <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash">nvm <span class="token function">install</span> <span class="token parameter variable">--lts</span></code><!-- HTML_TAG_END --></pre> <p data-svelte-h="svelte-ankrgl"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093664064/08d1edfe-d252-4552-8518-2687696cabf5.png"></p> <h2 data-svelte-h="svelte-4h05q9">Setting up VS Code with WSL</h2> <h3 data-svelte-h="svelte-1fn0x1t">Getting Started</h3> <p data-svelte-h="svelte-88onh6">Before starting, make sure you have installed <a href="https://code.visualstudio.com/" rel="nofollow">Visual Studio Code</a> to your PC.</p> <p data-svelte-h="svelte-1e703ct">Visual Studio Code, along with the WSL extension, enables you to use WSL as your full-time development environment directly from VS Code.</p> <h3 data-svelte-h="svelte-otxt3u">Installing the Remote Development Extension</h3> <p data-svelte-h="svelte-biay4w">Go to the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" rel="nofollow">Remote Development</a> page and press Install. It will prompt you to open Visual Studio Code.</p> <p data-svelte-h="svelte-f5slbl"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093715977/941e048a-4374-4f7e-ae97-f43446ee835b.png"></p> <p data-svelte-h="svelte-1z74h5">This will open Visual Studio Code and here you can press Install.</p> <p data-svelte-h="svelte-npy6l8"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093723158/ba05cbbe-fba4-4d28-82a6-38d1bf9d5020.png"></p> <h3 data-svelte-h="svelte-1wiytql">Setting WSL as defualt terminal</h3> <p data-svelte-h="svelte-8q9fef">Open a terminal window inside VS Code by pressing Terminal -&gt; New Terminal in the toolbar.</p> <p data-svelte-h="svelte-yautqf"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093734159/f6837f4c-4d88-4838-8759-67fe30b9b2f9.png"></p> <p data-svelte-h="svelte-1t4ua2u">This should open a powershell terminal. To change the default to your WSL terminal, click the arrow beside the new terminal option, at the top right of the terminal, and choose <code>Select Default Profile</code>.</p> <p data-svelte-h="svelte-15bmz5"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093745978/0ddfa466-e801-4231-881b-887c1ea4d6c7.png"></p> <p data-svelte-h="svelte-15bidhk">You are then prompted to select the default profile. Here, choose <code>Ubuntu (WSL)</code> as default.</p> <p data-svelte-h="svelte-112hwp6"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093750934/8b0942cf-a5ad-4e06-aefe-ad12848d8616.png"></p> <p data-svelte-h="svelte-ul8k4g">Go ahead and open an new terminal, and it will be using WSL as default!</p> <h2 data-svelte-h="svelte-hhzln4">Using WSL &amp; VSCode</h2> <h3 data-svelte-h="svelte-ab67oz">Running a simple project</h3> <p data-svelte-h="svelte-mmkeb8">Let’s try out our new set up and try running a project using Visual Studio Code &amp; Windows Subsystem for Linux.</p> <p data-svelte-h="svelte-l5jcr4">In this, we will be using the Windows Filesystem to store files, and Windows Subsystem for Linux to run the application using NodeJS.</p> <h3 data-svelte-h="svelte-1pxmthn">Clone a project</h3> <p data-svelte-h="svelte-cpmrat">Using your favourite Git client, clone the <a href="https://github.com/sveltejs/realworld" rel="nofollow">sveltejs/realworld</a> project. We will be using this as an example application to run.</p> <p data-svelte-h="svelte-1t9zbrz">Open up this project’s files in Visual Studio Code and open a terminal.</p> <p data-svelte-h="svelte-ojjrm0"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093793520/31855466-5887-4611-a04f-e850133d2d24.png"></p> <h3 data-svelte-h="svelte-1e0ue0r">Run the code</h3> <p data-svelte-h="svelte-1vy91sp">In the WSL terminal, enter <code>npm install</code> to install the dependencies.</p> <p data-svelte-h="svelte-44rw1g"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093802486/54b27dea-7b3a-443b-a308-07d4d0c74a04.png"></p> <p data-svelte-h="svelte-pimwkt">Enter <code>npm run dev</code> and the app should run inside WSL.</p> <p data-svelte-h="svelte-18zl5yr"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093817427/8dec887a-3878-4cf3-b424-a3e06290009c.png"></p> <p data-svelte-h="svelte-1eqlgcj">Visit <a href="http://localhost:5173" rel="nofollow">http://localhost:5173</a> in your usual browser and you will be able to access the application in Windows when it is running on the Linux Subsystem!</p> <p data-svelte-h="svelte-uynw9c"><img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1694093822485/3e94b4a3-e1e9-4ad2-aae9-d23a28d1dbc9.png"></p></article> <footer><div class="container py-8 text-center"><p class="text-sm text-gray-500">© 2024 Jordan Harrison. All rights reserved.</p> <div class="mt-4 flex justify-center space-x-4"><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a> <a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div></div></footer> 
 			
 			<script>
 				{
-					__sveltekit_uxycpl = {
-						env: {},
-						base: new URL("..", location).pathname.slice(0, -1),
-						element: document.currentScript.parentElement
+					__sveltekit_1ir8y5v = {
+						base: new URL("..", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.a92ee234.js"),
-						import("../_app/immutable/entry/app.570c8b79.js")
+						import("../_app/immutable/entry/start.C1-VyPba.js"),
+						import("../_app/immutable/entry/app.DoK81HJa.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_uxycpl.element, {
+						kit.start(app, element, {
 							node_ids: [0, 5],
 							data,
 							form: null,

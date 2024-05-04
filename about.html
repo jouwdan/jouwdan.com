@@ -1,179 +1,60 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+<!doctype html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.bd470f04.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/ProgressBar.4f1e9ba5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.a92ee234.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.41bbe901.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.19a283cb.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.ef874e6e.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.570c8b79.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.63a5a99b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/ProgressBar.svelte_svelte_type_style_lang.9e414730.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Icon.d519490d.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.e35f58d8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.c72f7b09.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/about-page.svelte.1217495a.js"><title>Jordan Harrison | Full Stack Developer</title><!-- HEAD_svelte-18opqxr_START --><!-- HEAD_svelte-18opqxr_END --><!-- HEAD_svelte-1fqad1o_START --><!-- HTML_TAG_START --><script>(function setInitialClassState() {
-  const elemHtmlClasses = document.documentElement.classList;
-  const condLocalStorageUserPrefs = localStorage.getItem("modeUserPrefers") === "false";
-  const condLocalStorageUserPrefsExists = !("modeUserPrefers" in localStorage);
-  const condMatchMedia = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (condLocalStorageUserPrefs || condLocalStorageUserPrefsExists && condMatchMedia) {
-    elemHtmlClasses.add("dark");
-  } else {
-    elemHtmlClasses.remove("dark");
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.BJ4O3mkF.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.C1-VyPba.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.fljWJh5z.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.K6Z9mYfZ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.-liJSYxy.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.DoK81HJa.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.D6kgxu3v.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.CVV3iqrd.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.Fvnlom0W.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/avatar-fallback.DzOVIs2J.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/each.D6YF6ztN.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.Cqsf0hPt.js"><!-- HEAD_svelte-cpyj77_START --><!-- HTML_TAG_START --><script nonce="%sveltekit.nonce%">(function setInitialMode(defaultMode, themeColors2) {
+  const rootEl = document.documentElement;
+  const mode = localStorage.getItem("mode-watcher-mode") || defaultMode;
+  const light = mode === "light" || mode === "system" && window.matchMedia("(prefers-color-scheme: light)").matches;
+  rootEl.classList[light ? "remove" : "add"]("dark");
+  rootEl.style.colorScheme = light ? "light" : "dark";
+  if (themeColors2) {
+    const themeMetaEl = document.querySelector('meta[name="theme-color"]');
+    if (themeMetaEl) {
+      themeMetaEl.setAttribute("content", mode === "light" ? themeColors2.light : themeColors2.dark);
+    }
   }
-})();</script><!-- HTML_TAG_END --><!-- HEAD_svelte-1fqad1o_END -->
+  localStorage.setItem("mode-watcher-mode", mode);
+})("system");</script><!-- HTML_TAG_END --><!-- HEAD_svelte-cpyj77_END -->
 	</head>
-	<body data-sveltekit-preload-data="hover" data-theme="skeleton">
-		<div style="display: contents" class="h-full overflow-hidden">
-
-
-
-
-
-
-
-
-<div id="appShell" class="w-full h-full flex flex-col overflow-hidden " data-testid="app-shell">
-	
-
-	
-	<div class="flex-auto w-full h-full flex overflow-hidden">
-		
-
-		
-		<div id="page" class="relative flex-1 overflow-x-hidden flex flex-col">
-			<header id="page-header" class="flex-none sticky top-0 z-10"><div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80"><div class="app-bar flex flex-col none  space-y-4 p-4  py-4 container mx-auto" data-testid="app-bar" role="toolbar" aria-label="" aria-labelledby="">
-	<div class="app-bar-row-main grid items-center grid-cols-[auto_1fr_auto] gap-4 ">
-		<div class="app-bar-slot-lead flex-none flex justify-between items-center "><a href="/"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-16  rounded-xl   " data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/logo.png" alt=""></figure></a></div>
-		
-		<div class="app-bar-slot-default flex-auto "></div>
-		
-		<div class="app-bar-slot-trail flex-none flex items-center space-x-4 ">
-
-<div class="lightswitch-track cursor-pointer transition-all duration-[200ms] w-12 h-6 ring-[1px] ring-surface-500/30 rounded-token bg-surface-900 " role="switch" aria-label="Light Switch" aria-checked="false" title="Toggle Light Mode" tabindex="0">
-	<div class="lightswitch-thumb aspect-square scale-[0.8] flex justify-center items-center transition-all duration-[200ms] h-6 rounded-token bg-surface-50 ">
-		<svg class="lightswitch-icon w-[70%] aspect-square fill-surface-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></div></div>
-					<div class="hidden lg:flex space-x-3 items-center"><a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/">Home
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200  variant-ghost-primary" href="/about">About
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/portfolio">Portfolio
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/blog">Blog
-						</a>
-						<a class="btn btn-sm hover:variant-ghost-primary transition-all duration-200 variant-ghost-surface" href="/contact">Contact
-						</a>
-						<hr class="divider-vertical h-6">
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://twitter.com/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://linkedin.com/in/jouwdan" target="_blank" rel="noreferrer"></a>
-						<a class="btn btn-sm variant-soft-surface hover:variant-soft-primary" href="https://github.com/jouwdan" target="_blank" rel="noreferrer"></a></div>
-					<div class="flex lg:hidden"><button class="btn px-0"></button></div>
-				</div></div>
-	
-	</div></div>
-	</header>
-
-			
-			<main id="page-content" class="flex-auto "><div class="container mx-auto px-4"><h1 class="font-bold pt-4 pb-8">About Me</h1>
-
-<div class="p-16 rounded-xl border border-surface-300 dark:border-surface-700 bg-surface-100 dark:bg-surface-800"><div class="max-w-[65ch] mx-auto"><div class="block md:flex items-center"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-32  rounded-full   mr-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="images/me.jpg" alt="avatar of Jordan"></figure>
-			<div class="flex-1"><h2 class="font-bold">Jordan Harrison</h2>
-				<h4>Software Developer I, CXE @ Charles River Labs</h4>
-				<h6 class="dark:text-surface-300 text-surface-700">Creative Full Stack Developer. GDG Portlaoise Founder &amp; Organizer. Web Tech &amp; Open Source Enthusiast.
-				</h6></div></div>
-		<div class="flex my-4"><div class="flex-1"><h2 class="font-bold pt-8">Biography</h2>
-				<p class="pt-4 text-justify text-surface-700 dark:text-surface-300">Hey, I&#39;m Jordan. I&#39;m the founder of Google Developer Groups Portlaoise, an all-around tech enthusiast &amp; maintainer of the
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <header class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"><div class="container flex h-14 items-center"><a class="mr-4 items-center space-x-4" href="/"><div class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10" data-avatar-root=""><img src="/logo.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">JH</span></div></a> <div class="flex-1 space-x-1 lg:space-x-4"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/" data-svelte-h="svelte-5a0zws">Home</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/about" data-svelte-h="svelte-iphxk9">About</a></button>  <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2" asChild data-button-root=""><a href="/blog" data-svelte-h="svelte-1ygd05f">Blog</a></button></div> <div class="right"> <button type="button" tabindex="0" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10" data-button-root=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-sun h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-moon absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg> <span class="sr-only" data-svelte-h="svelte-ntgole">Toggle theme</span></button></div></div></header>  <div class="container"><h1 class="py-8 text-3xl font-bold" data-svelte-h="svelte-dd9r80">About Me</h1> <div class="mx-auto max-w-[65ch]"><div class="flex items-center md:flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-24 w-24 border-2 border-[#f3d03e]" data-avatar-root=""><img src="https://github.com/jouwdan.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-20 w-20"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted text-8xl">JH</span></div> <div class="ml-8 flex-1" data-svelte-h="svelte-s46gc3"><p class="text-4xl font-bold">Jordan Harrison</p> <p class="text-xl">Software Developer @ Charles River Labs</p> <p class="text-md">Creative Full Stack Developer. GDG Portlaoise Founder &amp; Organizer. Web Tech &amp; Open Source
+					Enthusiast.</p></div></div> <div class="my-8 flex" data-svelte-h="svelte-rowi0y"><div class="flex-1"><h2 class="text-3xl font-bold">Biography</h2> <p class="py-4 text-justify">Hey, I&#39;m Jordan. I&#39;m the founder of Google Developer Groups Portlaoise, an all-around tech
+					enthusiast &amp; maintainer of the
 					<a href="https://tutors.dev" target="_blank">Tutors Open Source Project.</a>.<br>
-					I spoke at NodeConf EU 2023, GDG Glasgow 2022, and was the SETU Red Hat Best Project 2023 award winner.<br>
-					I&#39;m an avid reader, and am a huge fan of the Potterverse.
-				</p></div></div>
-		<div class="my-4"><div><h2 class="font-bold pt-8">Education</h2></div>
-			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/setu.png" alt="avatar of SETU"></figure>
-				<div class="flex-1"><h4>Higher Diploma in Computer Science</h4>
-					<h5>South East Technological University, Waterford</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">2021 - 2023</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">First Class Honors.
-					</p></div></div>
-			<hr class="my-4">
-			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/ait.jpg" alt="avatar of AIT"></figure>
-				<div class="flex-1"><h4>Bachelor of Science in Network Management</h4>
-					<h5>Athlone Institute of Technology</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">2014 - 2017</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Merit Grade 2.</p></div></div></div>
-		<div class="my-4"><div><h2 class="font-bold pt-8">Experience</h2></div>
-			<div class="flex pt-4"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/crl.png" alt="avatar of Charles River Labs"></figure>
-				<div class="flex-1"><h4>Software Developer I, CXE</h4>
-					<h5>Charles River Labs</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">Jan 2023 - Present</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Working in a full stack capacity, building an MVP of an internal user management
-						application.<br>
-						Migrated the app from Webpack to Vite (and Jest to Vitest) in early stages to improve DevEx.<br>
-						Ensured all code was written to a high standard, and it had a solid test coverage.<br>
-						Tech stack: NodeJS, React, Fastify, Vitest, Playwright, Azure, CosmosDB, Gremlin QL.
-					</p>
-					<hr class="my-4">
-					<h4>Associate Software Developer, CXE</h4>
-					<h5>Charles River Labs</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">Jul 2022 - Dec 2022</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Worked on the frontend of Apollo, a large client-facing application, from MVP stage -
-						implementing new functionality and working with large datasets. <br>
-						Tech Stack: NodeJS, React, Fastify, Jest, Cypress, Azure.
-					</p></div></div>
-			<hr class="my-4">
-			<div class="flex"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/glanbia-cheese-eu.jpeg" alt="avatar of Glanbia Cheese EU"></figure>
-				<div class="flex-1"><h4>IT Support Officer</h4>
-					<h5>Glanbia Cheese EU</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">Nov 2019 - Jul 2022</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">Overseen and implemented IT infrastructure &amp; systems during the green field build and
-						commissioning phase of a €135 million food processing facility. Ensured all the IT
-						infrastructure was delivered on-time and under budget. <br>
-						Sole IT System Administrator on site supporting all internal IT systems, including servers,
-						networks, printers &amp; end user hardware.
-					</p></div></div>
-			<hr class="my-4">
-			<div class="flex"><figure class="avatar flex aspect-square text-surface-50 font-semibold justify-center items-center overflow-hidden isolate bg-surface-400-500-token w-12  rounded-full   mr-8 h-12" data-testid="avatar"><img class="avatar-image w-full h-full object-cover" style="" src="/images/rps.jpeg" alt="avatar of RPS"></figure>
-				<div class="flex-1"><h4>Junior IT Administrator</h4>
-					<h5>RPS Group</h5>
-					<h6 class="dark:text-surface-300 text-surface-700">Dec 2017 - Nov 2019</h6>
-					<p class="text-justify dark:text-surface-300 text-surface-700 mt-2">First &amp; second line support role to 2 offices of circa 150 users in a heavily CAD
-						focused environment. <br>
-						Rolled out Windows 10 3 months earlier than projected.
-					</p></div></div></div></div></div></div></main>
-
-			
-			<footer id="page-footer" class="flex-none "><div class="container mx-auto"><div class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700"><p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p></div></div>
-	</footer></div>
-
-		
-		</div>
-
-	
-	</div>
-
-
+					I spoke at NodeConf EU 2023, GDG Glasgow 2022, and was the SETU Red Hat Best Project 2023 award
+					winner.<br>
+					I&#39;m an avid reader, and am a huge fan of the Potterverse.</p></div></div> <div class="my-8"><h2 class="text-3xl font-bold" data-svelte-h="svelte-ywdt6b">Education</h2> <div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/setu.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">South East Technological University</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Higher Diploma in Computer Science</h3> <p class="text-lg">South East Technological University, Waterford</p> <p class="text-md">2021 - 2023, First Class Honors.</p></div> </div><div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/ait.jpg" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">avatar of AIT</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Bachelor of Science in Network Management</h3> <p class="text-lg">Athlone Institute of Technology</p> <p class="text-md">2014 - 2017, Merit Grade 2.</p></div> </div></div> <div class="my-8"><h2 class="text-3xl font-bold" data-svelte-h="svelte-8diz6d">Experience</h2> <div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/crl.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">Charles River Labs</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Software Developer</h3> <p class="text-lg">Charles River Labs</p> <p class="text-sm">Nov 2023 - Present</p> <p class="text-md">Building a decoupled frontend, with a progressive rollout, for the company's Drupal-powered client facing website.</p> <p class="text-md"><b data-svelte-h="svelte-azx9v2">Tech Stack:</b> NodeJS, NextJS, React, Chakra UI, JSON API, Drupal</p></div> </div><div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/crl.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">Charles River Labs</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Software Developer I</h3> <p class="text-lg">Charles River Labs</p> <p class="text-sm">Jan 2023 - Nov 2023</p> <p class="text-md">Working in a full stack capacity, building an MVP of an internal user management application. Migrated the app from Webpack to Vite (and Jest to Vitest) in early stages to improve DevEx. Ensured all code was written to a high standard, and it had a solid test coverage.</p> <p class="text-md"><b data-svelte-h="svelte-azx9v2">Tech Stack:</b> NodeJS, React, Fastify, Vitest, Playwright, Azure, CosmosDB, Gremlin QL</p></div> </div><div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/crl.png" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">Charles River Labs</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Associate Software Developer</h3> <p class="text-lg">Charles River Labs</p> <p class="text-sm">Jul 2022 - Dec 2022</p> <p class="text-md">Worked on the frontend of Apollo, a large client-facing application, from MVP stage - implementing new functionality and working with large datasets</p> <p class="text-md"><b data-svelte-h="svelte-azx9v2">Tech Stack:</b> NodeJS, React, Fastify, Jest, Cypress, Azure</p></div> </div><div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/glanbia-cheese-eu.jpeg" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">Glanbia Cheese EU</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">IT Support Officer</h3> <p class="text-lg">Glanbia Cheese EU</p> <p class="text-sm">Nov 2019 - Jul 2022</p> <p class="text-md">Overseen and implemented IT infrastructure &amp; systems during the green field build and commissioning phase of a €135 million food processing facility. Ensured all the IT infrastructure was delivered on-time and under budget. Sole IT System Administrator on site supporting all internal IT systems, including servers, networks, printers &amp; end user hardware.</p> </div> </div><div class="my-8 flex"><div class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12" data-avatar-root=""><img src="/images/rps.jpeg" style="display:none;" data-melt-avatar-image="" data-bits-avatar-image="" class="aspect-square h-full w-full"> <span data-melt-avatar-fallback="" data-avatar-fallback="" class="flex h-full w-full items-center justify-center rounded-full bg-muted">RPS</span> </div> <div class="flex-1 pl-4"><h3 class="text-xl font-bold">Junior IT Administrator</h3> <p class="text-lg">RPS Group</p> <p class="text-sm">Dec 2017 - Nov 2019</p> <p class="text-md">First &amp; second line support role to 2 offices of circa 150 users in a heavily CAD focused environment. Rolled out Windows 10 3 months earlier than projected.</p> </div> </div></div></div></div> <footer><div class="container py-8 text-center"><p class="text-sm text-gray-500">© 2024 Jordan Harrison. All rights reserved.</p> <div class="mt-4 flex justify-center space-x-4"><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a> <a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg></a> <a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a></div></div></footer> 
 			
 			<script>
 				{
-					__sveltekit_uxycpl = {
-						env: {},
-						base: new URL(".", location).pathname.slice(0, -1),
-						element: document.currentScript.parentElement
+					__sveltekit_1ir8y5v = {
+						base: new URL(".", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.a92ee234.js"),
-						import("./_app/immutable/entry/app.570c8b79.js")
+						import("./_app/immutable/entry/start.C1-VyPba.js"),
+						import("./_app/immutable/entry/app.DoK81HJa.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_uxycpl.element, {
+						kit.start(app, element, {
 							node_ids: [0, 3],
 							data,
 							form: null,
