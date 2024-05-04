@@ -1,237 +1,68 @@
-<script lang="ts">
-	import { page } from '$app/stores';
-	import '$lib/theme.css';
-	import '@skeletonlabs/skeleton/styles/all.css';
-	import '../app.postcss';
-	import { AppShell, AppBar, Avatar, Drawer, drawerStore } from '@skeletonlabs/skeleton';
-	import type { DrawerSettings } from '@skeletonlabs/skeleton';
-	import Icon from '@iconify/svelte';
-	import { fly } from 'svelte/transition';
-	import { cubicIn, cubicOut } from 'svelte/easing';
-	import { afterNavigate } from '$app/navigation';
-	import { LightSwitch } from '@skeletonlabs/skeleton';
+<script>
+	import '../app.pcss';
+	import '@fontsource-variable/bricolage-grotesque';
+	import { ModeWatcher, toggleMode } from 'mode-watcher';
 
-	afterNavigate((params: any) => {
-		const isNewPage: boolean =
-			params.from && params.to && params.from.route.id !== params.to.route.id;
-		const elemPage = document.querySelector('#page');
-		if (isNewPage && elemPage !== null) {
-			elemPage.scrollTop = 0;
-		}
-	});
-
-	const menu: DrawerSettings = {
-		id: 'menu',
-		position: 'right',
-		bgDrawer: 'bg-surface-100 dark:bg-surface-800 dark:text-white',
-		bgBackdrop: 'backdrop-blur',
-		width: 'w-full',
-		padding: 'p-4',
-		rounded: 'rounded-xl',
-		border: 'border border-surface-300 dark:border-surface-700',
-	};
-
-	$: currentRoute = $page.url.pathname;
-	export let data;
+	import Sun from 'lucide-svelte/icons/sun';
+	import Moon from 'lucide-svelte/icons/moon';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
+	import { Github, Linkedin, Twitter } from 'lucide-svelte';
 </script>
 
-<svelte:head>
-	<title>Jordan Harrison | Full Stack Developer</title>
-</svelte:head>
+<header
+	class="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+>
+	<div class="container flex h-14 items-center">
+		<a class="mr-4 items-center space-x-4" href="/">
+			<Avatar class="h-10 w-10">
+				<AvatarImage src="/logo.png" />
+				<AvatarFallback>JH</AvatarFallback>
+			</Avatar>
+		</a>
+		<div class="flex-1 space-x-1 lg:space-x-4">
+			<Button variant="a" asChild>
+				<a href="/">Home</a>
+			</Button>
+			<Button variant="a" asChild>
+				<a href="/about">About</a>
+			</Button>
+			<Button variant="a" asChild>
+				<a href="/blog">Blog</a>
+			</Button>
+		</div>
+		<div class="right">
+			<Button on:click={toggleMode} variant="outline" size="icon">
+				<Sun
+					class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+				/>
+				<Moon
+					class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+				/>
+				<span class="sr-only">Toggle theme</span>
+			</Button>
+		</div>
+	</div>
+</header>
 
-<Drawer>
-	{#if $drawerStore.id === 'menu'}
-		<nav class="list-nav py-6 px-4">
-			<div class="flex pb-6 items-center">
-				<h2 class="font-bold pl-4 flex-1">Menu</h2>
-				<button class="btn btn-icon-lg variant-ghost-surface" on:click={() => drawerStore.close()}>
-					x
-				</button>
-			</div>
-			<ul>
-				<li>
-					<a
-						class="btn btn-xl my-2 transition-all duration-200"
-						href="/"
-						class:variant-ghost-surface={currentRoute !== '/'}
-						class:variant-ghost-primary={currentRoute === '/'}
-						on:click={() => drawerStore.close()}>
-						Home
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn btn-xl my-2 transition-all duration-200"
-						href="/about"
-						class:variant-ghost-surface={!currentRoute.includes('/about')}
-						class:variant-ghost-primary={currentRoute.includes('/about')}
-						on:click={() => drawerStore.close()}>
-						About
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn btn-xl my-2 transition-all duration-200"
-						href="/portfolio"
-						class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
-						class:variant-ghost-primary={currentRoute.includes('/portfolio')}
-						on:click={() => drawerStore.close()}>
-						Portfolio
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn btn-xl my-2 transition-all duration-200"
-						href="/blog"
-						class:variant-ghost-surface={!currentRoute.includes('/blog')}
-						class:variant-ghost-primary={currentRoute.includes('/blog')}
-						on:click={() => drawerStore.close()}>
-						Blog
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn btn-xl my-2 transition-all duration-200"
-						href="/contact"
-						class:variant-ghost-surface={!currentRoute.includes('/contact')}
-						class:variant-ghost-primary={currentRoute.includes('/contact')}
-						on:click={() => drawerStore.close()}>
-						Contact
-					</a>
-				</li>
-				<li>
-					<hr class="divider my-4 w-24 mx-auto" />
-				</li>
-			</ul>
-			<ul class="flex space-x-4 items-center justify-center content-center">
-				<li>
-					<a
-						class="btn variant-soft-surface hover:variant-soft-primary"
-						href="https://twitter.com/jouwdan"
-						target="_blank"
-						rel="noreferrer"
-						on:click={() => drawerStore.close()}>
-						<Icon icon="mdi:twitter" class="text-3xl" />
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn variant-soft-surface hover:variant-soft-primary"
-						href="https://linkedin.com/in/jouwdan"
-						target="_blank"
-						rel="noreferrer"
-						on:click={() => drawerStore.close()}>
-						<Icon icon="mdi:linkedin" class="text-3xl" />
-					</a>
-				</li>
-				<li>
-					<a
-						class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-						href="https://github.com/jouwdan"
-						target="_blank"
-						rel="noreferrer"
-						on:click={() => drawerStore.close()}>
-						<Icon icon="mdi:github" class="text-3xl" />
-					</a>
-				</li>
-			</ul>
-		</nav>
-	{/if}
-</Drawer>
+<ModeWatcher />
+<slot />
 
-<AppShell regionPage="relative" slotPageHeader="sticky top-0 z-10">
-	<svelte:fragment slot="pageHeader">
-		<div class="bg-surface-50 dark:bg-surface-900 backdrop-blur-xl bg-opacity-80">
-			<AppBar background="none" class="py-4 container mx-auto">
-				<svelte:fragment slot="lead">
-					<a href="/">
-						<Avatar src="/images/logo.png" rounded="rounded-xl" />
-					</a>
-				</svelte:fragment>
-				<svelte:fragment slot="trail">
-					<LightSwitch />
-					<div class="hidden lg:flex space-x-3 items-center">
-						<a
-							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-							href="/"
-							class:variant-ghost-surface={currentRoute !== '/'}
-							class:variant-ghost-primary={currentRoute === '/'}>
-							Home
-						</a>
-						<a
-							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-							href="/about"
-							class:variant-ghost-surface={!currentRoute.includes('/about')}
-							class:variant-ghost-primary={currentRoute.includes('/about')}>
-							About
-						</a>
-						<a
-							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-							href="/portfolio"
-							class:variant-ghost-surface={!currentRoute.includes('/portfolio')}
-							class:variant-ghost-primary={currentRoute.includes('/portfolio')}>
-							Portfolio
-						</a>
-						<a
-							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-							href="/blog"
-							class:variant-ghost-surface={!currentRoute.includes('/blog')}
-							class:variant-ghost-primary={currentRoute.includes('/blog')}>
-							Blog
-						</a>
-						<a
-							class="btn btn-sm hover:variant-ghost-primary transition-all duration-200"
-							href="/contact"
-							class:variant-ghost-surface={!currentRoute.includes('/contact')}
-							class:variant-ghost-primary={currentRoute.includes('/contact')}>
-							Contact
-						</a>
-						<hr class="divider-vertical h-6" />
-						<a
-							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-							href="https://twitter.com/jouwdan"
-							target="_blank"
-							rel="noreferrer">
-							<Icon icon="mdi:twitter" class="text-xl" />
-						</a>
-						<a
-							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-							href="https://linkedin.com/in/jouwdan"
-							target="_blank"
-							rel="noreferrer">
-							<Icon icon="mdi:linkedin" class="text-xl" />
-						</a>
-						<a
-							class="btn btn-sm variant-soft-surface hover:variant-soft-primary"
-							href="https://github.com/jouwdan"
-							target="_blank"
-							rel="noreferrer">
-							<Icon icon="mdi:github" class="text-xl" />
-						</a>
-					</div>
-					<div class="flex lg:hidden">
-						<button class="btn px-0" on:click={() => drawerStore.open(menu)}>
-							<Icon icon="mdi:menu" class="text-2xl" />
-						</button>
-					</div>
-				</svelte:fragment>
-			</AppBar>
+<footer>
+	<div class="container py-8 text-center">
+		<p class="text-sm text-gray-500">
+			&copy; {new Date().getFullYear()} Jordan Harrison. All rights reserved.
+		</p>
+		<div class="mt-4 flex justify-center space-x-4">
+			<a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer">
+				<Linkedin />
+			</a>
+			<a href="https://github.com/jouwdan " target="_blank" rel="noopener noreferrer">
+				<Github />
+			</a>
+			<a href="https://twitter.com/jouwdan" target="_blank" rel="noopener noreferrer">
+				<Twitter />
+			</a>
 		</div>
-	</svelte:fragment>
-	{#key data.pathname}
-		<div
-			class="container mx-auto px-4"
-			in:fly={{ easing: cubicOut, y: 10, duration: 150, delay: 200 }}
-			out:fly={{ easing: cubicIn, y: 10, duration: 150 }}>
-			<slot />
-		</div>
-	{/key}
-	<svelte:fragment slot="pageFooter">
-		<div class="container mx-auto">
-			<div
-				class="mx-4 p-4 bg-surface-100 dark:bg-surface-800 rounded-xl my-4 flex justify-center items-center border border-surface-300 dark:border-surface-700">
-				<p>Built with ♥ and SvelteKit, Deployed by GitHub Pages</p>
-			</div>
-		</div>
-	</svelte:fragment>
-</AppShell>
+	</div>
+</footer>
