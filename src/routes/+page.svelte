@@ -1,5 +1,7 @@
 <script>
+	import * as Card from '$lib/components/ui/card';
 	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
+	export let data;
 </script>
 
 <div class="container min-h-[70vh] content-center 2xl:min-h-[50vh]">
@@ -23,5 +25,23 @@
 				<AvatarFallback class="text-8xl">JH</AvatarFallback>
 			</Avatar>
 		</div>
+	</div>
+</div>
+<div class="container my-8">
+	<h2 class="text-4xl font-semibold tracking-tighter">Recent Posts</h2>
+	<div class="my-2 grid grid-cols-1 lg:grid-cols-3">
+		{#each data.posts as post}
+			<a class="mx-auto my-4 overflow-hidden lg:mx-4" href={post.path}>
+				<Card.Root class="h-full">
+					<Card.Header class="p-0">
+						<img src={post.meta.cover} class="h-48 w-full object-cover" alt="Post" />
+					</Card.Header>
+					<Card.Content class="pb-4">
+						<Card.Title class="my-4 text-xl">{post.meta.title}</Card.Title>
+						{post.meta.excerpt}
+					</Card.Content>
+				</Card.Root>
+			</a>
+		{/each}
 	</div>
 </div>
