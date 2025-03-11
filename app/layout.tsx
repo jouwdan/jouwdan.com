@@ -20,9 +20,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Jordan Harrison | Creative Software Developer",
+  title: "Jordan Harrison | Enterprise Digital Experience specialist",
   description:
-    "Personal website of Jordan Harrison, a creative software developer specializing in digital experiences",
+    "Personal website of Jordan Harrison, a creative software developer specializing in enterprise digital experiences",
 };
 
 export default function RootLayout({
