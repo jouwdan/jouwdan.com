@@ -8,10 +8,11 @@ import { Button } from "@/components/ui/button"
 import Markdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
 
-interface BlogPostPageProps {
+type BlogPostPageProps = {
   params: {
     slug: string
   }
+  searchParams?: { [key: string]: string | string[] | undefined }
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
