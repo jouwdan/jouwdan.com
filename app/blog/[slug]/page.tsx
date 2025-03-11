@@ -1,4 +1,4 @@
-import { getPostBySlug } from "@/lib/blog"
+import { getPostBySlug, getSortedPosts } from "@/lib/blog"
 import { format } from "date-fns"
 import { notFound } from "next/navigation"
 import Image from "next/image"
@@ -8,15 +8,15 @@ import { Button } from "@/components/ui/button"
 import Markdown from "react-markdown"
 import rehypeHighlight from "rehype-highlight"
 
-type BlogPostPageProps = {
-  params: {
-    slug: string
-  }
-  searchParams?: { [key: string]: string | string[] | undefined }
+export async function generateStaticParams() {
+  const posts = await getSortedPosts()
+  return posts.map((post) => ({
+    slug: post.slug,
+  }))
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug)
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const post = await getPostBySlug((await params).slug)
 
   if (!post) {
     notFound()
