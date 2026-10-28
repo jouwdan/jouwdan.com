@@ -183,7 +183,7 @@ export const contactData: ContactData = {
   highlightText: "Connect",
   description:
     "Interested in collaborating? I'm always open to discussing new projects and opportunities.",
-  email: "hello@jouwdan.com",
+  email: "jordan@harrison.to",
   emailDescription:
     "Feel free to reach out for collaborations, questions, or just to say hello!",
   socialLinks: [
@@ -207,4 +207,4 @@ export const contactData: ContactData = {
 export const footerData: FooterData = {
   name: "Jordan Harrison",
   year: new Date().getFullYear(),
-}; 
+};

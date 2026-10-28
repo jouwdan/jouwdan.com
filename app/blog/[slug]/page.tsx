@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   }
 
   return (
-    <div className="container mx-auto py-8 md:py-12 lg:py-24">
+    <main id="main-content" className="site-shell py-12 md:py-20">
       <div className="mx-auto max-w-[58rem]">
         <div className="mb-8">
           <Button variant="ghost" size="icon" className="rounded-full" asChild>
@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               className="w-full h-[400px] object-cover rounded-lg mb-8"
             />
           )}
-          <h1 className="font-heading text-4xl md:text-6xl mb-4">{post.title}</h1>
+          <h1 className="font-sans text-balance text-4xl md:text-6xl tracking-tight leading-tight mb-4">{post.title}</h1>
           <time className="text-sm text-muted-foreground">
             {format(new Date(post.date), "MMMM d, yyyy")}
           </time>
@@ -64,7 +64,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </article>
       </div>
-    </div>
+    </main>
   )
 }
 
