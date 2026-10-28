@@ -215,7 +215,96 @@
   .project-stage { height: 320px; }
   .project-image-wrap, .project-tutors .project-image-wrap { height: 200px; }
 }
+@layer components {
+  html { scroll-behavior: smooth; }
+  .lens-switch { position: relative; display: grid; grid-template-columns: 1fr 1fr; isolation: isolate; }
+  .lens-switch::before { content: ""; position: absolute; inset: 4px auto 4px 4px; width: calc(50% - 4px); border-radius: 24px; background: hsl(var(--foreground) / .1); transition: transform 400ms cubic-bezier(.22,1,.36,1), background 300ms; z-index: -1; }
+  .lens-switch[data-lens="engineering"]::before { transform: translateX(100%); background: hsl(var(--primary)); }
+  .lens-switch button { justify-content: center; transition: color 250ms, transform 200ms; }
+  .lens-switch button.is-active { background: transparent; }
+  .lens-switch[data-lens="engineering"] button.is-active { color: hsl(var(--primary-foreground)); }
+  .lens-switch button:active { transform: scale(.96); }
+  .lens-switch button svg { transition: transform 350ms; }
+  .lens-switch button.is-active svg { transform: rotate(-8deg); }
+  .work-section .section-heading { margin-bottom: 16px; }
+  .lens-description { display: flex; align-items: center; gap: 10px; color: hsl(var(--muted-foreground)); font-size: 14px; line-height: 1.6; min-height: 46px; padding-bottom: 20px; }
+  .lens-description .section-dot { flex-shrink: 0; }
+  .project-grid .project-stage { height: 400px; transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); transition: transform 350ms cubic-bezier(.22,1,.36,1), background 400ms, color 400ms, box-shadow 300ms; }
+  .project-stage-content { flex: 1; min-height: 0; animation: perspective-in 450ms cubic-bezier(.22,1,.36,1) both; }
+  .project-copy { animation: enter 350ms both; }
+  .project-grid[data-lens="engineering"] .project-stage { height: auto; min-height: 400px; background: hsl(var(--muted) / .65); color: hsl(var(--foreground)); box-shadow: inset 0 0 0 1px hsl(var(--primary) / .35); }
+  .project-grid[data-lens="engineering"] .project-stage-content { min-height: auto; }
+  .project-grid[data-lens="engineering"] .stage-top { padding: 20px 24px 12px; }
+  .project-grid[data-lens="engineering"] .project-wordmark { font-size: 30px; }
+  .project-grid[data-lens="engineering"] .stage-category { color: hsl(var(--primary)); max-width: none; font-size: 14px; letter-spacing: .03em; }
+  .project-grid[data-lens="engineering"] .project-open { border-color: hsl(var(--primary) / .4); color: hsl(var(--primary)); }
+  .project-grid[data-lens="engineering"] .stage-bottom { color: hsl(var(--muted-foreground)); padding: 12px 24px 18px; }
+  .project-grid[data-lens="engineering"] .stage-bottom span:last-child { color: hsl(var(--primary)); }
+  .project-blueprint { display: flex; flex-direction: column; gap: 12px; padding: 8px 24px; }
+  .blueprint-heading { display: flex; align-items: center; gap: 10px; font-size: 14px; color: hsl(var(--muted-foreground)); }
+  .blueprint-code { color: hsl(var(--primary)); font-weight: 650; }
+  .blueprint-layers { list-style: none; }
+  .blueprint-layers > li { animation: layer-in 480ms cubic-bezier(.22,1,.36,1) both; }
+  .blueprint-layer { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid hsl(var(--border)); background: hsl(var(--background) / .7); border-radius: 8px; transition: border-color 250ms, transform 250ms; }
+  .blueprint-layer > svg { color: hsl(var(--primary)); flex-shrink: 0; }
+  .blueprint-layer > div { display: flex; flex: 1; flex-direction: column; gap: 2px; }
+  .blueprint-layer strong { font-size: 14px; font-weight: 550; }
+  .blueprint-layer div > span { color: hsl(var(--muted-foreground)); font-size: 14px; line-height: 1.4; }
+  .blueprint-index { color: hsl(var(--muted-foreground)); font-size: 14px; }
+  .blueprint-connector { display: block; color: hsl(var(--primary) / .65); margin-left: 22px; }
+  .blueprint-note { display: flex; align-items: center; gap: 8px; font-size: 14px; color: hsl(var(--secondary)); }
+  .project-details:not([hidden]) { animation: enter 280ms both; transform-origin: top; }
+  .project-details-trigger { transition: color 200ms, border-color 200ms; }
+  .project-details-trigger svg { transition: transform 250ms; }
+  .project-details-trigger:hover svg { transform: rotate(90deg); }
+  .project-details-trigger[aria-expanded="true"] { color: hsl(var(--primary)); border-color: hsl(var(--primary)); }
+  .project-tags > span { transition: border-color 250ms, color 250ms, transform 250ms; }
+  .project-tags > span:hover { border-color: hsl(var(--primary) / .6); color: hsl(var(--primary)); transform: translateY(-3px); }
+  .header-nav a, .about-links a, .footer-links a, .hero-footnote a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 7px; transition: color 200ms, text-decoration-color 250ms, text-underline-offset 250ms; }
+  .header-nav a:hover, .about-links a:hover, .footer-links a:hover, .hero-footnote a:hover { text-decoration-color: currentColor; text-underline-offset: 4px; }
+  .text-link svg, .project-caption a svg, .about-links svg, .footer-links svg, .header-contact svg, .hero-footnote svg { transition: transform 250ms cubic-bezier(.22,1,.36,1); }
+  .text-link:hover > svg, .project-caption a:hover svg, .about-links a:hover svg, .footer-links a:hover svg, .header-contact:hover svg, .hero-footnote a:hover svg { transform: translate(3px,-3px); }
+  .intro-mark { transition: transform 450ms cubic-bezier(.34,1.56,.64,1), border-color 300ms; }
+  .hero-intro:hover .intro-mark { transform: rotate(4deg) translateY(-3px); border-color: hsl(var(--primary)); }
+  .hero-title .font-serif { display: inline-block; transition: color 450ms, transform 450ms; }
+  .hero-title:hover .font-serif { color: hsl(var(--primary)); transform: skewX(-4deg); }
+  .writing-item { transition: background 250ms, padding-inline 350ms cubic-bezier(.22,1,.36,1); }
+  .writing-item > svg { flex-shrink: 0; transition: transform 300ms, color 250ms; }
+  .writing-item:hover, .writing-item:focus-visible { background: hsl(var(--foreground) / .025); padding-inline: 12px; }
+  .writing-item:hover > svg, .writing-item:focus-visible > svg { transform: translate(3px,-3px); color: hsl(var(--primary)); }
+  .contact-heading-link .font-serif { transition: color 350ms; }
+  .contact-heading-link:hover .font-serif { color: hsl(var(--primary)); }
+  .copy-button { transition: background 200ms, color 200ms, border-color 200ms, transform 200ms; }
+  .copy-button:active { transform: scale(.9); }
+  .copy-button[data-state="copied"] { background: hsl(var(--primary)); border-color: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+  .copy-icon { display: flex; animation: confirm-in 250ms both; }
+  .copy-feedback:not(:empty) { animation: enter 250ms both; }
+  [data-reveal] { transition: opacity 700ms, transform 700ms cubic-bezier(.22,1,.36,1); }
+  [data-reveal="waiting"] { opacity: .25; transform: translateY(24px); }
+  [data-reveal="visible"], [data-reveal]:focus-within { opacity: 1; transform: none; }
+}
+@keyframes perspective-in { from { opacity: 0; transform: translateY(12px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes layer-in { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+@keyframes confirm-in { from { opacity: 0; transform: scale(.65) rotate(-15deg); } to { opacity: 1; transform: none; } }
+@media (hover: hover) and (pointer: fine) {
+  .project-stage:hover { box-shadow: 0 16px 32px hsl(var(--background) / .25); }
+  .blueprint-layer:hover { border-color: hsl(var(--primary) / .65); transform: translateX(3px); }
+}
+@media (max-width: 760px) {
+  .lens-switch { width: 100%; }
+  .work-section .section-heading { align-items: stretch; }
+  .lens-description { min-height: 66px; align-items: flex-start; }
+  .lens-description .section-dot { margin-top: 8px; }
+  .blueprint-index { display: none; }
+  .project-blueprint { padding-inline: 16px; }
+  .project-grid[data-lens="engineering"] .stage-top { padding-inline: 16px; }
+  .project-grid[data-lens="engineering"] .stage-bottom { padding-inline: 16px; }
+  .project-grid[data-lens="engineering"] .stage-category { display: block; margin-right: 12px; }
+  .project-grid[data-lens="engineering"] .stage-bottom > span:first-child { max-width: 180px; }
+}
 @media (prefers-reduced-motion: reduce) {
+  [data-reveal="waiting"] { opacity: 1; transform: none; }
+  .project-grid .project-stage { transform: none !important; }
   html { scroll-behavior: auto !important; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
