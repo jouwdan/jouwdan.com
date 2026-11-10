@@ -92,9 +92,9 @@ export function SelectedWork() {
                     <ProjectBlueprint slug={project.slug} />
                   ) : project.slug === "tutors" ? (
                     <CompareSlider
-                      label="Compare the earlier Tutors with the current redesign"
-                      before={{ src: "/images/tutors.png", width: 2300, height: 1452, alt: "The earlier Tutors course page, a dark grid of topic cards" }}
-                      after={{ src: "/images/tutors-current-dark.png", width: 1440, height: 1000, alt: "The redesigned Tutors dashboard in dark mode, with a sidebar, course cards and a reference panel" }}
+                      label="Compare the same Full Stack Web Development course in the earlier Tutors and the current redesign"
+                      before={{ src: "/images/tutors.png", width: 2300, height: 1452, alt: "The Full Stack Web Development course in the earlier Tutors, a dark grid of topic cards from Node to Deployment under a toolbar of icon buttons" }}
+                      after={{ src: "/images/tutors-full-stack-current.png", width: 1600, height: 1000, alt: "The same Full Stack Web Development course in the redesigned Tutors, with a labelled sidebar beside the same topic cards from Node to JWT" }}
                     />
                   ) : (
                     <Image
