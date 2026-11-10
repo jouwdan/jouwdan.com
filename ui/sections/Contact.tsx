@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { LocalTime } from "@/ui/sections/LocalTime";
+import { Letters, Proximity } from "@/ui/sections/Proximity";
 
 const EMAIL = "jordan@harrison.to";
 
@@ -33,11 +34,9 @@ export function Contact() {
             A project or a question, either is a good reason to write. I read everything that lands here.
           </p>
         </div>
-        <a href={`mailto:${EMAIL}`} className="email-link self-start" aria-label={`Email ${EMAIL}`}>
-          {[...EMAIL].map((letter, index) => (
-            <span key={index} className="email-letter" aria-hidden="true">{letter}</span>
-          ))}
-        </a>
+        <Proximity as="a" href={`mailto:${EMAIL}`} className="email-link self-start" aria-label={`Email ${EMAIL}`}>
+          <Letters text={EMAIL} />
+        </Proximity>
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-4">
             <button type="button" onClick={copyEmail} className="copy-button" data-state={copyState}>

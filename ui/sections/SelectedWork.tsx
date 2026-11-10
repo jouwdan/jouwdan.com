@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Brain, Code2, Heart } from "lucide-react";
+import { AppWindow, ArrowUpRight, Code2, Cpu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { CompareSlider } from "@/ui/sections/CompareSlider";
 import { ProjectBlueprint } from "@/ui/sections/ProjectBlueprint";
 
-type Lens = "heart" | "mind";
+type Lens = "interface" | "internals";
 
 const projects = [
   {
@@ -18,11 +18,11 @@ const projects = [
     repo: "https://github.com/meith-dev/meith",
     role: "Creator, full-stack",
     stack: ["Next.js", "TypeScript", "PostgreSQL"],
-    heart: {
+    interface: {
       title: "Forum software you host yourself.",
       body: "Meith is open-source forum software for communities that want their own domain and their own data. Threads render on the server, so you can read and post with JavaScript switched off. A typed theme system means no two boards have to look alike.",
     },
-    mind: {
+    internals: {
       title: "Postgres does most of the heavy lifting.",
       body: "Storage, search and background jobs all run on PostgreSQL. Plugins are typed, there are importers for MyBB and phpBB boards, and it deploys to Vercel or to your own box with Docker or Coolify.",
     },
@@ -35,11 +35,11 @@ const projects = [
     repo: "https://github.com/tutors-sdk/tutors-mono-repo",
     role: "Contributor, frontend and design system",
     stack: ["Svelte", "TypeScript", "Design systems"],
-    heart: {
+    interface: {
       title: "A learning platform, rebuilt around a dashboard.",
       body: "Tutors is an open learning toolkit used for remote courses at SETU Waterford. I moved it to Svelte a while back, then recently rebuilt the interface with a sidebar that stays put and a course structure you can read at a glance. Drag the handle to compare the two.",
     },
-    mind: {
+    internals: {
       title: "One reader in a much bigger monorepo.",
       body: "The course reader I work on is one package in a typed, layered monorepo, next to the course generators and the live classroom tools. I built it alongside educators and Red Hat engineers, and it won the Red Hat-sponsored Best Project award at SETU in 2023.",
     },
@@ -47,15 +47,15 @@ const projects = [
 ];
 
 const hints: Record<Lens, string> = {
-  heart: "Showing the interface. Flip the switch to see what runs underneath.",
-  mind: "Showing the engineering. Flip back for the part people actually click on.",
+  interface: "Showing the interface. Flip the switch to see what runs underneath.",
+  internals: "Showing the engineering. Flip back for the part people actually click on.",
 };
 
 export function SelectedWork() {
-  const [lens, setLens] = useState<Lens>("heart");
+  const [lens, setLens] = useState<Lens>("interface");
 
   return (
-    <section id="work" data-section data-lens={lens} className="work site-shell flex flex-col gap-12 py-20 md:gap-16 md:py-28" aria-labelledby="work-heading">
+    <section id="work" data-section className="site-shell flex flex-col gap-12 py-20 md:gap-16 md:py-28" aria-labelledby="work-heading">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-5">
           <p className="kicker">Work</p>
@@ -63,11 +63,11 @@ export function SelectedWork() {
         </div>
         <div className="flex flex-col gap-3 lg:items-end">
           <div className="lens-switch" data-lens={lens} role="group" aria-label="Choose what the projects show">
-            <button type="button" aria-pressed={lens === "heart"} onClick={() => setLens("heart")}>
-              <Heart size={16} aria-hidden="true" fill={lens === "heart" ? "currentColor" : "none"} /> Heart
+            <button type="button" aria-pressed={lens === "interface"} onClick={() => setLens("interface")}>
+              <AppWindow size={16} aria-hidden="true" /> Interface
             </button>
-            <button type="button" aria-pressed={lens === "mind"} onClick={() => setLens("mind")}>
-              <Brain size={16} aria-hidden="true" /> Mind
+            <button type="button" aria-pressed={lens === "internals"} onClick={() => setLens("internals")}>
+              <Cpu size={16} aria-hidden="true" /> Internals
             </button>
           </div>
           <p className="font-mono text-sm leading-relaxed text-muted-foreground" role="status">{hints[lens]}</p>
@@ -87,14 +87,14 @@ export function SelectedWork() {
                     <span className="sr-only">(opens in a new tab)</span>
                   </a>
                 </div>
-                <div key={lens} className={cn("window-body", lens === "mind" && "lg:aspect-[16/10]")}>
-                  {lens === "mind" ? (
+                <div key={lens} className={cn("window-body", lens === "internals" && "lg:aspect-[16/10]")}>
+                  {lens === "internals" ? (
                     <ProjectBlueprint slug={project.slug} />
                   ) : project.slug === "tutors" ? (
                     <CompareSlider
                       label="Compare the earlier Tutors with the current redesign"
                       before={{ src: "/images/tutors.png", width: 2300, height: 1452, alt: "The earlier Tutors course page, a dark grid of topic cards" }}
-                      after={{ src: "/images/tutors-current.png", width: 1440, height: 1000, alt: "The redesigned Tutors dashboard with a sidebar, course cards and a reference panel" }}
+                      after={{ src: "/images/tutors-current-dark.png", width: 1440, height: 1000, alt: "The redesigned Tutors dashboard in dark mode, with a sidebar, course cards and a reference panel" }}
                     />
                   ) : (
                     <Image
