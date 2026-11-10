@@ -2,16 +2,29 @@ import type { Metadata } from "next";
 import { ArrowUpRight } from "lucide-react";
 import { DevArticles } from "@/ui/sections/DevArticles";
 
-export const metadata: Metadata = { title: "Writing", description: "Jordan Harrison's latest writing from DEV: open-source software, frontend development, and the things learned along the way." };
+export const metadata: Metadata = {
+  title: "Writing",
+  description: "Articles by Jordan Harrison on open-source software and frontend development, published on DEV and collected here.",
+};
 
 export default function BlogPage() {
   return (
-    <main id="main-content" className="site-shell writing-archive">
-      <span className="eyebrow"><span className="section-dot" />NOTES FROM THE PROCESS</span>
-      <h1>Making things.<br /><span className="font-serif italic text-secondary">Making notes.</span></h1>
-      <p className="archive-intro">A few thoughts on the web, the tools we use, and what happens along the way. Published on <a href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-4">DEV</a>, collected here.</p>
+    <main id="main-content" className="site-shell flex min-h-[75vh] flex-col gap-10 pb-24 pt-8 md:pt-14">
+      <div className="hero-copy flex flex-col gap-6">
+        <p className="kicker rise">Writing</p>
+        <h1 className="hero-title rise" style={{ "--i": 1 } as React.CSSProperties}>
+          Things I wrote <span className="text-primary">down.</span>
+        </h1>
+        <p className="prose-copy rise max-w-lg" style={{ "--i": 2 } as React.CSSProperties}>
+          When I work something out, I write it up on{" "}
+          <a href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer" className="text-foreground underline decoration-primary decoration-2 underline-offset-4">DEV</a>
+          . Everything I&apos;ve published there is listed below.
+        </p>
+      </div>
       <DevArticles showDescriptions />
-      <a href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer" className="text-link mt-8">More on DEV <ArrowUpRight size={17} /></a>
+      <a href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer" className="link self-start">
+        My DEV profile <ArrowUpRight size={17} aria-hidden="true" />
+      </a>
     </main>
   );
 }
