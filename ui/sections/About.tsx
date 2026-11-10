@@ -48,14 +48,14 @@ export function About() {
       </div>
       <figure className="snapshot mx-auto w-full max-w-md lg:col-span-5">
         <Image
-          src="/images/nodeconf-eu-2022-small.jpg"
-          alt="The NodeConf EU stage before a session, with pixel-art characters on the screen under the words The show starts soon"
+          src="/images/devfest-ireland-2025.jpg"
+          alt="The DevFest Ireland 2025 group photo, with attendees gathered in a hotel ballroom in front of the DevFest Ireland 2025 slide and a neon DevFest Ireland sign at the front"
           width={1400}
-          height={787}
+          height={934}
           sizes="(max-width: 1024px) 90vw, 440px"
-          className="h-auto w-full rounded-sm"
+          className="aspect-video w-full rounded-sm object-cover object-[center_35%]"
         />
-        <figcaption className="pt-2.5 font-mono text-sm">NodeConf EU, 2022</figcaption>
+        <figcaption className="pt-2.5 font-mono text-sm">DevFest Ireland, 2025</figcaption>
       </figure>
     </section>
   );
