@@ -23,8 +23,8 @@ const projects = [
       body: "Meith is open-source forum software for communities that want their own domain and their own data. Threads render on the server, so you can read and post with JavaScript switched off. A typed theme system means no two boards have to look alike.",
     },
     internals: {
-      title: "Postgres does most of the heavy lifting.",
-      body: "Storage, search and background jobs all run on PostgreSQL. Plugins are typed, there are importers for MyBB and phpBB boards, and it deploys to Vercel or to your own box with Docker or Coolify.",
+      title: "One Postgres database, on a server you own.",
+      body: "Meith is built to be self-hosted, so your community's data stays with you and not with a hosting platform. Storage, search and background jobs all run on a single PostgreSQL database, and it deploys to your own server with Docker or Coolify. Plugins are typed, and there are importers for MyBB and phpBB boards.",
     },
   },
   {

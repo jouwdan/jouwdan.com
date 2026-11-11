@@ -7,7 +7,7 @@ const blueprints = {
     layers: [
       { icon: Layers, name: "Interface", detail: "Server-rendered threads, typed themes" },
       { icon: Braces, name: "Application", detail: "Next.js, TypeScript, typed plugins" },
-      { icon: Database, name: "Foundation", detail: "PostgreSQL for storage, search and jobs" },
+      { icon: Database, name: "Foundation", detail: "Self-hosted PostgreSQL for storage, search and jobs" },
     ],
   },
   tutors: {
