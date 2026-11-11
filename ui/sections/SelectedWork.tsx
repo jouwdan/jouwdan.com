@@ -93,8 +93,8 @@ export function SelectedWork() {
                   ) : project.slug === "tutors" ? (
                     <CompareSlider
                       label="Compare the same Full Stack Web Development course in the earlier Tutors and the current redesign"
-                      before={{ src: "/images/tutors.png", width: 2300, height: 1452, alt: "The Full Stack Web Development course in the earlier Tutors, a dark grid of topic cards from Node to Deployment under a toolbar of icon buttons" }}
-                      after={{ src: "/images/tutors-full-stack-current.png", width: 1600, height: 1000, alt: "The same Full Stack Web Development course in the redesigned Tutors, with a labelled sidebar beside the same topic cards from Node to JWT" }}
+                      before={{ src: "/images/tutors-full-stack-earlier-light.png", width: 1600, height: 1000, alt: "The Full Stack Web Development course in the earlier Tutors, with white topic cards from Node to JWT under two dark toolbars of icon buttons" }}
+                      after={{ src: "/images/tutors-full-stack-current-light.png", width: 1600, height: 1000, alt: "The same Full Stack Web Development course in the redesigned Tutors, with a labelled sidebar beside the same topic cards from Node to JWT" }}
                     />
                   ) : (
                     <Image
