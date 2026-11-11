@@ -17,7 +17,7 @@ export function CompareSlider({ before, after, label }: { before: CompareImage; 
   return (
     <div className="compare" style={{ "--pos": `${position}%` } as CSSProperties}>
       <div className="compare-before">
-        <Image src={before.src} alt={before.alt} width={before.width} height={before.height} sizes="(max-width: 1024px) 110vw, 800px" />
+        <Image src={before.src} alt={before.alt} width={before.width} height={before.height} sizes="(max-width: 1024px) 95vw, 700px" />
       </div>
       <div className="compare-after">
         <Image src={after.src} alt={after.alt} width={after.width} height={after.height} sizes="(max-width: 1024px) 95vw, 700px" />
