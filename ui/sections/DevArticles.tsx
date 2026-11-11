@@ -31,6 +31,10 @@ async function fetchArticles(url: string): Promise<DevArticle[]> {
   )).sort((a, b) => Date.parse(b.published_at) - Date.parse(a.published_at));
 }
 
+function FeedMessage({ children }: { children: React.ReactNode }) {
+  return <div className="flex flex-col gap-5 border-t border-border py-8 text-muted-foreground">{children}</div>;
+}
+
 export function DevArticles({ limit, showDescriptions = false }: { limit?: number; showDescriptions?: boolean }) {
   const { data, error, isLoading, mutate } = useSWR(feedUrl, fetchArticles, {
     revalidateOnFocus: false,
@@ -38,17 +42,58 @@ export function DevArticles({ limit, showDescriptions = false }: { limit?: numbe
     errorRetryCount: 1,
   });
 
-  if (isLoading) return <div className="feed-message" role="status">Loading the latest from DEV…</div>;
-  if (!data && error) return <div className="feed-message"><p role="status">The DEV feed is taking a break. You can still read everything on my profile.</p><div className="flex flex-wrap items-center gap-6"><a className="text-link" href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer">Read on DEV <ArrowUpRight size={16} /></a><button className="text-link" type="button" onClick={() => void mutate()}>Try again <RotateCw size={15} /></button></div></div>;
-  if (!data?.length) return <div className="feed-message"><p>No published articles to show just yet.</p><a className="text-link" href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer">Find me on DEV <ArrowUpRight size={16} /></a></div>;
+  if (isLoading) {
+    return (
+      <div className="border-t border-border" role="status">
+        <span className="sr-only">Loading articles from DEV</span>
+        {Array.from({ length: limit ?? 3 }, (_, index) => (
+          <div key={index} className="flex items-center gap-4 border-b border-border py-6" aria-hidden="true">
+            <div className="flex flex-1 flex-col gap-3">
+              <span className="skeleton h-4 w-24" />
+              <span className="skeleton h-6 w-4/5" />
+            </div>
+            <span className="skeleton size-9 rounded-full" />
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (!data && error) {
+    return (
+      <FeedMessage>
+        <p role="status">DEV isn&apos;t answering right now. The articles are all still on my profile.</p>
+        <div className="flex flex-wrap items-center gap-6 text-foreground">
+          <a className="link" href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer">Read on DEV <ArrowUpRight size={16} aria-hidden="true" /></a>
+          <button className="link" type="button" onClick={() => void mutate()}>Try again <RotateCw size={15} aria-hidden="true" /></button>
+        </div>
+      </FeedMessage>
+    );
+  }
+
+  if (!data?.length) {
+    return (
+      <FeedMessage>
+        <p>Nothing published yet.</p>
+        <a className="link self-start text-foreground" href="https://dev.to/jouwdan" target="_blank" rel="noopener noreferrer">Find me on DEV <ArrowUpRight size={16} aria-hidden="true" /></a>
+      </FeedMessage>
+    );
+  }
 
   return (
-    <div className="writing-list" data-feed="dev-to">
+    <div className="border-t border-border" data-feed="dev-to">
       {data.slice(0, limit ?? data.length).map((article) => (
-        <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer" className="writing-item">
-          <time className="writing-date" dateTime={article.published_at}>{new Date(article.published_at).toLocaleDateString("en-IE", { month: "short", year: "numeric", timeZone: "UTC" })}</time>
-          <div className="archive-post"><h3>{article.title}</h3>{showDescriptions && <><p>{article.description}</p><span className="article-reading-time">{article.reading_time_minutes} min read · Published on DEV</span></>}</div>
-          <ArrowUpRight size={23} className="shrink-0" /><span className="sr-only"> (opens on DEV in a new tab)</span>
+        <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer" className="post-row">
+          <div className="flex min-w-0 flex-1 flex-col gap-2">
+            <p className="font-mono text-sm text-muted-foreground">
+              <time dateTime={article.published_at}>{new Date(article.published_at).toLocaleDateString("en-IE", { month: "short", year: "numeric", timeZone: "UTC" })}</time>
+              {showDescriptions && <span> / {article.reading_time_minutes} min read</span>}
+            </p>
+            <h3 className="text-pretty text-xl font-semibold leading-snug tracking-tight md:text-2xl">{article.title}</h3>
+            {showDescriptions && <p className="prose-copy max-w-2xl">{article.description}</p>}
+          </div>
+          <span className="post-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>
+          <span className="sr-only">(opens on DEV in a new tab)</span>
         </a>
       ))}
     </div>

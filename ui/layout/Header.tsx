@@ -1,12 +1,17 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { NavLinks } from "@/ui/layout/NavLinks";
 
 export function Header() {
   return (
-    <header className="site-header site-shell">
+    <header className="site-shell flex h-20 items-center justify-between gap-4">
       <a href="#main-content" className="skip-link">Skip to content</a>
-      <Link href="/" className="wordmark" aria-label="Jordan Harrison home">jordan harrison<span className="text-primary">.</span></Link>
-      <nav aria-label="Main navigation" className="header-nav"><Link href="/#work">Work</Link><Link href="/#about">About</Link><Link href="/blog">Writing</Link><Link href="/#contact" className="header-contact">Let&apos;s talk <ArrowUpRight size={16} /></Link></nav>
+      <Link href="/" className="wordmark" aria-label="Jordan Harrison, home">
+        <span className="wordmark-mark" aria-hidden="true" />
+        <span className="hidden whitespace-nowrap min-[360px]:inline">
+          jordan<span className="hidden min-[440px]:inline"> harrison</span>
+        </span>
+      </Link>
+      <NavLinks />
     </header>
   );
 }

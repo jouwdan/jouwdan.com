@@ -1,44 +1,41 @@
-import { ArrowDown, Braces, Database, Layers, Network } from "lucide-react";
+import type { CSSProperties } from "react";
+import { Braces, Database, Layers, Network } from "lucide-react";
 
 const blueprints = {
   meith: {
-    title: "Community, end to end",
+    caption: "Top to bottom, as a request travels",
     layers: [
-      { icon: Layers, name: "Interface", detail: "Server-rendered discussions · Typed themes" },
-      { icon: Braces, name: "Application", detail: "Next.js · TypeScript · Plugin system" },
-      { icon: Database, name: "Foundation", detail: "PostgreSQL · Search · Background work" },
+      { icon: Layers, name: "Interface", detail: "Server-rendered threads, typed themes" },
+      { icon: Braces, name: "Application", detail: "Next.js, TypeScript, typed plugins" },
+      { icon: Database, name: "Foundation", detail: "PostgreSQL for storage, search and jobs" },
     ],
-    note: "Self-hostable by design",
   },
   tutors: {
-    title: "A connected learning toolkit",
+    caption: "Where the reader sits in the monorepo",
     layers: [
-      { icon: Layers, name: "Experience", detail: "Dashboard shell · Course navigation" },
-      { icon: Braces, name: "Interface system", detail: "Svelte · TypeScript · Shared components" },
-      { icon: Network, name: "Platform", detail: "Course generators · Classroom tools" },
+      { icon: Layers, name: "Course reader", detail: "Dashboard shell and course navigation" },
+      { icon: Braces, name: "Design system", detail: "Shared Svelte components in TypeScript" },
+      { icon: Network, name: "Platform", detail: "Course generators and classroom tools" },
     ],
-    note: "Built in a layered monorepo",
   },
 };
 
 export function ProjectBlueprint({ slug }: { slug: keyof typeof blueprints }) {
   const blueprint = blueprints[slug];
   return (
-    <div className="project-blueprint">
-      <div className="blueprint-heading"><CodeLabel /> <span>{blueprint.title}</span></div>
-      <ol className="blueprint-layers" aria-label="Technical layers">
+    <div className="flex min-h-full flex-col justify-center gap-4 p-5 md:p-8">
+      <p className="font-mono text-sm text-primary">{blueprint.caption}</p>
+      <ol className="flex flex-col gap-2.5" aria-label="Technical layers">
         {blueprint.layers.map(({ icon: Icon, name, detail }, index) => (
-          <li key={name} style={{ animationDelay: `${index * 70}ms` }}>
-            <div className="blueprint-layer"><Icon size={19} aria-hidden="true" /><div><strong>{name}</strong><span>{detail}</span></div><span className="blueprint-index" aria-hidden="true">0{index + 1}</span></div>
-            {index < blueprint.layers.length - 1 && <ArrowDown className="blueprint-connector" size={14} aria-hidden="true" />}
+          <li key={name} className="layer" style={{ "--i": index } as CSSProperties}>
+            <Icon size={20} className="shrink-0 text-primary" aria-hidden="true" />
+            <div className="flex min-w-0 flex-col gap-0.5">
+              <strong className="font-semibold">{name}</strong>
+              <span className="text-sm leading-relaxed text-muted-foreground">{detail}</span>
+            </div>
           </li>
         ))}
       </ol>
-      <div className="blueprint-note"><span className="section-dot" />{blueprint.note}</div>
     </div>
   );
-}
-
-function CodeLabel() {
-  return <span className="blueprint-code" aria-hidden="true">{"</>"}</span>;
 }

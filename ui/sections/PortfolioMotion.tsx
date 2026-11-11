@@ -8,7 +8,7 @@ export function PortfolioMotion({ children }: { children: ReactNode }) {
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     let observer: IntersectionObserver | undefined;
-    const sections = root.current?.querySelectorAll<HTMLElement>(".about-section, .writing-section, .contact-section");
+    const sections = root.current?.querySelectorAll<HTMLElement>("[data-section]");
     function setup() {
       observer?.disconnect();
       sections?.forEach((section) => section.removeAttribute("data-reveal"));

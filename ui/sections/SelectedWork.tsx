@@ -1,83 +1,136 @@
 "use client";
 
-import { useState, type PointerEvent, type FocusEvent } from "react";
-import { ProjectBlueprint } from "./ProjectBlueprint";
+import { useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight, ArrowRight, Code2, Layers, Plus, Minus } from "lucide-react";
+import { AppWindow, ArrowUpRight, Code2, Cpu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CompareSlider } from "@/ui/sections/CompareSlider";
+import { ProjectBlueprint } from "@/ui/sections/ProjectBlueprint";
 
-function tiltPreview(event: PointerEvent<HTMLAnchorElement>) {
-  if (event.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const target = event.currentTarget;
-  const bounds = target.getBoundingClientRect();
-  target.style.setProperty("--tilt-x", `${((event.clientY - bounds.top) / bounds.height - 0.5) * -5}deg`);
-  target.style.setProperty("--tilt-y", `${((event.clientX - bounds.left) / bounds.width - 0.5) * 5}deg`);
-}
-
-function resetPreview(event: PointerEvent<HTMLAnchorElement> | FocusEvent<HTMLAnchorElement>) {
-  event.currentTarget.style.removeProperty("--tilt-x");
-  event.currentTarget.style.removeProperty("--tilt-y");
-}
+type Lens = "interface" | "internals";
 
 const projects = [
   {
-    name: "Meith", slug: "meith", domain: "meith.dev", href: "https://meith.dev",
-    repo: "https://github.com/meith-dev/meith", category: "COMMUNITY, ON YOUR TERMS",
-    summary: "A proper home for your community.",
-    description: "Open-source forums for conversations worth keeping. Your domain, your data, your little corner of the internet.",
-    role: "Creator · Full-stack development", image: "/images/meith.png",
-    alt: "Meith forum interface with discussion categories, latest threads and community posts",
+    slug: "meith" as const,
+    name: "Meith",
+    domain: "meith.dev",
+    href: "https://meith.dev",
+    repo: "https://github.com/meith-dev/meith",
+    role: "Creator, full-stack",
     stack: ["Next.js", "TypeScript", "PostgreSQL"],
-    frontend: "Server-rendered discussions, accessible interfaces, and a typed theme system that lets every community feel like itself. Reading and posting work even without JavaScript.",
-    backend: "PostgreSQL-backed storage, search and background work. A typed plugin system, migrations from MyBB and phpBB, and self-hosted deployment with Docker, Coolify or Vercel.",
-    note: "Self-hosted. Open source. Yours to keep.",
+    interface: {
+      title: "Forum software you host yourself.",
+      body: "Meith is open-source forum software for communities that want their own domain and their own data. Threads render on the server, so you can read and post with JavaScript switched off. A typed theme system means no two boards have to look alike.",
+    },
+    internals: {
+      title: "Postgres does most of the heavy lifting.",
+      body: "Storage, search and background jobs all run on PostgreSQL. Plugins are typed, there are importers for MyBB and phpBB boards, and it deploys to Vercel or to your own box with Docker or Coolify.",
+    },
   },
   {
-    name: "Tutors", slug: "tutors", domain: "tutors.dev", href: "https://tutors.dev",
-    repo: "https://github.com/tutors-sdk/tutors-mono-repo", category: "A BETTER WAY TO LEARN",
-    summary: "Less friction. More lightbulb moments.",
-    description: "An open learning toolkit, reimagined with a fresh, dashboard-like design system. Clearer navigation. More room to learn.",
-    role: "Contributor · Frontend & design system", image: "/images/tutors-current.png",
-    alt: "The redesigned Tutors Reference Manual dashboard with persistent sidebar navigation, learning resource cards, and a reference panel",
+    slug: "tutors" as const,
+    name: "Tutors",
+    domain: "tutors.dev",
+    href: "https://tutors.dev",
+    repo: "https://github.com/tutors-sdk/tutors-mono-repo",
+    role: "Contributor, frontend and design system",
     stack: ["Svelte", "TypeScript", "Design systems"],
-    frontend: "I recently rebuilt Tutors with a fresh, dashboard-like design system: a persistent navigation shell, clearer course structure, and a consistent visual language across the learning experience. This builds on my earlier Svelte migration and collaboration with educators and Red Hat engineers.",
-    backend: "Part of a wider open-source platform: a course reader, course generators, live classroom tools and activity tracking, organised into a typed, layered monorepo. Used for remote courses at SETU Waterford.",
-    note: "Recognised with the Red Hat-sponsored SETU Best Project award, 2023.",
+    interface: {
+      title: "A learning platform, rebuilt around a dashboard.",
+      body: "Tutors is an open learning toolkit used for remote courses at SETU Waterford. I moved it to Svelte a while back, then recently rebuilt the interface with a sidebar that stays put and a course structure you can read at a glance. Drag the handle to compare the two.",
+    },
+    internals: {
+      title: "One reader in a much bigger monorepo.",
+      body: "The course reader I work on is one package in a typed, layered monorepo, next to the course generators and the live classroom tools. I built it alongside educators and Red Hat engineers, and it won the Red Hat-sponsored Best Project award at SETU in 2023.",
+    },
   },
 ];
 
+const hints: Record<Lens, string> = {
+  interface: "Showing the interface. Flip the switch to see what runs underneath.",
+  internals: "Showing the engineering. Flip back for the part people actually click on.",
+};
+
 export function SelectedWork() {
-  const [lens, setLens] = useState<"experience" | "engineering">("experience");
-  const [expanded, setExpanded] = useState<string | null>(null);
+  const [lens, setLens] = useState<Lens>("interface");
 
   return (
-    <section id="work" className="work-section site-shell" aria-labelledby="work-heading">
-      <div className="section-heading">
-        <div className="flex items-center gap-3"><span className="section-dot" /><h2 id="work-heading">Selected work</h2><span className="section-aside">Always a work in progress.</span></div>
-        <div className="lens-switch" data-lens={lens} role="group" aria-label="Project perspective" aria-controls="project-perspectives">
-          <button type="button" aria-pressed={lens === "experience"} onClick={() => setLens("experience")} className={cn(lens === "experience" && "is-active")}><Layers size={15} /> The experience</button>
-          <button type="button" aria-pressed={lens === "engineering"} onClick={() => setLens("engineering")} className={cn(lens === "engineering" && "is-active")}><Code2 size={16} /> Under the hood</button>
+    <section id="work" data-section className="site-shell flex flex-col gap-12 py-20 md:gap-16 md:py-28" aria-labelledby="work-heading">
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-5">
+          <p className="kicker">Work</p>
+          <h2 id="work-heading" className="section-title max-w-2xl">Two projects I keep coming back to.</h2>
+        </div>
+        <div className="flex flex-col gap-3 lg:items-end">
+          <div className="lens-switch" data-lens={lens} role="group" aria-label="Choose what the projects show">
+            <button type="button" aria-pressed={lens === "interface"} onClick={() => setLens("interface")}>
+              <AppWindow size={16} aria-hidden="true" /> Interface
+            </button>
+            <button type="button" aria-pressed={lens === "internals"} onClick={() => setLens("internals")}>
+              <Cpu size={16} aria-hidden="true" /> Internals
+            </button>
+          </div>
+          <p className="font-mono text-sm leading-relaxed text-muted-foreground" role="status">{hints[lens]}</p>
         </div>
       </div>
-      <p className="lens-description" role="status"><span className="section-dot" />{lens === "experience" ? "The finished experience. Explore what each project feels like." : "Blueprint mode. Explore the interfaces, systems, and foundations behind the experience."}</p>
-      <div id="project-perspectives" className="project-grid" data-lens={lens}>
-        {projects.map((project) => (
-          <article key={project.slug} className={cn("project", `project-${project.slug}`)}>
-            <a href={lens === "experience" ? project.href : project.repo} target="_blank" rel="noopener noreferrer" className="project-stage" onPointerMove={tiltPreview} onPointerLeave={resetPreview} onBlur={resetPreview} aria-label={`${lens === "experience" ? "Visit" : "Explore the source of"} ${project.name} — opens in a new tab`}>
-              <div className="stage-top"><span className="project-wordmark">{project.name.toLowerCase()}<span>.</span></span><span className="stage-category">{lens === "experience" ? project.category : "SYSTEM BLUEPRINT"}</span><span className="project-open"><ArrowUpRight size={23} /></span></div>
-              <div className="project-stage-content" key={lens}>
-                {lens === "engineering" ? <ProjectBlueprint slug={project.slug as "meith" | "tutors"} /> : <div className="project-image-wrap"><Image src={project.image} alt={project.alt} width={1568} height={1004} sizes="(max-width: 760px) 95vw, 50vw" className="project-image" /></div>}
+
+      <div className="flex flex-col gap-20 md:gap-28">
+        {projects.map((project, index) => (
+          <article key={project.slug} className="grid gap-9 lg:grid-cols-12 lg:items-center lg:gap-14">
+            <div className={cn("lg:col-span-7", index % 2 === 1 && "lg:order-2")}>
+              <div className="window">
+                <div className="window-bar">
+                  <div className="window-dots" aria-hidden="true"><span /><span /><span /></div>
+                  <a className="window-url" href={project.href} target="_blank" rel="noopener noreferrer">
+                    <span className="truncate">{project.domain}</span>
+                    <ArrowUpRight size={15} className="shrink-0" aria-hidden="true" />
+                    <span className="sr-only">(opens in a new tab)</span>
+                  </a>
+                </div>
+                <div key={lens} className={cn("window-body", lens === "internals" && "lg:aspect-[16/10]")}>
+                  {lens === "internals" ? (
+                    <ProjectBlueprint slug={project.slug} />
+                  ) : project.slug === "tutors" ? (
+                    <CompareSlider
+                      label="Compare the same Full Stack Web Development course in the earlier Tutors and the current redesign"
+                      before={{ src: "/images/tutors.png", width: 2300, height: 1452, alt: "The Full Stack Web Development course in the earlier Tutors, a dark grid of topic cards from Node to Deployment under a toolbar of icon buttons" }}
+                      after={{ src: "/images/tutors-full-stack-current.png", width: 1600, height: 1000, alt: "The same Full Stack Web Development course in the redesigned Tutors, with a labelled sidebar beside the same topic cards from Node to JWT" }}
+                    />
+                  ) : (
+                    <Image
+                      src="/images/meith.png"
+                      alt="A Meith forum showing discussion categories beside the latest threads and posts"
+                      width={2560}
+                      height={1640}
+                      sizes="(max-width: 1024px) 95vw, 700px"
+                      className="aspect-[16/10] w-full object-cover object-left-top"
+                    />
+                  )}
+                </div>
               </div>
-              <div className="stage-bottom"><span>{lens === "experience" ? project.domain : "Open source / inspect the build"}</span><span>{lens === "experience" ? "Explore project" : "View source"} <ArrowUpRight size={15} /></span></div>
-            </a>
-            <div className="project-caption"><span>{project.role}</span><a href={project.repo} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.name} source on GitHub`}>Source code <ArrowUpRight size={15} /></a></div>
-            <div className="project-copy" key={lens}>
-              <h3>{lens === "experience" ? project.summary : project.slug === "meith" ? "From interface to infrastructure." : "A design system for open learning."}</h3>
-              <p className="project-description">{lens === "experience" ? project.description : project.backend}</p>
             </div>
-            <div className="project-tags">{project.stack.map((tech) => <span key={tech}>{tech}</span>)}<span className="open-source-tag">Open source <ArrowUpRight size={12} /></span></div>
-            <button className="project-details-trigger" type="button" aria-expanded={expanded === project.slug} aria-controls={`${project.slug}-details`} onClick={() => setExpanded(expanded === project.slug ? null : project.slug)}>A closer look {expanded === project.slug ? <Minus size={16} /> : <Plus size={16} />}</button>
-            <div id={`${project.slug}-details`} hidden={expanded !== project.slug} className="project-details"><h4>The frontend</h4><p>{project.frontend}</p><h4>The foundations</h4><p>{project.backend}</p><p className="project-note">{project.note}</p><a className="text-link" href={project.repo} target="_blank" rel="noopener noreferrer">Explore the code <ArrowRight size={16} /></a></div>
+
+            <div className="flex flex-col gap-6 lg:col-span-5">
+              <p className="kicker">{project.role}</p>
+              <div key={lens} className="project-copy flex flex-col gap-4">
+                <h3 className="text-balance text-3xl font-semibold leading-tight tracking-tight">{project[lens].title}</h3>
+                <p className="prose-copy">{project[lens].body}</p>
+              </div>
+              <ul className="flex flex-wrap gap-2" aria-label={`${project.name} is built with`}>
+                {project.stack.map((item) => <li key={item} className="chip">{item}</li>)}
+              </ul>
+              <div className="flex flex-wrap items-center gap-3">
+                <a className="btn" href={project.href} target="_blank" rel="noopener noreferrer">
+                  Visit {project.domain}
+                  <span className="btn-icon"><ArrowUpRight size={18} aria-hidden="true" /></span>
+                  <span className="sr-only">(opens in a new tab)</span>
+                </a>
+                <a className="btn-outline" href={project.repo} target="_blank" rel="noopener noreferrer">
+                  <Code2 size={17} aria-hidden="true" /> Source
+                  <span className="sr-only">for {project.name} on GitHub (opens in a new tab)</span>
+                </a>
+              </div>
+            </div>
           </article>
         ))}
       </div>

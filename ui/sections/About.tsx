@@ -1,14 +1,62 @@
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+
+const facts = [
+  { label: "Day job", value: "Charles River Laboratories" },
+  { label: "Community", value: "GDG Portlaoise" },
+  { label: "Also", value: "v0 Ambassador" },
+];
+
+const links = [
+  { href: "https://github.com/jouwdan", label: "GitHub" },
+  { href: "https://linkedin.com/in/jouwdan", label: "LinkedIn" },
+  { href: "https://dev.to/jouwdan", label: "DEV" },
+];
 
 export function About() {
   return (
-    <section id="about" className="about-section site-shell" aria-labelledby="about-heading">
-      <div className="about-label"><span className="eyebrow"><span className="section-dot" />A LITTLE ABOUT ME</span></div>
-      <div className="about-content">
-        <h2 id="about-heading">Good software is technical.<br /><span className="font-serif italic">Great software is human.</span></h2>
-        <div className="about-copy"><p>I&apos;ve always been drawn to where creativity meets technology. What started with graphic design and photography turned into a love for building things on the web—and caring just as much about how they feel as how they work.</p><p>These days, I&apos;m a frontend-led full-stack developer in Portlaoise, Ireland. I work on digital experiences at Charles River Laboratories, build open-source projects, and bring developers together through GDG Portlaoise.</p><p>I like thoughtful interfaces, understandable code, and projects that give something back. Preferably all three.</p></div>
-        <div className="about-links"><a href="https://github.com/jouwdan" target="_blank" rel="noopener noreferrer">Find me on GitHub <ArrowUpRight size={16} /></a><a href="https://linkedin.com/in/jouwdan" target="_blank" rel="noopener noreferrer">LinkedIn <ArrowUpRight size={16} /></a><span>v0 Ambassador</span></div>
+    <section id="about" data-section className="site-shell grid gap-14 py-20 md:py-28 lg:grid-cols-12 lg:items-center" aria-labelledby="about-heading">
+      <div className="flex flex-col gap-7 lg:col-span-7">
+        <p className="kicker">About</p>
+        <h2 id="about-heading" className="section-title">I got here through design and a camera.</h2>
+        <div className="flex max-w-xl flex-col gap-5">
+          <p className="prose-copy">
+            I started out in graphic design and photography, then found out the web would let me build the things I was drawing. I never stopped caring about how they look and feel.
+          </p>
+          <p className="prose-copy">
+            These days I work on digital experiences at Charles River Laboratories, and I bring local developers together through GDG Portlaoise. The projects I enjoy most are open source, because someone else gets to use what I made.
+          </p>
+        </div>
+        <dl className="max-w-xl border-t border-border">
+          {facts.map((fact) => (
+            <div key={fact.label} className="fact-row">
+              <dt className="font-mono text-sm text-muted-foreground">{fact.label}</dt>
+              <dd className="text-right font-semibold">{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+        <ul className="flex flex-wrap gap-x-7 gap-y-2">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a className="link" href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label} <ArrowUpRight size={16} aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
+      <figure className="snapshot mx-auto w-full max-w-md lg:col-span-5">
+        <Image
+          src="/images/devfest-ireland-2025.jpg"
+          alt="The DevFest Ireland 2025 group photo, with attendees gathered in a hotel ballroom in front of the DevFest Ireland 2025 slide and a neon DevFest Ireland sign at the front"
+          width={1400}
+          height={934}
+          sizes="(max-width: 1024px) 90vw, 440px"
+          className="aspect-video w-full rounded-sm object-cover object-[center_35%]"
+        />
+        <figcaption className="pt-2.5 font-mono text-sm">DevFest Ireland, 2025</figcaption>
+      </figure>
     </section>
   );
 }
