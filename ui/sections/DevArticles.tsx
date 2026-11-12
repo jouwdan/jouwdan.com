@@ -12,10 +12,18 @@ interface DevArticle {
   reading_time_minutes: number;
 }
 
-const feedUrl = "https://dev.to/api/articles?username=jouwdan&per_page=30";
+const FRESHNESS_WINDOW_MS = 10 * 60 * 1000;
 
-async function fetchArticles(url: string): Promise<DevArticle[]> {
-  const response = await fetch(url, { signal: AbortSignal.timeout(12000) });
+// DEV's CDN can keep serving an old copy of one exact URL long after a new post is published,
+// and it ignores unknown query params. per_page is part of its cache key, so changing it every
+// window asks for a current copy. The 900-value range only repeats after about six days.
+function feedUrl() {
+  const window = Math.floor(Date.now() / FRESHNESS_WINDOW_MS);
+  return `https://dev.to/api/articles?username=jouwdan&per_page=${100 + (window % 900)}`;
+}
+
+async function fetchArticles(): Promise<DevArticle[]> {
+  const response = await fetch(feedUrl(), { signal: AbortSignal.timeout(12000) });
   if (!response.ok) throw new Error("DEV articles are temporarily unavailable.");
   const articles: unknown = await response.json();
   if (!Array.isArray(articles)) throw new Error("Invalid DEV feed.");
@@ -24,7 +32,8 @@ async function fetchArticles(url: string): Promise<DevArticle[]> {
     typeof article.title === "string" &&
     typeof article.description === "string" &&
     typeof article.url === "string" &&
-    article.url.startsWith("https://dev.to/jouwdan/") &&
+    article.url.startsWith("https://dev.to/") &&
+    article.user?.username === "jouwdan" &&
     typeof article.published_at === "string" &&
     Number.isFinite(Date.parse(article.published_at)) &&
     typeof article.reading_time_minutes === "number"
@@ -36,7 +45,7 @@ function FeedMessage({ children }: { children: React.ReactNode }) {
 }
 
 export function DevArticles({ limit, showDescriptions = false }: { limit?: number; showDescriptions?: boolean }) {
-  const { data, error, isLoading, mutate } = useSWR(feedUrl, fetchArticles, {
+  const { data, error, isLoading, mutate } = useSWR("dev-articles", fetchArticles, {
     revalidateOnFocus: false,
     dedupingInterval: 60000,
     errorRetryCount: 1,
