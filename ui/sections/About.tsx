@@ -18,10 +18,10 @@ export function About() {
     <section id="about" data-section className="site-shell grid gap-14 py-20 md:py-28 lg:grid-cols-12 lg:items-center" aria-labelledby="about-heading">
       <div className="flex flex-col gap-7 lg:col-span-7">
         <p className="kicker">About</p>
-        <h2 id="about-heading" className="section-title">I got here through design and a camera.</h2>
+        <h2 id="about-heading" className="section-title">Design, photography and tech led me to the web.</h2>
         <div className="flex max-w-xl flex-col gap-5">
           <p className="prose-copy">
-            I started out in graphic design and photography, then found out the web would let me build the things I was drawing. I never stopped caring about how they look and feel.
+            I have always had two interests running side by side: graphic design and photography on one side, technology on the other. I worked in system administration and IT before I built software for a living. The web is where I got to combine them, and I still care as much about how something looks and feels as how it runs.
           </p>
           <p className="prose-copy">
             These days I work on digital experiences at Charles River Laboratories, and I bring local developers together through GDG Portlaoise. The projects I enjoy most are open source, because someone else gets to use what I made.
