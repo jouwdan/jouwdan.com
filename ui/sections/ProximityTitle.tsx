@@ -2,7 +2,8 @@ import type { CSSProperties } from "react";
 import { cn } from "@/lib/utils";
 import { Letters, Proximity } from "@/ui/sections/Proximity";
 
-export type TitleWord = { text: string; accent?: boolean };
+export type StickerTone = "yellow" | "pink" | "blue" | "green" | "paper";
+export type TitleWord = { text: string; accent?: boolean; tone?: StickerTone; tilt?: number };
 
 function withLetterOffsets(lines: TitleWord[][]) {
   let count = 0;
@@ -26,7 +27,11 @@ export function ProximityTitle({ id, lines, wave = false }: { id?: string; lines
           {words.map((word, wordIndex) => (
             <span key={word.start}>
               {wordIndex > 0 && " "}
-              <span className={cn("inline-block", word.accent && "text-primary")}>
+              <span
+                className={cn("inline-block", word.accent && "sticker-word")}
+                data-tone={word.accent ? word.tone ?? "yellow" : undefined}
+                style={word.accent && word.tilt !== undefined ? ({ "--tilt": `${word.tilt}deg` } as CSSProperties) : undefined}
+              >
                 <Letters text={word.text} start={word.start} />
               </span>
             </span>

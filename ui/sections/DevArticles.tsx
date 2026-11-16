@@ -94,11 +94,11 @@ export function DevArticles({ limit, showDescriptions = false }: { limit?: numbe
       {data.slice(0, limit ?? data.length).map((article) => (
         <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer" className="post-row">
           <div className="flex min-w-0 flex-1 flex-col gap-2">
-            <p className="font-mono text-sm text-muted-foreground">
-              <time dateTime={article.published_at}>{new Date(article.published_at).toLocaleDateString("en-IE", { month: "short", year: "numeric", timeZone: "UTC" })}</time>
+            <p className="flex flex-wrap items-center gap-2 font-mono text-sm text-muted-foreground">
+              <time className="post-date" dateTime={article.published_at}>{new Date(article.published_at).toLocaleDateString("en-IE", { month: "short", year: "numeric", timeZone: "UTC" })}</time>
               {showDescriptions && <span> / {article.reading_time_minutes} min read</span>}
             </p>
-            <h3 className="text-pretty text-xl font-semibold leading-snug tracking-tight md:text-2xl">{article.title}</h3>
+            <h3 className="text-pretty text-xl leading-snug [font-variation-settings:'wght'_720,'ROND'_50] tracking-tight md:text-2xl">{article.title}</h3>
             {showDescriptions && <p className="prose-copy max-w-2xl">{article.description}</p>}
           </div>
           <span className="post-arrow" aria-hidden="true"><ArrowUpRight size={18} /></span>

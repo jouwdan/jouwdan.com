@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import Image from "next/image";
 import { AppWindow, ArrowUpRight, Code2, Cpu } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -17,6 +17,7 @@ const projects = [
     href: "https://meith.dev",
     repo: "https://github.com/meith-dev/meith",
     role: "Creator, full-stack",
+    tone: "blue",
     stack: ["Next.js", "TypeScript", "PostgreSQL"],
     interface: {
       title: "Forum software you host yourself.",
@@ -34,6 +35,7 @@ const projects = [
     href: "https://tutors.dev",
     repo: "https://github.com/tutors-sdk/tutors-mono-repo",
     role: "Contributor, frontend and design system",
+    tone: "green",
     stack: ["Svelte", "TypeScript", "Design systems"],
     interface: {
       title: "A learning platform, rebuilt around a dashboard.",
@@ -58,7 +60,7 @@ export function SelectedWork() {
     <section id="work" data-section className="site-shell flex flex-col gap-12 py-20 md:gap-16 md:py-28" aria-labelledby="work-heading">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
         <div className="flex flex-col gap-5">
-          <p className="kicker">Work</p>
+          <p className="kicker" data-tone="blue">Work</p>
           <h2 id="work-heading" className="section-title max-w-2xl">Two projects I keep coming back to.</h2>
         </div>
         <div className="flex flex-col gap-3 lg:items-end">
@@ -76,9 +78,9 @@ export function SelectedWork() {
 
       <div className="flex flex-col gap-20 md:gap-28">
         {projects.map((project, index) => (
-          <article key={project.slug} className="grid gap-9 lg:grid-cols-12 lg:items-center lg:gap-14">
+          <article key={project.slug} data-tone={project.tone} className="grid gap-9 lg:grid-cols-12 lg:items-center lg:gap-14">
             <div className={cn("lg:col-span-7", index % 2 === 1 && "lg:order-2")}>
-              <div className="window">
+              <div className="window" style={{ "--tilt": index % 2 === 1 ? "1.2deg" : "-1.2deg" } as CSSProperties}>
                 <div className="window-bar">
                   <div className="window-dots" aria-hidden="true"><span /><span /><span /></div>
                   <a className="window-url" href={project.href} target="_blank" rel="noopener noreferrer">
@@ -113,19 +115,19 @@ export function SelectedWork() {
             <div className="flex flex-col gap-6 lg:col-span-5">
               <p className="kicker">{project.role}</p>
               <div key={lens} className="project-copy flex flex-col gap-4">
-                <h3 className="text-balance text-3xl font-semibold leading-tight tracking-tight">{project[lens].title}</h3>
+                <h3 className="text-balance text-3xl leading-tight tracking-tight [font-variation-settings:'wght'_760,'ROND'_60]">{project[lens].title}</h3>
                 <p className="prose-copy">{project[lens].body}</p>
               </div>
               <ul className="flex flex-wrap gap-2" aria-label={`${project.name} is built with`}>
                 {project.stack.map((item) => <li key={item} className="chip">{item}</li>)}
               </ul>
               <div className="flex flex-wrap items-center gap-3">
-                <a className="btn" href={project.href} target="_blank" rel="noopener noreferrer">
+                <a className="btn" data-tone="yellow" href={project.href} target="_blank" rel="noopener noreferrer">
                   Visit {project.domain}
                   <span className="btn-icon"><ArrowUpRight size={18} aria-hidden="true" /></span>
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
-                <a className="btn-outline" href={project.repo} target="_blank" rel="noopener noreferrer">
+                <a className="btn-outline" data-tone="paper" href={project.repo} target="_blank" rel="noopener noreferrer">
                   <Code2 size={17} aria-hidden="true" /> Source
                   <span className="sr-only">for {project.name} on GitHub (opens in a new tab)</span>
                 </a>

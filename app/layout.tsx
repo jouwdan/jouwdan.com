@@ -1,12 +1,19 @@
 import type React from "react";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { Mona_Sans, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import "highlight.js/styles/github-dark.css";
 import { Header } from "@/ui/layout/Header";
 import { Footer } from "@/ui/layout/Footer";
 
-const monaSans = Mona_Sans({ subsets: ["latin"], axes: ["wdth"], variable: "--font-mona" });
+const allo = localFont({
+  src: "./fonts/AlloVariable.woff2",
+  weight: "100 900",
+  style: "normal",
+  display: "swap",
+  variable: "--font-allo",
+});
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 const description =
@@ -25,7 +32,7 @@ export const viewport: Viewport = { themeColor: "#141624", colorScheme: "dark" }
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" id="top" className="dark bg-background">
-      <body className={`${monaSans.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body className={`${allo.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
         <Header />
         {children}
         <Footer />
