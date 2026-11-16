@@ -1,11 +1,11 @@
 import type { CSSProperties } from "react";
 import { ArrowDown } from "lucide-react";
-import { ProximityTitle, type TitleWord } from "@/ui/sections/ProximityTitle";
 import { StickerPile } from "@/ui/sections/StickerPile";
+import { WaveTitle, type TitleWord } from "@/ui/sections/WaveTitle";
 
 const title: TitleWord[][] = [
-  [{ text: "Full-stack" }, { text: "mind.", accent: true, tone: "pink", tilt: -3 }],
-  [{ text: "Frontend" }, { text: "heart.", accent: true, tone: "yellow", tilt: 2 }],
+  [{ text: "Full-stack" }, { text: "mind.", accent: true, tone: "pink" }],
+  [{ text: "Frontend" }, { text: "heart.", accent: true, tone: "yellow" }],
 ];
 
 const step = (index: number) => ({ "--i": index }) as CSSProperties;
@@ -13,14 +13,9 @@ const step = (index: number) => ({ "--i": index }) as CSSProperties;
 export function Hero() {
   return (
     <section className="site-shell flex flex-col gap-8 pb-20 pt-8 md:gap-10 md:pb-28 md:pt-14" aria-labelledby="hero-title">
-      <div className="rise flex flex-wrap items-center justify-between gap-x-8 gap-y-3" style={step(0)}>
-        <p className="kicker" data-tone="paper">Jordan Harrison, developer</p>
-        <p className="hidden font-mono text-sm text-muted-foreground [@media(hover:hover)]:block">
-          Run your cursor through the headline.
-        </p>
-      </div>
+      <p className="kicker rise" data-tone="paper" style={step(0)}>Jordan Harrison, developer</p>
       <div className="hero-copy">
-        <ProximityTitle id="hero-title" lines={title} wave />
+        <WaveTitle id="hero-title" lines={title} />
       </div>
       <div className="grid items-center gap-10 lg:grid-cols-12">
         <div className="rise flex flex-col gap-7 lg:col-span-5" style={step(3)}>
