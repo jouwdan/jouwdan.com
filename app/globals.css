@@ -276,6 +276,23 @@
     white-space: nowrap;
   }
 
+  /* WaveTitle locks each letter's width and drives "wght"/"ROND" from a single loop */
+
+  .hero-title:has(.wave-letter) {
+    letter-spacing: 0;
+    contain: layout style;
+  }
+
+  .wave-letter {
+    display: inline-block;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .wave-accent {
+    color: var(--tone-bg);
+  }
+
   /* Expanding type: Proximity sets --pull (0 to 1) on each letter. Letters swell and soften. */
 
   .prox-letter {
