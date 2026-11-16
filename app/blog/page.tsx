@@ -5,7 +5,7 @@ import { ProximityTitle, type TitleWord } from "@/ui/sections/ProximityTitle";
 
 const title: TitleWord[][] = [
   [{ text: "Things" }, { text: "I" }, { text: "wrote" }],
-  [{ text: "down.", accent: true }],
+  [{ text: "down.", accent: true, tone: "green", tilt: -3 }],
 ];
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function BlogPage() {
   return (
     <main id="main-content" className="site-shell flex min-h-[75vh] flex-col gap-10 pb-24 pt-8 md:pt-14">
       <div className="hero-copy flex flex-col gap-6">
-        <p className="kicker rise">Writing</p>
+        <p className="kicker rise" data-tone="green">Writing</p>
         <ProximityTitle lines={title} />
         <p className="prose-copy rise max-w-lg" style={{ "--i": 3 } as React.CSSProperties}>
           When I work something out, I write it up on{" "}

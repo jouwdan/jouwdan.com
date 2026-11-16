@@ -11,19 +11,19 @@
     --card-foreground: 42 38% 92%;
     --popover: 232 26% 15%;
     --popover-foreground: 42 38% 92%;
-    --primary: 45 96% 66%;
+    --primary: 47 100% 62%;
     --primary-foreground: 232 34% 9%;
     --secondary: 232 22% 18%;
     --secondary-foreground: 42 38% 92%;
     --muted: 232 22% 18%;
     --muted-foreground: 230 18% 74%;
-    --accent: 45 96% 66%;
+    --accent: 47 100% 62%;
     --accent-foreground: 232 34% 9%;
     --destructive: 42 38% 92%;
     --destructive-foreground: 232 34% 9%;
     --border: 232 18% 27%;
     --input: 232 18% 27%;
-    --ring: 45 96% 66%;
+    --ring: 47 100% 62%;
     --radius: 0.875rem;
 
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -41,6 +41,7 @@
 
   body {
     @apply bg-background text-foreground;
+    font-variation-settings: "ROND" 30;
   }
 
   ::selection {
@@ -60,8 +61,8 @@
 
   :focus-visible {
     outline: 2px solid hsl(var(--ring));
-    outline-offset: 4px;
-    border-radius: 4px;
+    outline-offset: 6px;
+    border-radius: 6px;
   }
 }
 
@@ -81,29 +82,127 @@
     transform: translateY(0);
   }
 
+  /*
+    Sticker tones. Each sticker has a fill, an ink for text drawn on it,
+    and a pale die-cut ring that separates it from the dark page.
+  */
+
+  :root {
+    --tone-bg: oklch(0.88 0.17 92);
+    --tone-ink: oklch(0.3 0.08 60);
+    --tone-ring: oklch(0.97 0.07 98);
+  }
+
+  [data-tone="yellow"] {
+    --tone-bg: oklch(0.88 0.17 92);
+    --tone-ink: oklch(0.3 0.08 60);
+    --tone-ring: oklch(0.97 0.07 98);
+  }
+
+  [data-tone="pink"] {
+    --tone-bg: oklch(0.73 0.2 355);
+    --tone-ink: oklch(0.29 0.12 355);
+    --tone-ring: oklch(0.93 0.06 355);
+  }
+
+  [data-tone="blue"] {
+    --tone-bg: oklch(0.74 0.14 240);
+    --tone-ink: oklch(0.27 0.12 262);
+    --tone-ring: oklch(0.94 0.045 235);
+  }
+
+  [data-tone="green"] {
+    --tone-bg: oklch(0.8 0.18 150);
+    --tone-ink: oklch(0.29 0.08 155);
+    --tone-ring: oklch(0.95 0.08 150);
+  }
+
+  [data-tone="paper"] {
+    --tone-bg: oklch(0.96 0.025 85);
+    --tone-ink: oklch(0.22 0.045 270);
+    --tone-ring: oklch(0.99 0.005 85);
+  }
+
+  .sticker {
+    --ring: 5px;
+    --tilt: 0deg;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
+    box-shadow:
+      0 0 0 var(--ring) var(--tone-ring),
+      inset 0 -0.22rem 0 color-mix(in oklch, var(--tone-ink) 22%, transparent);
+    rotate: var(--tilt);
+    transition:
+      rotate 500ms var(--ease-spring),
+      translate 500ms var(--ease-spring),
+      scale 500ms var(--ease-spring),
+      box-shadow 300ms var(--ease-out);
+  }
+
+  .sticker ::selection {
+    background: var(--tone-ink);
+    color: var(--tone-bg);
+  }
+
+  .sticker :focus-visible,
+  .sticker:focus-visible {
+    outline-color: var(--tone-ink);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .peel:hover {
+      rotate: calc(var(--tilt) * -0.4);
+      translate: 0 -3px;
+      scale: 1.03;
+      box-shadow:
+        0 0 0 var(--ring) var(--tone-ring),
+        inset 0 -0.22rem 0 color-mix(in oklch, var(--tone-ink) 22%, transparent),
+        0 18px 28px -10px rgb(0 0 0 / 0.55);
+    }
+  }
+
+  /* Lettering cut out like a vinyl sticker: inked outline, extruded edge, pale ring */
+
+  .sticker-word {
+    display: inline-block;
+    color: var(--tone-bg);
+    padding-inline: 0.04em;
+    filter:
+      drop-shadow(0.03em 0 0 var(--tone-ink))
+      drop-shadow(-0.03em 0 0 var(--tone-ink))
+      drop-shadow(0 0.03em 0 var(--tone-ink))
+      drop-shadow(0 -0.03em 0 var(--tone-ink))
+      drop-shadow(0 0.06em 0 var(--tone-ink))
+      drop-shadow(0.028em 0 0 var(--tone-ring))
+      drop-shadow(-0.028em 0 0 var(--tone-ring))
+      drop-shadow(0 0.028em 0 var(--tone-ring))
+      drop-shadow(0 -0.028em 0 var(--tone-ring));
+    rotate: var(--tilt, -2deg);
+  }
+
   /* Labels and headings */
 
   .kicker {
-    @apply inline-flex items-center gap-3 font-mono text-sm text-muted-foreground;
+    @apply inline-flex items-center gap-2 self-start rounded-full text-xs uppercase;
+    padding: 0.4rem 0.85rem 0.45rem;
+    letter-spacing: 0.08em;
+    font-variation-settings: "wght" 760, "ROND" 100;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
+    box-shadow: 0 0 0 4px var(--tone-ring);
+    rotate: -3deg;
+    transform-origin: left center;
   }
 
-  .kicker::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: hsl(var(--primary));
-    transition: background-color 300ms, transform 400ms var(--ease-spring);
-  }
-
-  [data-reveal="visible"] .kicker::before {
-    transform: rotate(90deg);
+  [data-reveal="visible"] .kicker {
+    animation: slap 600ms var(--ease-spring) both;
   }
 
   .section-title {
     font-size: clamp(2rem, 5.2vw, 3.75rem);
     line-height: 1.02;
-    letter-spacing: -0.03em;
-    font-variation-settings: "wdth" 100, "wght" 640;
+    letter-spacing: -0.035em;
+    font-variation-settings: "wght" 780, "ROND" 70;
     text-wrap: balance;
   }
 
@@ -117,22 +216,25 @@
   /* Header */
 
   .wordmark {
-    @apply inline-flex items-center gap-2.5;
-    font-size: 1.125rem;
+    @apply inline-flex items-center gap-3;
+    font-size: 1.1875rem;
     letter-spacing: -0.02em;
-    font-variation-settings: "wdth" 100, "wght" 700;
+    font-variation-settings: "wght" 800, "ROND" 100;
   }
 
   .wordmark-mark {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
     background: hsl(var(--primary));
-    transition: rotate 600ms var(--ease-spring);
+    box-shadow: 0 0 0 3px oklch(0.97 0.07 98);
+    transition: scale 500ms var(--ease-spring), border-radius 400ms var(--ease-out);
   }
 
   .wordmark:hover .wordmark-mark,
   .wordmark:focus-visible .wordmark-mark {
-    rotate: 180deg;
+    scale: 1.2;
+    border-radius: 4px;
   }
 
   .nav-pill {
@@ -142,7 +244,7 @@
   }
 
   .nav-link {
-    @apply relative inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-[15px];
+    @apply relative inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-[15px] font-medium;
     transition: color 200ms;
   }
 
@@ -161,12 +263,12 @@
   }
 
   .hero-title {
-    --wdth: 90;
-    --wght: 620;
-    font-size: clamp(2.5rem, 15.2cqi, 12.5rem);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
-    font-variation-settings: "wdth" 90, "wght" 620;
+    --wght: 780;
+    --rond: 20;
+    font-size: clamp(2.5rem, 13.4cqi, 11rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    font-variation-settings: "wght" 780, "ROND" 20;
   }
 
   .hero-line {
@@ -174,13 +276,13 @@
     white-space: nowrap;
   }
 
-  /* Expanding type: Proximity sets --pull (0 to 1) on each letter */
+  /* Expanding type: Proximity sets --pull (0 to 1) on each letter. Letters swell and soften. */
 
   .prox-letter {
     display: inline-block;
     font-variation-settings:
-      "wdth" calc(var(--wdth, 100) + var(--pull, 0) * var(--wdth-gain, 28)),
-      "wght" calc(var(--wght, 600) + var(--pull, 0) * var(--wght-gain, 240));
+      "wght" calc(var(--wght, 600) + var(--pull, 0) * var(--wght-gain, 120)),
+      "ROND" calc(var(--rond, 0) + var(--pull, 0) * var(--rond-gain, 80));
     transition: font-variation-settings 260ms var(--ease-out);
   }
 
@@ -193,25 +295,132 @@
     animation-delay: calc(var(--i, 0) * 90ms);
   }
 
+  /* Sticker pile */
+
+  .pile {
+    @apply flex flex-wrap items-center justify-center;
+    gap: 18px 14px;
+    padding: 12px;
+  }
+
+  .pile-item {
+    position: relative;
+    translate: var(--x, 0) var(--y, 0);
+    animation: stick 650ms var(--ease-spring) both;
+    animation-delay: calc(900ms + var(--i, 0) * 110ms);
+  }
+
+  .pile-item[data-dragging="true"] {
+    z-index: 20;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .pile-item {
+      cursor: grab;
+      touch-action: none;
+    }
+
+    .pile-item[data-dragging="true"] {
+      cursor: grabbing;
+    }
+
+    .pile-item[data-dragging="true"] .sticker {
+      scale: 1.08;
+      rotate: 0deg;
+      box-shadow:
+        0 0 0 var(--ring) var(--tone-ring),
+        inset 0 -0.22rem 0 color-mix(in oklch, var(--tone-ink) 22%, transparent),
+        0 26px 36px -12px rgb(0 0 0 / 0.6);
+    }
+  }
+
+  .name-tag {
+    @apply flex flex-col overflow-hidden rounded-2xl;
+    min-width: 11.5rem;
+  }
+
+  .name-tag-band {
+    @apply flex flex-col items-center px-5 pb-2 pt-2.5 text-center;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
+  }
+
+  .name-tag-body {
+    @apply px-5 pb-4 pt-3 text-center;
+    background: oklch(0.99 0.005 85);
+    color: oklch(0.22 0.045 270);
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-variation-settings: "wght" 860, "ROND" 100;
+  }
+
+  .ticket {
+    @apply flex items-stretch rounded-lg;
+  }
+
+  .ticket-stub {
+    @apply flex flex-col justify-center gap-0.5 px-4 py-3;
+    border-left: 2px dashed color-mix(in oklch, var(--tone-ink) 45%, transparent);
+  }
+
+  .burst {
+    filter:
+      drop-shadow(4px 0 0 var(--tone-ring))
+      drop-shadow(-4px 0 0 var(--tone-ring))
+      drop-shadow(0 4px 0 var(--tone-ring))
+      drop-shadow(0 -4px 0 var(--tone-ring));
+    rotate: var(--tilt, 0deg);
+    transition: rotate 500ms var(--ease-spring), scale 500ms var(--ease-spring);
+  }
+
+  .burst-shape {
+    @apply grid place-items-center text-center;
+    width: 8.5rem;
+    aspect-ratio: 1;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .burst:hover {
+      rotate: calc(var(--tilt, 0deg) + 25deg);
+      scale: 1.05;
+    }
+  }
+
+  .heart-sticker {
+    color: var(--tone-bg);
+    filter:
+      drop-shadow(4px 0 0 var(--tone-ring))
+      drop-shadow(-4px 0 0 var(--tone-ring))
+      drop-shadow(0 4px 0 var(--tone-ring))
+      drop-shadow(0 -4px 0 var(--tone-ring));
+    rotate: var(--tilt, 0deg);
+    transition: scale 400ms var(--ease-spring);
+  }
+
+  .heart-sticker:hover {
+    scale: 1.15;
+  }
+
   /* Buttons and links */
 
   .btn {
-    @apply inline-flex items-center gap-3 rounded-full bg-foreground font-semibold text-background;
+    @apply sticker peel inline-flex items-center gap-3 rounded-full font-semibold;
+    --ring: 4px;
     min-height: 48px;
     padding: 6px 6px 6px 22px;
-    transition: background-color 250ms, transform 200ms var(--ease-out);
-  }
-
-  .btn:hover {
-    background: hsl(var(--primary));
   }
 
   .btn:active {
-    transform: scale(0.97);
+    scale: 0.96;
   }
 
   .btn-icon {
-    @apply grid size-9 shrink-0 place-items-center overflow-hidden rounded-full bg-background text-foreground;
+    @apply grid size-9 shrink-0 place-items-center overflow-hidden rounded-full;
+    background: var(--tone-ink);
+    color: var(--tone-bg);
   }
 
   .btn:hover .btn-icon svg,
@@ -220,19 +429,14 @@
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 rounded-full border-2 border-foreground/25 font-semibold;
+    @apply sticker peel inline-flex items-center gap-2 rounded-full font-semibold;
+    --ring: 4px;
     min-height: 48px;
     padding: 6px 20px;
-    transition: border-color 250ms, color 250ms, transform 200ms var(--ease-out);
-  }
-
-  .btn-outline:hover {
-    border-color: hsl(var(--primary));
-    color: hsl(var(--primary));
   }
 
   .btn-outline:active {
-    transform: scale(0.97);
+    scale: 0.96;
   }
 
   .link {
@@ -263,8 +467,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4px;
-    border: 2px solid hsl(var(--foreground));
     border-radius: 999px;
+    background: oklch(0.96 0.025 85);
+    box-shadow: 0 0 0 4px oklch(0.99 0.005 85);
     isolation: isolate;
   }
 
@@ -274,9 +479,10 @@
     inset: 4px auto 4px 4px;
     width: calc(50% - 4px);
     border-radius: 999px;
-    background: hsl(var(--primary));
+    background: var(--tone-bg);
+    box-shadow: inset 0 -3px 0 color-mix(in oklch, var(--tone-ink) 25%, transparent);
     z-index: -1;
-    transition: transform 480ms var(--ease-spring), background-color 300ms;
+    transition: transform 480ms var(--ease-spring);
   }
 
   .lens-switch[data-lens="internals"]::before {
@@ -284,15 +490,21 @@
   }
 
   .lens-switch button {
-    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold text-muted-foreground;
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold;
     min-height: 44px;
     padding: 8px 18px;
     font-size: 15px;
+    color: oklch(0.42 0.04 270);
     transition: color 250ms, transform 200ms var(--ease-out);
   }
 
   .lens-switch button[aria-pressed="true"] {
-    color: hsl(var(--primary-foreground));
+    color: var(--tone-ink);
+  }
+
+  .lens-switch button:focus-visible {
+    outline-color: oklch(0.22 0.045 270);
+    outline-offset: 2px;
   }
 
   .lens-switch button:active {
@@ -308,16 +520,19 @@
   }
 
   .window {
+    @apply sticker;
+    --ring: 6px;
     overflow: hidden;
-    border: 2px solid hsl(var(--foreground));
-    border-radius: 18px;
+    border-radius: 20px;
     background: hsl(var(--card));
-    box-shadow: 6px 6px 0 hsl(var(--primary));
-    transition: transform 350ms var(--ease-out), box-shadow 350ms var(--ease-out);
+    color: hsl(var(--foreground));
+    box-shadow: 0 0 0 var(--ring) var(--tone-ring);
   }
 
   .window-bar {
-    @apply flex items-center gap-3 border-b-2 border-foreground bg-background px-3 py-2.5;
+    @apply flex items-center gap-3 px-3 py-2.5;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
   }
 
   .window-dots {
@@ -325,12 +540,13 @@
   }
 
   .window-dots span {
-    @apply size-2.5 rounded-full bg-foreground/25;
+    @apply size-2.5 rounded-full;
+    background: color-mix(in oklch, var(--tone-ink) 35%, transparent);
     transition: background-color 250ms;
   }
 
   .window:hover .window-dots span {
-    background: hsl(var(--primary));
+    background: var(--tone-ink);
   }
 
   .window:hover .window-dots span:nth-child(2) {
@@ -342,13 +558,19 @@
   }
 
   .window-url {
-    @apply inline-flex min-w-0 flex-1 items-center justify-between gap-2 rounded-full bg-muted px-3.5 py-1.5 font-mono text-sm;
-    transition: background-color 250ms, color 250ms;
+    @apply inline-flex min-w-0 flex-1 items-center justify-between gap-2 rounded-full px-3.5 py-1.5 font-mono text-sm;
+    background: color-mix(in oklch, var(--tone-ring) 70%, transparent);
+    color: var(--tone-ink);
+    transition: background-color 250ms;
   }
 
   .window-url:hover {
-    background: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    background: var(--tone-ring);
+  }
+
+  .window-url:focus-visible {
+    outline-color: var(--tone-ink);
+    outline-offset: 2px;
   }
 
   .window-url svg {
@@ -368,27 +590,46 @@
   }
 
   .chip {
-    @apply inline-flex items-center rounded-full border border-foreground/25 px-3 py-1 font-mono text-sm;
-    transition: transform 300ms var(--ease-spring), border-color 250ms, color 250ms;
+    @apply sticker inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold;
+    --ring: 3px;
+  }
+
+  .chip:nth-child(1) {
+    --tilt: -3deg;
+  }
+
+  .chip:nth-child(2) {
+    --tilt: 2deg;
+  }
+
+  .chip:nth-child(3) {
+    --tilt: -1deg;
   }
 
   .chip:hover {
-    transform: translateY(-3px) rotate(-2deg);
-    border-color: hsl(var(--primary));
-    color: hsl(var(--primary));
+    rotate: 0deg;
+    translate: 0 -3px;
   }
 
   .layer {
-    @apply flex items-center gap-3.5 rounded-xl border-2 border-foreground/15 bg-background px-4 py-3;
+    @apply flex items-center gap-3.5 rounded-2xl px-4 py-3;
+    background: hsl(var(--background));
+    box-shadow: 0 0 0 2px hsl(var(--border));
     margin-inline-start: calc(var(--i) * 4%);
     animation: layer-in 500ms var(--ease-out) both;
     animation-delay: calc(var(--i) * 80ms);
-    transition: border-color 250ms, translate 300ms var(--ease-out);
+    transition: box-shadow 250ms, translate 300ms var(--ease-out);
   }
 
   .layer:hover {
-    border-color: hsl(var(--primary));
+    box-shadow: 0 0 0 2px var(--tone-bg);
     translate: 6px 0;
+  }
+
+  .layer-icon {
+    @apply grid size-9 shrink-0 place-items-center rounded-full;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
   }
 
   /* Before and after comparison */
@@ -415,7 +656,9 @@
   }
 
   .compare-tag {
-    @apply absolute bottom-3 rounded-full bg-background px-3 py-1 font-mono text-sm text-foreground;
+    @apply absolute bottom-3 rounded-full px-3 py-1 text-sm font-semibold;
+    background: oklch(0.22 0.045 270);
+    color: oklch(0.96 0.025 85);
     pointer-events: none;
   }
 
@@ -435,13 +678,17 @@
     top: 0;
     bottom: 0;
     left: var(--pos);
-    width: 2px;
-    background: hsl(var(--background));
+    width: 3px;
+    translate: -1.5px 0;
+    background: var(--tone-ring);
     pointer-events: none;
   }
 
   .compare-knob {
-    @apply absolute left-1/2 top-1/2 grid size-11 place-items-center rounded-full border-2 border-background bg-primary text-primary-foreground;
+    @apply absolute left-1/2 top-1/2 grid size-11 place-items-center rounded-full;
+    background: var(--tone-bg);
+    color: var(--tone-ink);
+    box-shadow: 0 0 0 4px var(--tone-ring);
     transform: translate(-50%, -50%);
     transition: transform 250ms var(--ease-spring);
   }
@@ -453,59 +700,64 @@
 
   .compare-range:focus-visible + .compare-handle .compare-knob {
     outline: 2px solid hsl(var(--ring));
-    outline-offset: 3px;
+    outline-offset: 5px;
   }
 
   /* About */
 
   .snapshot {
-    @apply bg-foreground p-2.5 pb-3 text-background;
-    rotate: -3deg;
-    border-radius: 6px;
-    box-shadow: 6px 6px 0 hsl(var(--primary));
-    transition: rotate 500ms var(--ease-spring), scale 500ms var(--ease-spring), box-shadow 350ms var(--ease-out);
-  }
-
-  .snapshot:hover {
-    rotate: 1deg;
-    scale: 1.02;
-    box-shadow: 12px 12px 0 hsl(var(--primary));
+    @apply sticker peel p-2.5 pb-3;
+    --ring: 0px;
+    --tilt: -4deg;
+    border-radius: 10px;
   }
 
   .fact-row {
-    @apply flex items-baseline justify-between gap-6 border-b border-border py-3.5;
-    transition: padding-inline 300ms var(--ease-out), border-color 250ms;
+    @apply flex items-center justify-between gap-6 border-b border-border py-3.5;
   }
 
-  .fact-row:hover {
-    padding-inline: 8px;
-    border-color: hsl(var(--primary));
+  .fact-value {
+    @apply sticker peel rounded-full px-3.5 py-1 text-right text-sm font-semibold;
+    --ring: 3px;
   }
 
   /* Writing */
 
   .post-row {
     @apply flex items-start gap-4 border-b border-border py-6;
-    background: linear-gradient(hsl(var(--primary)), hsl(var(--primary))) no-repeat left bottom / 0% 2px;
-    transition: background-size 450ms var(--ease-out), padding-inline 350ms var(--ease-out);
+    transition: padding-inline 350ms var(--ease-out);
+  }
+
+  .post-row h3 {
+    transition: color 250ms;
   }
 
   .post-row:hover,
   .post-row:focus-visible {
-    background-size: 100% 2px;
     padding-inline: 8px;
   }
 
+  .post-row:hover h3,
+  .post-row:focus-visible h3 {
+    color: hsl(var(--primary));
+  }
+
+  .post-date {
+    @apply inline-flex rounded-md px-2 py-0.5 font-mono text-xs;
+    background: hsl(var(--muted));
+    color: hsl(var(--muted-foreground));
+  }
+
   .post-arrow {
-    @apply mt-1 grid size-9 shrink-0 place-items-center overflow-hidden rounded-full border border-foreground/25;
-    transition: background-color 250ms, color 250ms, border-color 250ms;
+    @apply sticker mt-1 grid size-10 shrink-0 place-items-center overflow-hidden rounded-full;
+    --ring: 3px;
+    --tilt: -8deg;
   }
 
   .post-row:hover .post-arrow,
   .post-row:focus-visible .post-arrow {
-    background: hsl(var(--primary));
-    border-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
+    rotate: 0deg;
+    scale: 1.1;
   }
 
   .post-row:hover .post-arrow svg,
@@ -521,34 +773,34 @@
   /* Contact */
 
   .contact-panel {
-    @apply bg-primary text-primary-foreground;
-    border-radius: 28px;
+    @apply sticker;
+    --ring: 8px;
+    --tilt: -0.6deg;
+    border-radius: 32px;
   }
 
   .contact-panel :focus-visible {
-    outline-color: hsl(var(--primary-foreground));
-  }
-
-  .contact-panel ::selection {
-    background: hsl(var(--primary-foreground));
-    color: hsl(var(--primary));
+    outline-color: var(--tone-ink);
   }
 
   .email-link {
-    --wdth: 90;
-    --wght: 700;
-    --wght-gain: 200;
+    --wght: 760;
+    --rond: 40;
+    --wght-gain: 140;
+    --rond-gain: 60;
     display: inline-block;
-    font-size: clamp(1.75rem, 7.4vw, 5.25rem);
+    font-size: clamp(1.75rem, 7vw, 5rem);
     line-height: 1.05;
-    letter-spacing: -0.035em;
-    font-variation-settings: "wdth" 90, "wght" 700;
+    letter-spacing: -0.04em;
+    font-variation-settings: "wght" 760, "ROND" 40;
   }
 
   .copy-button {
-    @apply inline-flex items-center gap-2.5 rounded-full bg-primary-foreground font-semibold text-foreground;
+    @apply inline-flex items-center gap-2.5 rounded-full font-semibold;
     min-height: 48px;
     padding: 6px 20px;
+    background: var(--tone-ink);
+    color: var(--tone-bg);
     transition: transform 200ms var(--ease-out), background-color 250ms, color 250ms;
   }
 
@@ -561,8 +813,8 @@
   }
 
   .copy-button[data-state="copied"] {
-    background: hsl(var(--foreground));
-    color: hsl(var(--background));
+    background: var(--tone-ring);
+    color: var(--tone-ink);
   }
 
   .copy-icon {
@@ -598,8 +850,25 @@
 @keyframes swell {
   45% {
     font-variation-settings:
-      "wdth" calc(var(--wdth, 100) + 0.75 * var(--wdth-gain, 28)),
-      "wght" calc(var(--wght, 600) + 0.75 * var(--wght-gain, 240));
+      "wght" calc(var(--wght, 600) + 0.75 * var(--wght-gain, 120)),
+      "ROND" calc(var(--rond, 0) + 0.75 * var(--rond-gain, 80));
+  }
+}
+
+@keyframes stick {
+  from {
+    opacity: 0;
+    transform: scale(1.35) rotate(8deg);
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+@keyframes slap {
+  from {
+    opacity: 0;
+    transform: scale(1.3) rotate(6deg);
   }
 }
 
@@ -649,16 +918,15 @@
   .site-shell {
     width: min(1240px, 100% - 80px);
   }
-
-  .window {
-    box-shadow: 10px 10px 0 hsl(var(--primary));
-  }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .window:hover {
-    transform: translate(-3px, -3px);
-    box-shadow: 14px 14px 0 hsl(var(--primary));
+    rotate: 0deg;
+    translate: 0 -4px;
+    box-shadow:
+      0 0 0 var(--ring) var(--tone-ring),
+      0 28px 40px -16px rgb(0 0 0 / 0.6);
   }
 }
 

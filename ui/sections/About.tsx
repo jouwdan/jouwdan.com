@@ -1,10 +1,11 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const facts = [
-  { label: "Day job", value: "Charles River Laboratories" },
-  { label: "Community", value: "GDG Portlaoise" },
-  { label: "Also", value: "v0 Ambassador" },
+  { label: "Day job", value: "Charles River Laboratories", tone: "blue", tilt: -2 },
+  { label: "Community", value: "GDG Portlaoise", tone: "green", tilt: 2 },
+  { label: "Also", value: "v0 Ambassador", tone: "paper", tilt: -1 },
 ];
 
 const links = [
@@ -17,7 +18,7 @@ export function About() {
   return (
     <section id="about" data-section className="site-shell grid gap-14 py-20 md:py-28 lg:grid-cols-12 lg:items-center" aria-labelledby="about-heading">
       <div className="flex flex-col gap-7 lg:col-span-7">
-        <p className="kicker">About</p>
+        <p className="kicker" data-tone="pink">About</p>
         <h2 id="about-heading" className="section-title">Design, photography and tech led me to the web.</h2>
         <div className="flex max-w-xl flex-col gap-5">
           <p className="prose-copy">
@@ -31,7 +32,7 @@ export function About() {
           {facts.map((fact) => (
             <div key={fact.label} className="fact-row">
               <dt className="font-mono text-sm text-muted-foreground">{fact.label}</dt>
-              <dd className="text-right font-semibold">{fact.value}</dd>
+              <dd className="fact-value" data-tone={fact.tone} style={{ "--tilt": `${fact.tilt}deg` } as CSSProperties}>{fact.value}</dd>
             </div>
           ))}
         </dl>
@@ -46,7 +47,7 @@ export function About() {
           ))}
         </ul>
       </div>
-      <figure className="snapshot mx-auto w-full max-w-md lg:col-span-5">
+      <figure data-tone="paper" className="snapshot mx-auto w-full max-w-md lg:col-span-5">
         <Image
           src="/images/devfest-ireland-2025.jpg"
           alt="The DevFest Ireland 2025 group photo, with attendees gathered in a hotel ballroom in front of the DevFest Ireland 2025 slide and a neon DevFest Ireland sign at the front"

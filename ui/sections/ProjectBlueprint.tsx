@@ -24,11 +24,11 @@ export function ProjectBlueprint({ slug }: { slug: keyof typeof blueprints }) {
   const blueprint = blueprints[slug];
   return (
     <div className="flex min-h-full flex-col justify-center gap-4 p-5 md:p-8">
-      <p className="font-mono text-sm text-primary">{blueprint.caption}</p>
-      <ol className="flex flex-col gap-2.5" aria-label="Technical layers">
+      <p className="font-mono text-sm text-[var(--tone-bg)]">{blueprint.caption}</p>
+      <ol className="flex flex-col gap-3" aria-label="Technical layers">
         {blueprint.layers.map(({ icon: Icon, name, detail }, index) => (
           <li key={name} className="layer" style={{ "--i": index } as CSSProperties}>
-            <Icon size={20} className="shrink-0 text-primary" aria-hidden="true" />
+            <span className="layer-icon"><Icon size={18} aria-hidden="true" /></span>
             <div className="flex min-w-0 flex-col gap-0.5">
               <strong className="font-semibold">{name}</strong>
               <span className="text-sm leading-relaxed text-muted-foreground">{detail}</span>
