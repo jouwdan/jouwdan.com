@@ -7,8 +7,8 @@ export type StickerTone = "yellow" | "pink" | "blue" | "green" | "paper";
 export type TitleWord = { text: string; accent?: boolean; tone?: StickerTone };
 
 // Same shape as Allo's hero wall: weight and roundness ride two travelling sine waves.
-const WEIGHT = { speed: 1, length: 1, lineOffset: 1.24, lightest: 100, heaviest: 900, breath: 0.5 };
-const ROUND = { speed: 1.05, length: 0.7, offset: 1.2, sharpest: 0, roundest: 100 };
+const WEIGHT = { speed: 1, length: 1.6, lineOffset: 1.24, lightest: 100, heaviest: 900, breath: 0.5 };
+const ROUND = { speed: 0.8, length: 1.1, offset: 1.2, sharpest: 0, roundest: 100 };
 const MEASURE_WEIGHT = WEIGHT.lightest + 0.65 * (WEIGHT.heaviest - WEIGHT.lightest);
 const WEIGHT_STEP = 10;
 const ROUND_STEP = 5;
