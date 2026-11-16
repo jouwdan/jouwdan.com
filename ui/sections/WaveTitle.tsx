@@ -123,9 +123,13 @@ export function WaveTitle({ id, lines, animate = true }: { id?: string; lines: T
           {words.map((word, wordIndex) => (
             <span key={wordIndex}>
               {wordIndex > 0 && " "}
-              <span className={cn("inline-block", word.accent && "wave-accent")} data-tone={word.accent ? word.tone ?? "yellow" : undefined}>
+              <span
+                className={cn("inline-block", word.accent && "wave-accent")}
+                data-tone={word.accent ? word.tone ?? "yellow" : undefined}
+                style={word.accent ? ({ "--tilt": row % 2 ? "2deg" : "-2deg" } as CSSProperties) : undefined}
+              >
                 {[...word.text].map((letter, index) => (
-                  <i key={index} className="wave-letter" data-row={row}>{letter}</i>
+                  <span key={index} className="wave-letter" data-row={row}>{letter}</span>
                 ))}
               </span>
             </span>

@@ -289,8 +289,15 @@
     text-align: center;
   }
 
+  /* Sticker lettering built from text-shadow, not stacked filters, so it stays cheap while the wave runs */
+
   .wave-accent {
     color: var(--tone-bg);
+    padding-inline: 0.06em;
+    rotate: var(--tilt, -2deg);
+    -webkit-text-stroke: 0.08em var(--tone-ink);
+    paint-order: stroke fill;
+    text-shadow: 0 0.06em 0 var(--tone-ink);
   }
 
   /* Expanding type: Proximity sets --pull (0 to 1) on each letter. Letters swell and soften. */
